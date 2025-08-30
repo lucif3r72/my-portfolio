@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== Meta ===== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Favicon ===== -->
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/favicon.png">
+
+    <!-- ===== Title ===== -->
+    <title>UX//Raw</title>
+
+    <!-- ===== LineAwesome ===== -->
+    <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
+
+
+    <!-- ===== Fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- ===== Stylesheet ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <link rel="stylesheet" href="./assets/css/dark-mode.css"> -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+
+<body>
+    <!-- ===== Magic Cursor Start ===== -->
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+    <!-- ===== Magic Cursor End ===== -->
+
+    <!-- ===== Loader Start ===== -->
+    <div class="preloader-wrap">
+        <div class="loader">
+            <img src="./assets/imgs/loader-2.gif" alt="loader">
+        </div>
+    </div>
+    <!-- ===== Loader End ===== -->
+
+
+    <!-- ===== Main Start ===== -->
+    <main class="bronx-main home-page">
+
+        <!-- ===== Popup Menu Start ===== -->
+        <div class="popup-menu-wrap">
+            <div class="popup-menu-header">
+                <div class="local-temperature">
+                    <a href="index.html"><span>Local/</span><span id="coordinates"></span></a>
+                </div>
+
+                <div class="popup-menu-close-btn">
+                    <div class="icon">
+                        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" color="rgba(214, 214, 215, 0.7)">
+                            <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="right text-right">
+                    <a href="contact.html" class="theme-btn">Schedule a call</a>
+                </div>
+            </div>
+            <div class="popup-menu">
+                <nav>
+                    <ul>
+                        <li class="active">
+                            <a href="index.html">
+                                <span class="count">(1)</span>
+                                <span>Home</span>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="work.html">
+                                <span class="count">(2)</span>
+                                <span>Work</span>
+                                <span>Work</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                <span class="count">(3)</span>
+                                <span>Contact</span>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="popup-menu-footer">
+                <div class="copyright">
+                    <p>&copy;2025 ALL RIGHTS RESERVED</p>
+
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://instagram.com/" target="_blank">Instagram <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                    </path>
+                                </svg></a>
+                        </li>
+                        <li>
+                            <a href="https://dribbble.com/" target="_blank">Dribbble <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                    </path>
+                                </svg></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank">Twitter <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                    </path>
+                                </svg></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!-- ===== Popup Menu End ===== -->
+
+        <!-- ===== Smooth Scroll Start ===== -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+
+
+                <!-- ===== Hero Section Start ===== -->
+                <section class="hero-sec">
+
+                    <!-- ===== Header Start ===== -->
+                    <header class="header-wrap scroll-animation" data-animation="slide_up">
+                        <div class="custom-row">
+
+                            <!-- ===== Local Time ===== -->
+                            <div class="header-local-time-box">
+                                <a href="index.html"><span>Local/</span></a>
+                                <span id="realtime">00:00</span>
+                            </div>
+
+                            <div class="header-middle">
+                                <div class="humberg-menu">
+                                    <a href="contact.html">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
+                                        <path d="M9 9L13.5 12L18 9" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M3 13.5H5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M1 10.5H5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path>
+                                    </svg>
+
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <!-- ===== Header Contact Button ===== -->
+                            <div class="header-right">
+                                <a href="#" class="theme-btn">MENU</a>
+                            </div>
+
+                        </div>
+                    </header>
+                    <!-- ===== Header End ===== -->
+
+
+                    <!-- ===== Hero Section Content Start ===== -->
+                    <div class="hero-sec-content">
+                        <span class="available-status">
+                            AVAILABLE FOR FREELANCE
+                        </span>
+
+                        <h1>
+                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">HEY!</span></span>
+                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">I'M NADIR</span></span>
+                        </h1>
+                    </div>
+                    <!-- ===== Hero Section Content End ===== -->
+
+
+                    <!-- ===== Hero Footer Start ===== -->
+                    <div class="hero-footer-wrap scroll-animation" data-animation="slide_down">
+                        <p>BASED IN MUMBAI, IN</p>
+                        <div class="hero-footer-right">
+                            <a href="#" class="link-with-line">VISUAL & EXPERIENCE DESIGNER</a>
+                            <p>+ FRONTEND DEVELOPER</p>
+                        </div>
+                    </div>
+                    <!-- ===== Hero Footer End ===== -->
+
+                </section>
+                <!-- ===== Hero Section End ===== -->
+
+                <!-- ===== Full Image Start ===== -->
+                <div class="full-image-sec pt-30">
+                    <div class="full-image-box">
+                        <img class="scaleDown" src="./assets/imgs/dark-mode/cover.png" alt="about">
+                    </div>
+                </div>
+                <!-- ===== Full Image End ===== -->
+
+
+                <!-- ===== Featured Work Start ===== -->
+                <section class="featured-work-sec">
+                    <div class="section-header">
+                        <div class="left">
+                            <h3>
+                                <span><span class="timeline-anim scroll-animation" data-animation="slide_down">FEATURED</span></span>
+                                <span><span class="timeline-anim scroll-animation" data-animation="slide_down">WORK</span></span>
+                            </h3>
+                        </div>
+                        <div class="right">
+                            <p>My creative spirit comes alive in the digital realm. With nimble fingers flying across
+                                the keyboard, I craft clear experiences out of nothing but ones and zeroes.</p>
+                        </div>
+                    </div>
+
+                    <div class="featured-work-lists">
+
+                        <!-- Featured Cart -->
+                        <div class="featured-card">
+                            <a class="link-overlay" href="work-detail.html"></a>
+                            <div class="img-box">
+                                <img src="./assets/imgs/dark-mode/work-1.png" alt="Work">
+                            </div>
+                            <div class="content">
+                                <div class="left">
+                                    <p class="title">Lightric Motors</p>
+                                    <p class="subtitle">Photography</p>
+                                </div>
+                                <div class="right">
+                                    <span class="date">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Featured Cart -->
+                        <div class="featured-card">
+                            <a class="link-overlay" href="work-detail-1.html"></a>
+                            <div class="img-box">
+                                <img src="./assets/imgs/dark-mode/work-2.png" alt="Work">
+                            </div>
+                            <div class="content">
+                                <div class="left">
+                                    <p class="title">Positive Energy</p>
+                                    <p class="subtitle">Branding</p>
+                                </div>
+                                <div class="right">
+                                    <span class="date">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Featured Cart -->
+                        <div class="featured-card">
+                            <a class="link-overlay" href="work-detail-2.html"></a>
+                            <div class="img-box">
+                                <img src="./assets/imgs/dark-mode/work-3.png" alt="Work">
+                            </div>
+                            <div class="content">
+                                <div class="left">
+                                    <p class="title">Xiong Wall</p>
+                                    <p class="subtitle">Marketplace</p>
+                                </div>
+                                <div class="right">
+                                    <span class="date">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Featured Cart -->
+                        <div class="featured-card">
+                            <a class="link-overlay" href="work-detail-3.html"></a>
+                            <div class="img-box">
+                                <img src="./assets/imgs/dark-mode/work-4.png" alt="Work">
+                            </div>
+                            <div class="content">
+                                <div class="left">
+                                    <p class="title">Hideway</p>
+                                    <p class="subtitle">Web Design</p>
+                                </div>
+                                <div class="right">
+                                    <span class="date">2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Featured Cart -->
+                        <div class="featured-card">
+                            <a class="link-overlay" href="work-detail-4.html"></a>
+                            <div class="img-box">
+                                <img src="./assets/imgs/dark-mode/work-5.png" alt="Work">
+                            </div>
+                            <div class="content">
+                                <div class="left">
+                                    <p class="title">Califfo</p>
+                                    <p class="subtitle">Branding</p>
+                                </div>
+                                <div class="right">
+                                    <span class="date">2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Featured Cart -->
+                        <div class="featured-card">
+                            <a class="link-overlay" href="work-detail-5.html"></a>
+                            <div class="img-box">
+                                <img src="./assets/imgs/dark-mode/work-6.png" alt="Work">
+                            </div>
+                            <div class="content">
+                                <div class="left">
+                                    <p class="title">Louis Martin</p>
+                                    <p class="subtitle">Portfolio</p>
+                                </div>
+                                <div class="right">
+                                    <span class="date">2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- ===== Featured Work End ===== -->
+
+
+                <!-- ===== About Start ===== -->
+                <section class="about-sec">
+                    <div class="section-header2">
+                        <h3 class="title sticky-statement2">
+                            <span class="transform-anim"><span class="timeline-anim scroll-animation" data-animation="slide_down">MORE ABOUT</span></span>
+                            <span class="transform-anim"><span class="timeline-anim scroll-animation" data-animation="slide_down">NADIR©</span></span>
+                        </h3>
+                    </div>
+
+                    <div class="about-bottom-content-wrap">
+                        <div class="img-box">
+                            <div class="img-box-inner">
+                                <img data-jarallax-element="-20 0" src="./assets/imgs/dark-mode/about.png" alt="About">
+                            </div>
+                        </div>
+                        <div class="about-bottom-content">
+                            <div>
+                                <h4>BOLD WITH GRIDS. BRUTAL WITH CLARITY.<br> FLUENT IN TYPOGRAPHY, SYSTEMS, AND UX DESIGN <br>THAT CHALLENGES CONVENTION AND SERVES USERS.</h4>
+                            </div>
+                            <p>Experienced in delivering end-to-end <i>"UX/UI design"</i> for software products, with a passion for improving lives through thoughtful, user-centered design. Constantly exploring new tools, ideas, and perspectives to elevate both craft and collaboration.</p>
+                            <p class="responsive-mode">Experienced in delivering end-to-end <i>"UX/UI design"</i> for software products, with a passion for improving lives through thoughtful, user-centered design.</p>
+                            <a href="https://drive.google.com/file/d/1Issw97gs-kreC7QWev66jO6YC2FdF0L0/view" download class="theme-btn">Download Resume</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== About End ===== -->
+
+                <!-- ===== Partner Start ===== -->
+                <div class="partner-sec">
+                    <ul>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/altayar-logo.png" alt="Altayar Logo">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/anglo-eastern-logo.png" alt="Anglo Eastern Logo">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/botxpert-logo.svg" alt="Botxpert Logo">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/credora-logo.png" alt="Credora Logo">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/elite-logo.png" alt="Elite Eye Care Logo">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/renttro-logo.svg" alt="Renttro Logo">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/revoow-logo.svg" alt="Revoow Logo">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/siaa-logo.svg" alt="SIAA Logo">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/social-sweep.png" alt="Social Sweep Logo">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/uberheal-logo.svg" alt="UberHeal Logo">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="partner-box">
+                                <div class="partner-box-inner">
+                                    <img src="./assets/imgs/logos/welspun-logo.svg" alt="Welspun Logo">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ===== Partner End ===== -->
+
+
+                <!-- ===== Experience Start ===== -->
+                <section class="experience-sec">
+                    <div class="section-header">
+                        <div class="left">
+                            <h3>
+                                <span><span class="timeline-anim scroll-animation" data-animation="slide_down">MY</span></span>
+                                <span><span class="timeline-anim scroll-animation" data-animation="slide_down">EXPERTISE</span></span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- ==== Experience lists ==== -->
+                    <div class="experience-list-wrap">
+                        <div class="experience-lists">
+                            <div class="experience-box">
+                                <h4>
+                                    <span>(1)</span>
+                                    <span>APP DESIGN</span>
+                                </h4>
+                                <p>Craft intuitive navigation that makes features accessible. Choose layouts and
+                                    graphics that fit your app's personality.</p>
+                            </div>
+                            <div class="experience-box">
+                                <h4>
+                                    <span>(2)</span>
+                                    <span>WEB DESIGN</span>
+                                </h4>
+                                <p>Polish animations and microinteractions that add delight. Every detail matters when
+                                    sculpting an web.</p>
+                            </div>
+                            <div class="experience-box">
+                                <h4>
+                                    <span>(3)</span>
+                                    <span>DESIGN SYSTEMS</span>
+                                </h4>
+                                <p>Built adaptive design systems with reusable components and dynamic theming for cross-platform consistency.</p>
+                            </div>
+                        </div>
+
+                        <div class="experience-lists2">
+                            <div class="experience-box">
+                                <h4>
+                                    <span>(4)</span>
+                                    <span>UX STRATEGY & RESEARCH</span>
+                                </h4>
+                                <p>With every insight uncovered, a strategy evolves that aligns user needs with purposeful design outcomes.</p>
+                            </div>
+                            <div class="experience-box">
+                                <h4>
+                                    <span>(5)</span>
+                                    <span>PROTOTYPING & INTERACTION DESIGN</span>
+                                </h4>
+                                <p>Through each prototype built, interactions are shaped, tested, and tuned to feel natural, intentional, and alive.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== Experience End ===== -->
+
+
+                <!-- ===== Motivation Start ===== -->
+                <section class="motivation-sec">
+                    <div class="custom-row">
+                        <div class="left">
+                            <h3>DESIGN</h3>
+                            <h3>AS DIALOGUE</h3>
+                        </div>
+                        <div class="right">
+                            <div class="motivation-content">
+                                <p>More than a profession, <i>UI/UX design</i> is Nadir Shaikh’s creative outlet—a way to translate vision into reality. With a
+                                    rare blend of <i>interaction design</i>, <i>visual storytelling</i>, and <i>responsive design</i>, Nadir brings ideas to life through
+                                    interfaces that tell stories, elevate brands, and spark meaningful change. As the digital landscape expands, so do
+                                    the possibilities from <i>mobile app design</i> to <i>web-based</i> user experiences and Nadir thrives in both remote
+                                    collaborations and dynamic work settings. Few moments compare to the thrill of seeing a live product in
+                                    action crafted with intention, tested with care, and built to resonate.</p>
+                                <p>As a <i>Visual designer</i> and <i>UX strategist</i>, Nadir blends art and technology to create digital experiences that inform,
+                                    entertain, and inspire. No two days are alike one might begin with sketching wireframes and site layouts, and end
+                                    with coding responsive page templates using tools like <i>Figma</i> or <i>Adobe XD</i>. It’s a discipline that demands agility,
+                                    empathy, and vision and Nadir brings all three to the table.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== Motivation End ===== -->
+
+
+                <!-- ===== Experience2 Start ===== -->
+                <section class="experience2-sec sticky-elem-sec">
+                    <div class="custom-row">
+                        <div class="left">
+                            <h3 class="sticky-statement">EXPERIENCE</h3>
+                        </div>
+
+                        <div class="right">
+                            <div class="experience2-lists">
+
+                                <div class="experience2-box">
+                                    <div class="experience2-box-header">
+                                        WERQ LABS
+                                    </div>
+                                    <div class="experience2-box-body">
+                                        <h4>UI UX DESIGNER / DEVELOPER <span>2023 – PRESENT</span></h4>
+                                        <p>I'm working as a UI/UX designer and front-end developer, creating intuitive user flows and responsive
+                                            layouts. I build semantic, accessible interfaces and collaborated across teams to turn complex ideas into modular
+                                            design systems. It's a space where I balance expressive visuals with user-first functionality always pushing for
+                                            clarity, scalability, and creative momentum.</p>
+                                    </div>
+                                </div>
+
+                                <div class="experience2-box">
+                                    <div class="experience2-box-header">
+                                        FREELANCE
+                                    </div>
+                                    <div class="experience2-box-body">
+                                        <h4>UI/UX DESIGNER <span>2017 – 2020</span></h4>
+                                        <p>I’ve worked with startups and creative teams to design user-centered interfaces and shape UX strategies that drive
+                                            clarity and engagement. From wireframes and prototypes to logos and design systems, I focused on intuitive flows,
+                                            expressive visuals, and adaptive microcopy always grounded in usability and empathy.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== Experience2 End ===== -->
+
+
+                <!-- ===== Favourite Stack Start ===== -->
+                <section class="favourite-stack-sec sticky-elem-sec">
+                    <div class="custom-row">
+                        <div class="left">
+                            <h3 class="sticky-statement4">
+                                FAVOURITE
+                                <br>
+                                STACK
+                            </h3>
+                        </div>
+                        <div class="right">
+                            <div class="favourite-stack-lists">
+
+                                <div class="favourite-stack-box">
+                                    <div class="favourite-stack-box-left">
+                                        <div class="icon">
+                                            <img src="./assets/imgs/figma.png" alt="Figma">
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h4>FIGMA</h4>
+                                        <div class="content-body">
+                                            <h4>DESIGN TOOL</h4>
+                                            <p>I use Figma to design responsive interfaces, build modular design systems, and collaborate in real time with teams.
+                                                Its flexibility lets me iterate fast, maintain consistency, and stay aligned across design and development
+                                                workflows.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="favourite-stack-box">
+                                    <div class="favourite-stack-box-left">
+                                        <div class="icon">
+                                            <img src="./assets/imgs/figma.png" alt="figma">
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h4>ADOBE XD</h4>
+                                        <div class="content-body">
+                                            <h4>DESIGN TOOL</h4>
+                                            <p>I’ve used Adobe XD to create interactive prototypes and high-fidelity mockups translating UX strategy into smooth,
+                                                clickable flows. It’s been a key tool for presenting ideas clearly and validating user journeys early in the
+                                                process.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="favourite-stack-box">
+                                    <div class="favourite-stack-box-left">
+                                        <div class="icon">
+                                            <img src="./assets/imgs/js.png" alt="figma">
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h4>JAVASCRIPT</h4>
+                                        <div class="content-body">
+                                            <h4>FRONT END DEVELOPMENT</h4>
+                                            <p>I use JavaScript to bring interfaces to life by handling interactivity, dynamic states, and user-driven logic while
+                                                keeping performance and usability front and center.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="favourite-stack-box">
+                                    <div class="favourite-stack-box-left">
+                                        <div class="icon">
+                                            <img src="./assets/imgs/figma.png" alt="figma">
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h4>FIGJAM</h4>
+                                        <div class="content-body">
+                                            <h4>COLLABORATION TOOL</h4>
+                                            <p>I’ve used FigJam to map user journeys, brainstorm flows, and align teams around UX strategy by turning abstract ideas
+                                                into actionable design plans.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- ===== Favourite Stack End ===== -->
+
+
+                <!-- ===== FAQ Start ===== -->
+                <section class="faq-sec">
+                    <div class="section-header3">
+                        <h3 class="title">
+                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">FREQUENTLY</span></span>
+                            <span><span class="timeline-anim scroll-animation" data-animation="slide_down">ASKED QUESTIONS</span></span>
+                        </h3>
+                    </div>
+
+                    <div class="accordion faq-wrap" id="accordionExample">
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    WHAT INDUSTRIES DO YOU SPECIALIZE IN? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>I have experience working across various industries including but not limited to
+                                        technology, healthcare, fashion, hospitality, and logistics.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    WHAT SERVICES DO YOU OFFER AS A DESIGNER? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>As a designer, I offer a range of services including graphic design, web design,
+                                        branding, illustration, and more. My goal is to provide creative solutions that
+                                        effectively communicate your message and resonate with your audience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    CAN YOU PROVIDE EXAMPLES OF YOUR PREVIOUS WORK? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Absolutely! You can browse through my portfolio on this website to see a
+                                        selection of my previous projects. Each project showcases my design capabilities
+                                        and creative approach across various mediums and industries.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    HOW DO YOU APPROACH BRANDING PROJECTS? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>When it comes to branding projects, I believe in delving deep into understanding
+                                        the client's brand identity, target audience, and market positioning. I strive
+                                        to create cohesive visual identities that effectively communicate the brand's
+                                        values and personality across various touchpoints, including logos, color
+                                        palettes, typography, and brand guidelines.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    CAN YOU WALK ME THROUGH YOUR DESIGN PROCESS? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Certainly! My design process typically involves understanding the client's needs
+                                        and objectives, conducting research, brainstorming ideas, sketching concepts,
+                                        refining designs, and delivering high-quality final products.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    WHAT SOFTWARE AND TOOLS DO YOU USE FOR YOUR DESIGNS? <i class="las la-plus"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>I am proficient in using industry-standard design software such as Figma, Adobe Creative
+                                        Suite (XD, Illustrator, InDesign), Sketch, and others.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== FAQ End ===== -->
+
+
+                <!-- ===== CTA Start ===== -->
+                <section class="cta-sec">
+                    <div class="section-header2">
+                        <h3 class="title">
+                            <span>LET'S WORK</span>
+                            <span>TOGETHER</span>
+                        </h3>
+                        <a href="#" class="theme-btn">CONTACT NOW</a>
+                    </div>
+
+                    <div class="cta-content about-bottom-content-wrap">
+                        <div class="img-box">
+                            <div class="img-box-inner">
+                                <img data-jarallax-element="-20 0" src="./assets/imgs/dark-mode/about-4.png" alt="About">
+                            </div>
+                        </div>
+                        <div class="about-bottom-content">
+                            <div>
+                                <p>BASED IN MUMBAI, I AM AN VISUAL AND EXPERIENCE DESIGNER. MY <br>PASSION FOR VISUAL AESTHETICS, ELEGANT TYPOGRAPHY, AND <br>INTUITIVE DESIGN IS EVIDENT IN MY WORK.</p>
+                            </div>
+                            <ul class="social-links">
+                                <li>
+                                    <a href="https://instagram.com/" target="_blank">Instagram <svg xmlns="http://www.w3.org/2000/svg"
+                                            focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                            </path>
+                                        </svg></a>
+                                </li>
+                                <li>
+                                    <a href="https://dribbble.com/" target="_blank">Dribbble <svg xmlns="http://www.w3.org/2000/svg"
+                                            focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                            </path>
+                                        </svg></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/" target="_blank">Twitter <svg xmlns="http://www.w3.org/2000/svg"
+                                            focusable="false" viewBox="0 0 24 24" color="rgb(29, 29, 31)">
+                                            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                            </path>
+                                        </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== CTA End ===== -->
+
+
+                <!-- ===== Footer Start ===== -->
+                <footer class="footer-area">
+                    <div class="footer-big-text">
+                        <span class="timeline-anim scroll-animation" data-animation="slide_down">UX//RAW</span>
+                    </div>
+
+                    <div class="copyright">
+                        <p>&copy;2025 NADIR SHAIKH</p>
+                        <div class="right">
+                            <a href="#" id="back-to-top">GO BACK TO TOP</a>
+                        </div>
+                    </div>
+                </footer>
+                <!-- ===== Footer End ===== -->
+
+            </div>
+        </div>
+        <!-- ===== Smooth Scroll End ===== -->
+
+    </main>
+    <!-- ===== Main End ===== -->
+
+
+
+
+    <!-- ===== Scripts ===== -->
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/ScrollToPlugin.min.js"></script>
+    
+    <script src="./assets/js/ScrollSmoother.min.js"></script>
+    <script src="./assets/js/SplitText.min.js"></script>
+    <script src="./assets/js/jarallax.js"></script>
+    <script src="./assets/js/jarallax-element.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/themescroll.js"></script>
+
+</body>
+
+</html>
