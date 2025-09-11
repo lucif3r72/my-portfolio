@@ -897,7 +897,7 @@ strong {
 .featured-card .content .subtitle {
     margin: 0;
     font-size: 18px;
-    color: #525252;
+    color: #373737;
     line-height: 20px;
     letter-spacing: 0;
     font-weight: 500;
@@ -933,7 +933,7 @@ strong {
     color: rgba(29, 29, 31, 0.7);
     letter-spacing: 0.4px;
     margin: 0;
-    max-width: 580px;
+    max-width: 650px;
 }
 .work-detail-header-infos .work-detail-header-left h1 {
     font-size: 50px;
@@ -1016,7 +1016,6 @@ strong {
     width: 100%;
     height: 100%;
     position: relative;
-    transform: scale(1.2);
 }
 .work-detail-full-img img {
     display: block;
@@ -1029,7 +1028,7 @@ strong {
     position: relative;
 }
 .work-detail2-content-wrap.work-detail2-content-wrap2 {
-    padding: 60px 40px 90px 40px;
+    padding: 60px 40px 40px 40px;
 }
 .work-detail2-content-wrap .work-detail2-content-box:last-child {
     padding-bottom: 0;
