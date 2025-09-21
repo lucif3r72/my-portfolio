@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== Meta ===== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Favicon ===== -->
+    <link rel="icon" type="image/x-icon" href="../../assets/imgs/favicon.png">
+
+    <!-- ===== Title ===== -->
+    <title>UX//Raw - AESM TAP Case Study</title>
+
+    <!-- ===== LineAwesome ===== -->
+    <link rel="stylesheet" href="../../assets/css/line-awesome.min.css">
+
+
+    <!-- ===== Fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- ===== Stylesheet ===== -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
+</head>
+
+<body>
+    <!-- ===== Magic Cursor Start ===== -->
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+    <!-- ===== Magic Cursor End ===== -->
+
+    <!-- ===== Loader Start ===== -->
+    <div class="preloader-wrap">
+        <div class="loader">
+            <img src="../../assets/imgs/loader-2.gif" alt="loader">
+        </div>
+    </div>
+    <!-- ===== Loader End ===== -->
+
+    <!-- ===== Main Start ===== -->
+    <main class="bronx-main work-detail-page">
+
+        <!-- ===== Popup Menu Start ===== -->
+        <div class="popup-menu-wrap">
+            <div class="popup-menu-header">
+                <div class="local-temperature">
+                    <a href="index.html"><span>Local/</span><span id="coordinates"></span></a>
+                </div>
+
+                <div class="popup-menu-close-btn">
+                    <div class="icon">
+                        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" color="rgba(214, 214, 215, 0.7)">
+                            <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="right text-right">
+                    <a href="contact.html" class="theme-btn">Schedule a call</a>
+                </div>
+            </div>
+            <div class="popup-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="count">(1)</span>
+                                <span>Home</span>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="work.html">
+                                <span class="count">(2)</span>
+                                <span>Work</span>
+                                <span>Work</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                <span class="count">(3)</span>
+                                <span>Contact</span>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="popup-menu-footer">
+                <div class="copyright">
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.instagram.com/de_str0yed/" target="_blank">Instagram <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
+                                    color="rgb(29, 29, 31)">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                    </path>
+                                </svg></a>
+                        </li>
+                        <li>
+                            <a href="https://dribbble.com/Lucif3r72" target="_blank">Dribbble <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
+                                    color="rgb(29, 29, 31)">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                    </path>
+                                </svg></a>
+                        </li>
+                        <li>
+                            <a href="https://in.pinterest.com/Lucif3r72/" target="_blank">Pinterest <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
+                                    color="rgb(29, 29, 31)">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
+                                    </path>
+                                </svg></a>
+                        </li>
+                    </ul>
+                    <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </div>
+        <!-- ===== Popup Menu End ===== -->
+
+        <!-- ===== Smooth Scroll Start ===== -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+
+                <!-- ===== Hero Section Start ===== -->
+                <section class="hero-sec hero-sec3">
+
+                    <!-- ===== Header Start ===== -->
+                    <header class="header-wrap scroll-animation" data-animation="slide_up">
+                        <div class="custom-row">
+
+                            <!-- ===== Local Time ===== -->
+                            <div class="header-local-time-box">
+                                <a href="../../"><span>Local/</span></a>
+                                <span id="realtime">00:00</span>
+                            </div>
+
+                            <div class="header-middle">
+                                <div class="humberg-menu">
+                                    <a href="mailto:nadiruxdesign@gmail.com">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
+                                            <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
+                                                stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
+                                        </svg>
+
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <!-- ===== Header Contact Button ===== -->
+                            <div class="header-right">
+                                <a href="javascript:void(0);" class="theme-btn">MENU</a>
+                            </div>
+
+                        </div>
+                    </header>
+                    <!-- ===== Header End ===== -->
+
+                </section>
+                <!-- ===== Hero Section End ===== -->
+
+
+                <!-- ===== Work Detail Header Start ===== -->
+                <section class="work-detail-header-infos scroll-animation" data-animation="slide_down2">
+                    <div class="work-detail-header-left">
+                        <h1>AESM TAP<br>Talent Acquisition Portal</h1>
+                        <p>AESM TAP is a comprehensive talent acquisition platform for Anglo-Eastern Shipping
+                            Management. The dual-platform solution includes a web application for HR teams to manage
+                            requisitions, candidate pipelines, and hiring workflows, plus a mobile app for candidates to
+                            complete applications and participate in AI-powered interviews. The system streamlines
+                            recruitment for new hires and existing crew members transitioning between vessels.</p>
+                    </div>
+                    <div class="work-detail-header-right">
+                        <ul>
+                            <li><span>CLIENT</span> Anglo-Eastern</li>
+                            <li><span>ROLE</span> UI/UX Designer</li>
+                            <li><span>PLATFORM</span> Web App (Admin/HR) <br>+ Mobile App (Candidates)</li>
+                            <li><span>LIVE PROJECT</span> Internal Platform</li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- ===== Work Detail Header End ===== -->
+
+
+                <!-- ===== Work Detail Full Image Start ===== -->
+                <div class="work-detail-full-img-wrap">
+                    <div class="work-detail-full-img">
+                        <div class="work-detail-full-img-inner">
+                            <img src="../../assets/imgs/dark-mode/work-aesm-tap.png" alt="AESM TAP Platform">
+                        </div>
+                    </div>
+                </div>
+                <!-- ===== Work Detail Full Image End ===== -->
+
+                <!-- ===== Work Detail2 Start ===== -->
+                <div class="work-detail2-content-wrap">
+                    <div class="work-detail2-content-box">
+                        <div class="left">
+                            <h4 class="text-uppercase">Challenges</h4>
+                        </div>
+                        <div class="right">
+                            <p class="scroll-animation" data-animation="slide_down2">The existing recruitment process
+                                relied on extensive paper-based forms and fragmented systems. HR teams managed 10+
+                                different form types manually with no efficient way to search through massive candidate
+                                databases. Complex RBAC requirements created approval workflow bottlenecks. Technical
+                                challenges included selecting appropriate technology stacks while adhering to enterprise
+                                guidelines and implementing sophisticated search filters for maritime qualifications.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work-detail2-content-box">
+                        <div class="left">
+                            <h4 class="text-uppercase">Goals</h4>
+                        </div>
+                        <div class="right">
+                            <p class="scroll-animation" data-animation="slide_down2">Our objective was to digitize the
+                                entire talent acquisition ecosystem while building upon Anglo-Eastern's established
+                                design system. We focused on creating intelligent search across extensive candidate
+                                databases, implementing RBAC-based approval workflows, and digitizing paper forms into
+                                intuitive digital experiences. The mobile app needed comprehensive form completion with
+                                AI-powered conversational interviews. The goal was achieving significant process
+                                improvements across all hiring workflows.</p>
+                        </div>
+                    </div>
+                    <div class="work-detail2-content-box">
+                        <div class="left">
+                            <h4 class="text-uppercase">Design Highlights</h4>
+                        </div>
+                        <div class="right">
+                            <p class="scroll-animation" data-animation="slide_down2">Built on Anglo-Eastern's base
+                                design system, the web platform features advanced search architecture with
+                                maritime-specific filters for precise candidate discovery. The RBAC system dynamically
+                                adjusts interfaces based on permissions, with smart approval routing. Form digitization
+                                transformed paper workflows into progressive, contextual experiences. The mobile app
+                                integrates AI conversational interviews via phone, while both platforms maintain
+                                consistent visual language.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===== Work Detail2 End ===== -->
+
+
+                <!-- ===== Work Detail Full Image Start ===== -->
+                <div class="work-detail-full-img-wrap">
+                    <div class="work-detail-full-img">
+                        <img-comparison-slider>
+                            <img slot="first" src="../../assets/imgs/dark-mode/aesm-tap-before.png" alt="Before">
+                            <img slot="second" src="../../assets/imgs/dark-mode/aesm-tap-after.png" alt="After">
+                        </img-comparison-slider>
+                    </div>
+                </div>
+                <!-- ===== Work Detail Full Image End ===== -->
+
+                <!-- ===== Work Detail2 Start ===== -->
+                <div class="work-detail2-content-wrap work-detail2-content-wrap2">
+                    <div class="work-detail2-content-box">
+                        <div class="left">
+                            <h4 class="text-uppercase">Before vs After</h4>
+                        </div>
+                        <table class="table table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Feature</th>
+                                    <th scope="col">Legacy Process</th>
+                                    <th scope="col">AESM TAP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Form Management</td>
+                                    <td>10+ paper forms, manual processing</td>
+                                    <td>Digitized forms with smart validation</td>
+                                </tr>
+                                <tr>
+                                    <td>Candidate Search</td>
+                                    <td>Basic database queries, limited filters</td>
+                                    <td>Advanced search across extensive databases</td>
+                                </tr>
+                                <tr>
+                                    <td>Approval Workflows</td>
+                                    <td>Email chains, unclear hierarchies</td>
+                                    <td>RBAC-based dynamic routing</td>
+                                </tr>
+                                <tr>
+                                    <td>Interview Process</td>
+                                    <td>Manual scheduling, inconsistent</td>
+                                    <td>AI conversational agent via phone</td>
+                                </tr>
+                                <tr>
+                                    <td>Technical Stack</td>
+                                    <td>Outdated systems, security gaps</td>
+                                    <td>Enterprise-grade architecture</td>
+                                </tr>
+                                <tr>
+                                    <td>Data Access</td>
+                                    <td>Role confusion, security risks</td>
+                                    <td>Granular permission management</td>
+                                </tr>
+                                <tr>
+                                    <td>Process Tracking</td>
+                                    <td>Manual status updates</td>
+                                    <td>Real-time pipeline visibility</td>
+                                </tr>
+                                <tr>
+                                    <td>Integration</td>
+                                    <td>Siloed applications</td>
+                                    <td>Unified platform ecosystem</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ===== Work Detail2 End ===== -->
+
+                <!-- ===== Work Detail2 Start ===== -->
+                <div class="work-detail2-content-wrap work-detail2-content-wrap2">
+                    <div class="work-detail2-content-box">
+                        <div class="left">
+                            <h4 class="text-uppercase">Results</h4>
+                        </div>
+                        <div class="right">
+                            <p class="scroll-animation" data-animation="slide_down2">The platform successfully digitized
+                                the complete hiring workflow, eliminating paper-based delays. Advanced search
+                                capabilities now enable HR teams to efficiently navigate vast candidate pools using
+                                maritime-specific filters. The RBAC implementation ensures secure, role-appropriate
+                                access while streamlining approval processes. Currently in Phase 3 with social
+                                integration and expanded AI automation, we're targeting substantial improvements in
+                                recruitment efficiency and user satisfaction.</p>
+                        </div>
+                    </div>
+                    <div class="work-detail2-content-box">
+                        <div class="left">
+                            <h4 class="text-uppercase">Reflection</h4>
+                        </div>
+                        <div class="right">
+                            <p class="scroll-animation" data-animation="slide_down2">This project exemplified
+                                enterprise-scale digital transformation in regulated industries. The challenge wasn't
+                                just digitizing forms—it was reimagining complex approval hierarchies and search systems
+                                while maintaining strict security protocols. Working within Anglo-Eastern's design
+                                system constraints pushed creative solutions that strengthened platform cohesiveness.
+                                Phase 3's social integration represents the next frontier in making HR workflows
+                                collaborative and intelligent.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===== Work Detail2 End ===== -->
+
+
+
+
+                <!-- ===== Work Detail Text Animation Start ===== -->
+                <div class="work-detail-text-anim-wrap">
+                    <ul>
+                        <li>MORE WORKS <span>MORE WORKS</span></li>
+                        <li>MORE WORKS <span>MORE WORKS</span></li>
+                        <li>MORE WORKS <span>MORE WORKS</span></li>
+                        <li>MORE WORKS <span>MORE WORKS</span></li>
+                    </ul>
+                </div>
+                <!-- ===== Work Detail Text Animation End ===== -->
+
+
+                <!-- ===== Work Start ===== -->
+                <div class="work-detail-featured-work-wrap">
+                    <div class="featured-work-lists">
+
+                        <!-- Featured Cart -->
+                        <div class="featured-card">
+                            <a class="link-overlay" href="#"></a>
+                            <div class="img-box">
+                                <img src="../../assets/imgs/dark-mode/work-1.png" alt="WeCare App">
+                            </div>
+                            <div class="content">
+                                <div class="left">
+                                    <p class="title">WeCare App</p>
+                                    <p class="subtitle">Mobile App Redesign</p>
+                                </div>
+                                <div class="right">
+                                    <span class="date">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Featured Cart -->
+                        <div class="featured-card">
+                            <a class="link-overlay" href="#"></a>
+                            <div class="img-box">
+                                <img src="../../assets/imgs/dark-mode/work-5.png" alt="Work">
+                            </div>
+                            <div class="content">
+                                <div class="left">
+                                    <p class="title">Califfo</p>
+                                    <p class="subtitle">Branding</p>
+                                </div>
+                                <div class="right">
+                                    <span class="date">2022</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- ===== Work End ===== -->
+
+
+                <!-- ===== Footer Start ===== -->
+                <footer class="footer-area">
+                    <div class="footer-big-text">
+                        <span class="timeline-anim scroll-animation" data-animation="slide_down">UX//RAW</span>
+                    </div>
+
+                    <div class="copyright">
+                        <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
+                        <div class="right">
+                            <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP</a>
+                        </div>
+                    </div>
+                </footer>
+                <!-- ===== Footer End ===== -->
+
+
+            </div>
+        </div>
+        <!-- ===== Smooth Scroll End ===== -->
+
+
+
+    </main>
+    <!-- ===== Main End ===== -->
+
+
+
+
+    <!-- ===== Scripts ===== -->
+    <script src="../../assets/js/jquery.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/gsap.min.js"></script>
+    <script src="../../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../../assets/js/ScrollToPlugin.min.js"></script>
+
+    <script src="../../assets/js/ScrollSmoother.min.js"></script>
+    <script src="../../assets/js/SplitText.min.js"></script>
+    <script src="../../assets/js/jarallax.js"></script>
+    <script src="../../assets/js/jarallax-element.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/ajaxform.js"></script>
+    <script src="../../assets/js/themescroll.js"></script>
+
+    <script type="module" src="https://unpkg.com/img-comparison-slider@8/dist/index.js"></script>
+</body>
+
+</html>
