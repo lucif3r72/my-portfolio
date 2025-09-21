@@ -261,7 +261,7 @@
         grid-template-columns: repeat(1, 1fr);
     }
     .featured-card .img-box {
-        height: 163px;
+        height: 175px;
     }
     .section-header2 .title {
         font-size: 40px;
@@ -459,6 +459,12 @@
     .work-detail2-content-box {
         margin-bottom: 50px;
         padding-bottom: 50px;
+    }
+    .work-detail-full-img {
+        height: 340px;
+    }
+    .work-detail-full-img.comparison-slider {
+        height: 100%;
     }
     .work-detail-full-img-wrap {
         padding-left: 15px;
