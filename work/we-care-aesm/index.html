@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
 </head>
 
 <body>
@@ -247,7 +249,10 @@
                 <!-- ===== Work Detail Full Image Start ===== -->
                 <div class="work-detail-full-img-wrap">
                     <div class="work-detail-full-img">
-                        <img src="../../assets/imgs/dark-mode/work-detail-2.png" alt="work">
+                        <img-comparison-slider>
+                            <img slot="first" src="../../assets/imgs/dark-mode/work-1-before.png" alt="Before">
+                            <img slot="second" src="../../assets/imgs/dark-mode/work-1-after.png" alt="After">
+                        </img-comparison-slider>
                     </div>
                 </div>
                 <!-- ===== Work Detail Full Image End ===== -->
@@ -303,14 +308,6 @@
                 </div>
                 <!-- ===== Work Detail2 End ===== -->
 
-                <!-- ===== Work Detail Full Image Start ===== -->
-                <div class="work-detail-full-img-wrap">
-                    <div class="work-detail-full-img">
-                        <img src="../../assets/imgs/dark-mode/work-detail-2.png" alt="work">
-                    </div>
-                </div>
-                <!-- ===== Work Detail Full Image End ===== -->
-
                 <!-- ===== Work Detail2 Start ===== -->
                 <div class="work-detail2-content-wrap work-detail2-content-wrap2">
                     <div class="work-detail2-content-box">
@@ -335,14 +332,6 @@
                     </div>
                 </div>
                 <!-- ===== Work Detail2 End ===== -->
-
-                <!-- ===== Work Detail Full Image Start ===== -->
-                <div class="work-detail-full-img-wrap work-detail-full-img-wrap2">
-                    <div class="work-detail-full-img">
-                        <img src="../../assets/imgs/dark-mode/work-detail-3.png" alt="work">
-                    </div>
-                </div>
-                <!-- ===== Work Detail Full Image End ===== -->
 
 
                 <!-- ===== Work Detail Text Animation Start ===== -->
@@ -441,6 +430,8 @@
     <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/ajaxform.js"></script>
     <script src="../../assets/js/themescroll.js"></script>
+
+    <script type="module" src="https://unpkg.com/img-comparison-slider@8/dist/index.js"></script>
 </body>
 
 </html>
