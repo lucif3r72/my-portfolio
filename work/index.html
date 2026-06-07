@@ -2,70 +2,80 @@
 <html lang="en">
 
 <head>
-    <!-- ===== Meta ===== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===== Favicon ===== -->
     <link rel="icon" type="image/x-icon" href="../assets/imgs/favicon.png">
-
-    <!-- ===== Title ===== -->
-    <title>UX//Raw</title>
-
-    <!-- ===== LineAwesome ===== -->
+    <title>Work — UX//Raw</title>
     <link rel="stylesheet" href="../assets/css/line-awesome.min.css">
-
-
-    <!-- ===== Fonts ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap"
         rel="stylesheet">
-
-    <!-- ===== Stylesheet ===== -->
+    <!-- dark-mode.css removed — not part of our design system -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 
 <body>
-    <!-- ===== Magic Cursor Start ===== -->
+
+    <!-- ===== Magic Cursor ===== -->
     <div id="magic-cursor">
         <div id="ball"></div>
     </div>
-    <!-- ===== Magic Cursor End ===== -->
 
-    <!-- ===== Loader Start ===== -->
-    <div class="preloader-wrap">
-        <div class="loader">
-            <img src="../assets/imgs/loader-2.gif" alt="loader">
+    <!-- ═══════════════════════════════════════════
+         PRELOADER — canonical UX//RAW structure
+         Identical to homepage + contact page
+    ═══════════════════════════════════════════ -->
+    <div id="uxrPreloader" class="uxr-preloader">
+        <div id="uxrPanelL" class="uxr-panel uxr-panel--l"></div>
+        <div id="uxrPanelR" class="uxr-panel uxr-panel--r"></div>
+        <div class="uxr-progress-line" id="uxrProgress"></div>
+        <div class="uxr-corner uxr-corner--tl" id="ccTL"></div>
+        <div class="uxr-corner uxr-corner--tr" id="ccTR"></div>
+        <div class="uxr-corner uxr-corner--bl" id="ccBL"></div>
+        <div class="uxr-corner uxr-corner--br" id="ccBR"></div>
+        <div class="uxr-counter" id="uxrCounter">000</div>
+        <div class="uxr-divider" id="uxrDivider"></div>
+        <div class="uxr-logo">
+            <div class="uxr-word" id="uxrWord">
+                <div class="uxr-clip"><span class="uxr-letter" id="lU">U</span></div>
+                <div class="uxr-gap" id="gX">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lX">X</span></div>
+                </div>
+                <div class="uxr-clip"><span class="uxr-letter uxr-letter--sep" id="lSep">//</span></div>
+                <div class="uxr-gap" id="gR">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lR">R</span></div>
+                </div>
+                <div class="uxr-clip"><span class="uxr-letter" id="lA">A</span></div>
+                <div class="uxr-gap" id="gW">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lW">W</span></div>
+                </div>
+            </div>
+            <div class="uxr-sub" id="uxrSub">Visual & Experience Design</div>
         </div>
     </div>
-    <!-- ===== Loader End ===== -->
 
-    <!-- ===== Main Start ===== -->
     <main class="bronx-main work-page">
 
-        <!-- ===== Popup Menu Start ===== -->
+        <!-- ===== Popup Menu ===== -->
         <div class="popup-menu-wrap">
             <div class="popup-menu-header">
                 <div class="local-temperature">
                     <a href="../"><span>Local/</span><span id="coordinates"></span></a>
                 </div>
-
                 <div class="popup-menu-close-btn">
                     <div class="icon">
                         <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" color="rgba(214, 214, 215, 0.7)">
+                            xmlns="http://www.w3.org/2000/svg" color="rgba(214,214,215,0.7)">
                             <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round"></path>
                         </svg>
                     </div>
                 </div>
-
                 <div class="right text-right">
                     <a href="../contact/" class="theme-btn">Schedule a call</a>
                 </div>
@@ -73,137 +83,135 @@
             <div class="popup-menu">
                 <nav>
                     <ul>
-                        <li>
-                            <a href="../">
-                                <span class="count">(1)</span>
-                                <span>Home</span>
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="./">
-                                <span class="count">(2)</span>
-                                <span>Work</span>
-                                <span>Work</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../contact/">
-                                <span class="count">(3)</span>
-                                <span>Contact</span>
-                                <span>Contact</span>
-                            </a>
-                        </li>
+                        <li><a href="../"><span class="count">(1)</span><span>Home</span><span>Home</span></a></li>
+                        <li class="active"><a href="./"><span
+                                    class="count">(2)</span><span>Work</span><span>Work</span></a></li>
+                        <li><a href="../contact/"><span
+                                    class="count">(3)</span><span>Contact</span><span>Contact</span></a></li>
                     </ul>
                 </nav>
             </div>
             <div class="popup-menu-footer">
                 <div class="copyright">
                     <ul class="social-links">
-                        <li>
-                            <a href="https://www.instagram.com/de_str0yed/" target="_blank">Instagram <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
-                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
-                                    </path>
-                                </svg></a>
-                        </li>
-                        <li>
-                            <a href="https://dribbble.com/Lucif3r72" target="_blank">Dribbble <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
-                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
-                                    </path>
-                                </svg></a>
-                        </li>
-                        <li>
-                            <a href="https://in.pinterest.com/Lucif3r72/" target="_blank">Pinterest <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
-                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
-                                    </path>
-                                </svg></a>
-                        </li>
+                        <li><a href="https://www.instagram.com/de_str0yed/" target="_blank">Instagram <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://dribbble.com/Lucif3r72" target="_blank">Dribbble <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://in.pinterest.com/Lucif3r72/" target="_blank">Pinterest <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
                     </ul>
                     <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                 </div>
             </div>
         </div>
-        <!-- ===== Popup Menu End ===== -->
 
-        <!-- ===== Smooth Scroll Start ===== -->
+        <!-- ===== Smooth Scroll ===== -->
         <div id="smooth-wrapper">
             <div id="smooth-content">
 
-                <!-- ===== Hero Section Start ===== -->
-                <section class="hero-sec hero-sec2">
-
-                    <!-- ===== Header Start ===== -->
-                    <header class="header-wrap scroll-animation" data-animation="slide_up">
-                        <div class="custom-row">
-
-                            <!-- ===== Local Time ===== -->
-                            <div class="header-local-time-box">
-                                <a href="../"><span>Local/</span></a>
-                                <span id="realtime">00:00</span>
+                <!-- ═══════════════════════════════════
+                     HEADER
+                ═══════════════════════════════════ -->
+                <header class="header-wrap">
+                    <div class="custom-row">
+                        <div class="header-local-time-box">
+                            <a href="../"><span>Local/</span></a>
+                            <span id="realtime">00:00</span>
+                        </div>
+                        <div class="header-middle">
+                            <div class="humberg-menu">
+                                <a href="mailto:nadiruxdesign@gmail.com">
+                                    <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
+                                        <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path
+                                            d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
+                                            stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
+                                    </svg>
+                                </a>
                             </div>
+                        </div>
+                        <div class="header-right">
+                            <a href="javascript:void(0);" class="theme-btn menu-trigger">MENU</a>
+                        </div>
+                    </div>
+                </header>
 
-                            <div class="header-middle">
-                                <div class="humberg-menu">
-                                    <a href="mailto:nadiruxdesign@gmail.com">
-                                        <?xml version="1.0" encoding="UTF-8"?>
-                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
-                                            <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path
-                                                d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
-                                                stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
-                                        </svg>
+                <!-- ═══════════════════════════════════
+                     WORK HERO
+                ═══════════════════════════════════ -->
+                <section class="work-hero-sec">
+                    <div class="work-hero-inner">
 
-                                    </a>
+                        <!-- Left — title block -->
+                        <div class="work-hero-left">
+                            <span class="work-eyebrow hero-anim-item">SELECTED WORKS</span>
+                            <h1 class="hero-heading">
+                                <span class="hero-line"><span class="hero-line-inner">MY</span></span>
+                                <span class="hero-line"><span class="hero-line-inner">WORK</span></span>
+                            </h1>
+                        </div>
 
+                        <!-- Right — descriptor + meta -->
+                        <div class="work-hero-right hero-anim-item">
+                            <p>End-to-end design work spanning product design, brand systems, and interactive
+                                experiences — each project grounded in research, refined through iteration.</p>
+                            <div class="work-hero-meta">
+                                <div class="work-meta-item">
+                                    <span class="work-meta-num">08</span>
+                                    <span class="work-meta-label">Projects</span>
+                                </div>
+                                <div class="work-meta-divider"></div>
+                                <div class="work-meta-item">
+                                    <span class="work-meta-num">3+</span>
+                                    <span class="work-meta-label">Industries</span>
+                                </div>
+                                <div class="work-meta-divider"></div>
+                                <div class="work-meta-item">
+                                    <span class="work-meta-num">2023–25</span>
+                                    <span class="work-meta-label">Timeline</span>
                                 </div>
                             </div>
-
-                            <!-- ===== Header Contact Button ===== -->
-                            <div class="header-right">
-                                <a href="javascript:void(0);" class="theme-btn">MENU</a>
-                            </div>
-
                         </div>
-                    </header>
-                    <!-- ===== Header End ===== -->
 
-
-                    <!-- ===== Hero Section Content Start ===== -->
-                    <div class="hero-sec-content">
-                        <span class="available-status">
-                            (2023 - 2025)
-                        </span>
-
-                        <h1>
-                            <span><span class="timeline-anim scroll-animation"
-                                    data-animation="slide_down">SELECTED</span></span>
-                            <span><span class="timeline-anim scroll-animation"
-                                    data-animation="slide_down">WORKS</span></span>
-                        </h1>
                     </div>
-                    <!-- ===== Hero Section Content End ===== -->
-
+                    <!-- Full-width rule -->
+                    <div class="work-hero-rule"></div>
                 </section>
-                <!-- ===== Hero Section End ===== -->
 
-                <!-- ===== Featured Work Start ===== -->
-                <div class="featured-work-sec mt-30">
-                    <div class="featured-work-lists">
+                <!-- ═══════════════════════════════════
+                     FILTER BAR
+                ═══════════════════════════════════ -->
+                <div class="work-filter-bar hero-anim-item">
+                    <span class="work-filter-label">FILTER BY</span>
+                    <div class="work-filters">
+                        <button class="work-filter active" data-filter="all">ALL <span>08</span></button>
+                        <button class="work-filter" data-filter="ui-ux">UI/UX <span>05</span></button>
+                        <button class="work-filter" data-filter="web">WEB <span>02</span></button>
+                        <button class="work-filter" data-filter="branding">BRANDING <span>01</span></button>
+                    </div>
+                </div>
+
+                <!-- ═══════════════════════════════════
+                     WORK GRID
+                ═══════════════════════════════════ -->
+                <section class="work-grid-sec">
+                    <div class="featured-work-lists work-grid">
 
                         <!-- We Care -->
-                        <div class="featured-card">
+                        <div class="featured-card js-card-reveal" data-category="ui-ux">
                             <a class="link-overlay" href="./we-care-aesm/"></a>
                             <div class="img-box">
                                 <img src="../assets/imgs/dark-mode/work-1.png" alt="We Care App">
@@ -213,14 +221,12 @@
                                     <p class="title">We Care (Redesign)</p>
                                     <p class="subtitle">Healthcare · Mobile App</p>
                                 </div>
-                                <div class="right">
-                                    <span class="date">2025</span>
-                                </div>
+                                <div class="right"><span class="date">2025</span></div>
                             </div>
                         </div>
 
                         <!-- AESM TAP -->
-                        <div class="featured-card">
+                        <div class="featured-card js-card-reveal" data-category="ui-ux">
                             <a class="link-overlay" href="./aesm-tap/"></a>
                             <div class="img-box">
                                 <img src="../assets/imgs/dark-mode/work-2.png" alt="AESM TAP">
@@ -230,14 +236,12 @@
                                     <p class="title">AESM TAP</p>
                                     <p class="subtitle">Enterprise · UI/UX Design</p>
                                 </div>
-                                <div class="right">
-                                    <span class="date">2025</span>
-                                </div>
+                                <div class="right"><span class="date">2025</span></div>
                             </div>
                         </div>
 
                         <!-- Renttro -->
-                        <div class="featured-card">
+                        <div class="featured-card js-card-reveal" data-category="web">
                             <a class="link-overlay" href="./renttro/"></a>
                             <div class="img-box">
                                 <img src="../assets/imgs/dark-mode/work-renttro.png" alt="Renttro">
@@ -247,14 +251,12 @@
                                     <p class="title">Renttro</p>
                                     <p class="subtitle">Marketplace · Web & Mobile</p>
                                 </div>
-                                <div class="right">
-                                    <span class="date">2025</span>
-                                </div>
+                                <div class="right"><span class="date">2025</span></div>
                             </div>
                         </div>
 
                         <!-- Finder -->
-                        <div class="featured-card">
+                        <div class="featured-card js-card-reveal" data-category="ui-ux">
                             <a class="link-overlay" href="./finder/"></a>
                             <div class="img-box">
                                 <img src="../assets/imgs/dark-mode/work-finder.png" alt="Finder">
@@ -264,14 +266,12 @@
                                     <p class="title">Finder</p>
                                     <p class="subtitle">Consumer App · Food & Offers</p>
                                 </div>
-                                <div class="right">
-                                    <span class="date">2025</span>
-                                </div>
+                                <div class="right"><span class="date">2025</span></div>
                             </div>
                         </div>
 
                         <!-- AI Scribe -->
-                        <div class="featured-card">
+                        <div class="featured-card js-card-reveal" data-category="ui-ux">
                             <a class="link-overlay" href="./ai-scribe/"></a>
                             <div class="img-box">
                                 <img src="../assets/imgs/dark-mode/work-aiscribe.png" alt="AI Scribe">
@@ -281,14 +281,12 @@
                                     <p class="title">AI Scribe</p>
                                     <p class="subtitle">Healthcare · AI Product</p>
                                 </div>
-                                <div class="right">
-                                    <span class="date">2025</span>
-                                </div>
+                                <div class="right"><span class="date">2025</span></div>
                             </div>
                         </div>
 
                         <!-- Uberheal -->
-                        <div class="featured-card">
+                        <div class="featured-card js-card-reveal" data-category="ui-ux">
                             <a class="link-overlay" href="./uberheal/"></a>
                             <div class="img-box">
                                 <img src="../assets/imgs/dark-mode/work-uberheal.png" alt="Uberheal">
@@ -298,14 +296,12 @@
                                     <p class="title">Uberheal</p>
                                     <p class="subtitle">Healthcare SaaS · Operations</p>
                                 </div>
-                                <div class="right">
-                                    <span class="date">2025</span>
-                                </div>
+                                <div class="right"><span class="date">2025</span></div>
                             </div>
                         </div>
 
                         <!-- Ignite -->
-                        <div class="featured-card">
+                        <div class="featured-card js-card-reveal" data-category="branding">
                             <a class="link-overlay" href="./ignite/"></a>
                             <div class="img-box">
                                 <img src="../assets/imgs/dark-mode/work-ignite.png" alt="Ignite">
@@ -315,14 +311,12 @@
                                     <p class="title">Ignite</p>
                                     <p class="subtitle">Enterprise · Idea Management</p>
                                 </div>
-                                <div class="right">
-                                    <span class="date">2024</span>
-                                </div>
+                                <div class="right"><span class="date">2024</span></div>
                             </div>
                         </div>
 
                         <!-- Vaviya Developers -->
-                        <div class="featured-card">
+                        <div class="featured-card js-card-reveal" data-category="web">
                             <a class="link-overlay" href="./vaviya-developers/"></a>
                             <div class="img-box">
                                 <img src="../assets/imgs/dark-mode/work-vaviya.png" alt="Vaviya Developers">
@@ -332,14 +326,12 @@
                                     <p class="title">Vaviya Developers</p>
                                     <p class="subtitle">Real Estate · Website</p>
                                 </div>
-                                <div class="right">
-                                    <span class="date">2024</span>
-                                </div>
+                                <div class="right"><span class="date">2024</span></div>
                             </div>
                         </div>
 
                         <!-- Welspun Michigan -->
-                        <div class="featured-card">
+                        <div class="featured-card js-card-reveal" data-category="web">
                             <a class="link-overlay" href="./welspun-michigan/"></a>
                             <div class="img-box">
                                 <img src="../assets/imgs/dark-mode/work-welspun.png" alt="Welspun Michigan">
@@ -349,44 +341,44 @@
                                     <p class="title">Welspun Michigan</p>
                                     <p class="subtitle">Enterprise · 3D Experience</p>
                                 </div>
-                                <div class="right">
-                                    <span class="date">2024</span>
-                                </div>
+                                <div class="right"><span class="date">2024</span></div>
                             </div>
                         </div>
 
                     </div>
+                </section>
 
+                <!-- ═══════════════════════════════════
+                     CTA STRIP — nudge to contact
+                ═══════════════════════════════════ -->
+                <div class="work-cta-strip js-fade-up">
+                    <div class="work-cta-left">
+                        <span class="work-cta-eyebrow">HAVE A PROJECT IN MIND?</span>
+                        <p>Let's build something together that actually makes a difference.</p>
+                    </div>
+                    <a href="../contact/" class="theme-btn">GET IN TOUCH →</a>
                 </div>
-                <!-- ===== Featured Work End ===== -->
 
-                <!-- ===== Footer Start ===== -->
+                <!-- ═══════════════════════════════════
+                     FOOTER — identical to homepage
+                ═══════════════════════════════════ -->
                 <footer class="footer-area">
                     <div class="footer-big-text">
-                        <span class="timeline-anim scroll-animation" data-animation="slide_down">UX//RAW</span>
+                        <span class="js-footer-text">UX//RAW</span>
                     </div>
-
                     <div class="copyright">
                         <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                         <div class="right">
-                            <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP</a>
+                            <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP ↑</a>
                         </div>
                     </div>
                 </footer>
-                <!-- ===== Footer End ===== -->
-
 
             </div>
         </div>
-        <!-- ===== Smooth Scroll End ===== -->
-
-
+        <!-- ===== /Smooth Scroll ===== -->
 
     </main>
-    <!-- ===== Main End ===== -->
-
-
-
 
     <!-- ===== Scripts ===== -->
     <script src="../assets/js/jquery.js"></script>
@@ -394,9 +386,10 @@
     <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/ScrollTrigger.min.js"></script>
     <script src="../assets/js/ScrollToPlugin.min.js"></script>
-
     <script src="../assets/js/ScrollSmoother.min.js"></script>
     <script src="../assets/js/SplitText.min.js"></script>
+    <script src="../assets/js/jarallax.js"></script>
+    <script src="../assets/js/jarallax-element.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/themescroll.js"></script>
 

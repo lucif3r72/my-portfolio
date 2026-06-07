@@ -2,70 +2,78 @@
 <html lang="en">
 
 <head>
-    <!-- ===== Meta ===== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===== Favicon ===== -->
     <link rel="icon" type="image/x-icon" href="../assets/imgs/favicon.png">
-
-    <!-- ===== Title ===== -->
-    <title>UX//Raw</title>
-
-    <!-- ===== LineAwesome ===== -->
+    <title>Contact — UX//Raw</title>
     <link rel="stylesheet" href="../assets/css/line-awesome.min.css">
-
-
-    <!-- ===== Fonts ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap"
         rel="stylesheet">
-
-    <!-- ===== Stylesheet ===== -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 
 <body>
-    <!-- ===== Magic Cursor Start ===== -->
+
+    <!-- ===== Magic Cursor ===== -->
     <div id="magic-cursor">
         <div id="ball"></div>
     </div>
-    <!-- ===== Magic Cursor End ===== -->
 
-    <!-- ===== Loader Start ===== -->
-    <div class="preloader-wrap">
-        <div class="loader">
-            <img src="../assets/imgs/loader-2.gif" alt="loader">
+    <!-- ═══════════════════════════════════════════
+         PRELOADER — identical to homepage
+    ═══════════════════════════════════════════ -->
+    <div id="uxrPreloader" class="uxr-preloader">
+        <div id="uxrPanelL" class="uxr-panel uxr-panel--l"></div>
+        <div id="uxrPanelR" class="uxr-panel uxr-panel--r"></div>
+        <div class="uxr-progress-line" id="uxrProgress"></div>
+        <div class="uxr-corner uxr-corner--tl" id="ccTL"></div>
+        <div class="uxr-corner uxr-corner--tr" id="ccTR"></div>
+        <div class="uxr-corner uxr-corner--bl" id="ccBL"></div>
+        <div class="uxr-corner uxr-corner--br" id="ccBR"></div>
+        <div class="uxr-counter" id="uxrCounter">000</div>
+        <div class="uxr-divider" id="uxrDivider"></div>
+        <div class="uxr-logo">
+            <div class="uxr-word" id="uxrWord">
+                <div class="uxr-clip"><span class="uxr-letter" id="lU">U</span></div>
+                <div class="uxr-gap" id="gX">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lX">X</span></div>
+                </div>
+                <div class="uxr-clip"><span class="uxr-letter uxr-letter--sep" id="lSep">//</span></div>
+                <div class="uxr-gap" id="gR">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lR">R</span></div>
+                </div>
+                <div class="uxr-clip"><span class="uxr-letter" id="lA">A</span></div>
+                <div class="uxr-gap" id="gW">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lW">W</span></div>
+                </div>
+            </div>
+            <div class="uxr-sub" id="uxrSub">Visual & Experience Design</div>
         </div>
     </div>
-    <!-- ===== Loader End ===== -->
 
-    <!-- ===== Main Start ===== -->
-    <main class="bronx-main photography-page">
+    <main class="bronx-main contact-page">
 
-        <!-- ===== Popup Menu Start ===== -->
+        <!-- ===== Popup Menu ===== -->
         <div class="popup-menu-wrap">
             <div class="popup-menu-header">
                 <div class="local-temperature">
                     <a href="../"><span>Local/</span><span id="coordinates"></span></a>
                 </div>
-
                 <div class="popup-menu-close-btn">
                     <div class="icon">
                         <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" color="rgba(214, 214, 215, 0.7)">
+                            xmlns="http://www.w3.org/2000/svg" color="rgba(214,214,215,0.7)">
                             <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round"></path>
                         </svg>
                     </div>
                 </div>
-
                 <div class="right text-right">
                     <a href="./" class="theme-btn">Schedule a call</a>
                 </div>
@@ -73,157 +81,225 @@
             <div class="popup-menu">
                 <nav>
                     <ul>
-                        <li>
-                            <a href="/">
-                                <span class="count">(1)</span>
-                                <span>Home</span>
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./work/">
-                                <span class="count">(2)</span>
-                                <span>Work</span>
-                                <span>Work</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="./contact/">
-                                <span class="count">(3)</span>
-                                <span>Contact</span>
-                                <span>Contact</span>
-                            </a>
-                        </li>
+                        <li><a href="/"><span class="count">(1)</span><span>Home</span><span>Home</span></a></li>
+                        <li><a href="../work/"><span class="count">(2)</span><span>Work</span><span>Work</span></a></li>
+                        <li class="active"><a href="../contact/"><span
+                                    class="count">(3)</span><span>Contact</span><span>Contact</span></a></li>
                     </ul>
                 </nav>
             </div>
             <div class="popup-menu-footer">
                 <div class="copyright">
                     <ul class="social-links">
-                        <li>
-                            <a href="https://www.instagram.com/de_str0yed/" target="_blank">Instagram <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
-                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
-                                    </path>
-                                </svg></a>
-                        </li>
-                        <li>
-                            <a href="https://dribbble.com/Lucif3r72" target="_blank">Dribbble <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
-                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
-                                    </path>
-                                </svg></a>
-                        </li>
-                        <li>
-                            <a href="https://in.pinterest.com/Lucif3r72/" target="_blank">Pinterest <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
-                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
-                                    </path>
-                                </svg></a>
-                        </li>
+                        <li><a href="https://www.instagram.com/de_str0yed/" target="_blank">Instagram <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://dribbble.com/Lucif3r72" target="_blank">Dribbble <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://in.pinterest.com/Lucif3r72/" target="_blank">Pinterest <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
                     </ul>
                     <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                 </div>
             </div>
         </div>
-        <!-- ===== Popup Menu End ===== -->
 
-        <!-- ===== Smooth Scroll Start ===== -->
+        <!-- ===== Smooth Scroll ===== -->
         <div id="smooth-wrapper">
             <div id="smooth-content">
 
-                <!-- ===== Hero Section Start ===== -->
-                <section class="hero-sec hero-sec3">
-
-                    <!-- ===== Header Start ===== -->
-                    <header class="header-wrap scroll-animation" data-animation="slide_up">
-                        <div class="custom-row">
-
-                            <!-- ===== Local Time ===== -->
-                            <div class="header-local-time-box">
-                                <a href="../"><span>Local/</span></a>
-                                <span id="realtime">00:00</span>
-                            </div>
-
-                            <div class="header-middle">
-                                <div class="humberg-menu">
-                                    <a href="mailto:nadiruxdesign@gmail.com">
-                                        <?xml version="1.0" encoding="UTF-8"?>
-                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
-                                            <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path
-                                                d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
-                                                stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-                            </div>
-
-                            <!-- ===== Header Contact Button ===== -->
-                            <div class="header-right">
-                                <a href="javascript:void(0);" class="theme-btn">MENU</a>
-                            </div>
-
+                <!-- ═══════════════════════════════════
+                     HEADER
+                ═══════════════════════════════════ -->
+                <header class="header-wrap">
+                    <div class="custom-row">
+                        <div class="header-local-time-box">
+                            <a href="../"><span>Local/</span></a>
+                            <span id="realtime">00:00</span>
                         </div>
-                    </header>
-                    <!-- ===== Header End ===== -->
+                        <div class="header-middle">
+                            <div class="humberg-menu">
+                                <a href="mailto:nadiruxdesign@gmail.com">
+                                    <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
+                                        <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path
+                                            d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
+                                            stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <a href="javascript:void(0);" class="theme-btn menu-trigger">MENU</a>
+                        </div>
+                    </div>
+                </header>
 
-                </section>
-                <!-- ===== Hero Section End ===== -->
-
-
-                <!-- ===== Contact Start ===== -->
-                <section class="contact-sec">
-                    <div class="contact-form-wrap">
-                        <div class="contact-header">
-                            <h2>SAY HELLO!</h2>
+                <!-- ═══════════════════════════════════
+                     CONTACT HERO — page title strip
+                ═══════════════════════════════════ -->
+                <section class="contact-hero">
+                    <div class="contact-hero-inner">
+                        <div class="contact-hero-left">
+                            <span class="contact-eyebrow js-fade-up">GET IN TOUCH</span>
+                            <h1 class="contact-hero-title">
+                                <span class="hero-line"><span class="hero-line-inner">SAY</span></span>
+                                <span class="hero-line"><span class="hero-line-inner">HELLO.</span></span>
+                            </h1>
+                        </div>
+                        <div class="contact-hero-right js-fade-up">
                             <p>My creative spirit comes alive in the digital realm. With nimble fingers flying across
-                                the keyboard.</p>
-                        </div>
-                        <div class="contact-form">
-                            <h4>FILL THIS FORM OUT</h4>
-                            <form id="ajax-form" action="https://api.web3forms.com/submit" method="POST">
-                                <input type="hidden" name="access_key" value="0ea6f02e-35e1-4bc8-801a-f700e7c5a95c">
-                                <input type="checkbox" name="botcheck" id="botcheck" style="display: none;">
-
-                                <div class="input-group">
-                                    <input type="text" name="name" id="name" placeholder="Name">
-                                </div>
-                                <div class="input-group">
-                                    <input type="email" name="email" id="email" placeholder="E-mail">
-                                </div>
-                                <div class="input-group">
-                                    <textarea name="message" id="message" placeholder="Message"></textarea>
-                                </div>
-                                <div class="input-group mb-0">
-                                    <button class="theme-btn2">Send Email</button>
-                                </div>
-                                <p id="result"></p>
-                            </form>
+                                the keyboard, I craft clear experiences out of nothing but ones and zeroes.</p>
+                            <div class="contact-hero-availability">
+                                <span class="avail-dot"></span>
+                                <span>Available for freelance — starting immediately</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-img">
-                        <img src="../assets/imgs/dark-mode/about-4.png" alt="about">
+                    <!-- Full-width border rule -->
+                    <div class="contact-hero-rule"></div>
+                </section>
+
+                <!-- ═══════════════════════════════════
+                     MAIN CONTACT BODY
+                     col-lg-7 form  |  col-lg-5 image
+                ═══════════════════════════════════ -->
+                <section class="contact-body-sec">
+                    <div class="container-fluid px-0">
+                        <div class="row g-0">
+
+                            <!-- LEFT — Form col -->
+                            <div class="col-lg-7">
+                                <div class="contact-form-panel">
+
+                                    <!-- Section label -->
+                                    <span class="contact-form-label">SEND A MESSAGE</span>
+
+                                    <div class="contact-form">
+                                        <form id="ajax-form" action="https://api.web3forms.com/submit" method="POST">
+                                            <input type="hidden" name="access_key"
+                                                value="0ea6f02e-35e1-4bc8-801a-f700e7c5a95c">
+                                            <input type="checkbox" name="botcheck" id="botcheck" style="display:none;">
+
+                                            <div class="cf-row">
+                                                <div class="cf-field">
+                                                    <label for="name">NAME</label>
+                                                    <input type="text" name="name" id="name" placeholder="Nadir Shaikh"
+                                                        autocomplete="off">
+                                                </div>
+                                                <div class="cf-field">
+                                                    <label for="email">EMAIL</label>
+                                                    <input type="email" name="email" id="email"
+                                                        placeholder="hello@domain.com" autocomplete="off">
+                                                </div>
+                                            </div>
+
+                                            <div class="cf-field cf-field--full">
+                                                <label for="subject">SUBJECT</label>
+                                                <input type="text" name="subject" id="subject"
+                                                    placeholder="Project enquiry / Collaboration / Just saying hi"
+                                                    autocomplete="off">
+                                            </div>
+
+                                            <div class="cf-field cf-field--full">
+                                                <label for="message">MESSAGE</label>
+                                                <textarea name="message" id="message"
+                                                    placeholder="Tell me about your project, timeline, and budget…"></textarea>
+                                            </div>
+
+                                            <div class="cf-submit">
+                                                <button type="submit" class="cf-submit-btn">
+                                                    <span class="cf-submit-text">SEND MESSAGE</span>
+                                                    <span class="cf-submit-arrow">→</span>
+                                                </button>
+                                                <p id="result" style="display:none;"></p>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!-- Info strip below form -->
+                                    <div class="contact-quick-info">
+                                        <div class="cqi-item">
+                                            <span class="cqi-label">RESPONSE TIME</span>
+                                            <span class="cqi-value">Within 24 hours</span>
+                                        </div>
+                                        <div class="cqi-divider"></div>
+                                        <div class="cqi-item">
+                                            <span class="cqi-label">TIMEZONE</span>
+                                            <span class="cqi-value">IST (GMT+5:30)</span>
+                                        </div>
+                                        <div class="cqi-divider"></div>
+                                        <div class="cqi-item">
+                                            <span class="cqi-label">PREFERRED</span>
+                                            <span class="cqi-value">Email / Video call</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- RIGHT — Image + info col -->
+                            <div class="col-lg-5">
+                                <div class="contact-aside">
+
+                                    <!-- Portrait image -->
+                                    <div class="contact-aside-img js-parallax-img">
+                                        <img src="../assets/imgs/dark-mode/about-4.png" alt="Nadir Shaikh">
+                                    </div>
+
+                                    <!-- Direct links panel -->
+                                    <div class="contact-direct">
+                                        <span class="contact-direct-label">DIRECT CHANNELS</span>
+                                        <ul class="contact-direct-list">
+                                            <li>
+                                                <span class="cdl-icon">✉</span>
+                                                <div class="cdl-content">
+                                                    <span class="cdl-label">EMAIL</span>
+                                                    <a href="mailto:nadiruxdesign@gmail.com"
+                                                        class="cdl-value">nadiruxdesign@gmail.com</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="cdl-icon">☎</span>
+                                                <div class="cdl-content">
+                                                    <span class="cdl-label">PHONE</span>
+                                                    <a href="tel:+918286607726" class="cdl-value">+91 82866 07726</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="cdl-icon">⌖</span>
+                                                <div class="cdl-content">
+                                                    <span class="cdl-label">LOCATION</span>
+                                                    <span class="cdl-value">Govandi, Mumbai — 400043, IN</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </section>
-                <!-- ===== Contact End ===== -->
 
-
-                <!-- ===== Contact Informations Start ===== -->
+                <!-- ═══════════════════════════════════
+                     CONTACT INFO STRIP (Social / Location / Phone / Email)
+                ═══════════════════════════════════ -->
                 <div class="contact-infos-wrap">
                     <div class="contact-infos">
-                        <div class="contact-info-box">
+                        <div class="contact-info-box js-fade-up">
                             <h4>SOCIAL</h4>
                             <ul>
                                 <li><a href="https://instagram.com/de_str0yed" target="_blank">Instagram</a></li>
@@ -231,21 +307,21 @@
                                 <li><a href="https://in.pinterest.com/Lucif3r72/" target="_blank">Pinterest</a></li>
                             </ul>
                         </div>
-                        <div class="contact-info-box">
+                        <div class="contact-info-box js-fade-up">
                             <h4>CURRENT LOCATION</h4>
                             <ul>
                                 <li>GOVANDI,</li>
-                                <li>MUMBAI(MH), 400043</li>
+                                <li>MUMBAI (MH), 400043</li>
                                 <li>INDIA</li>
                             </ul>
                         </div>
-                        <div class="contact-info-box">
+                        <div class="contact-info-box js-fade-up">
                             <h4>PHONE</h4>
                             <ul>
-                                <li><span>IND</span> <a href="tel:+11394588734">+91 82866 07726</a></li>
+                                <li><span>IND</span> <a href="tel:+918286607726">+91 82866 07726</a></li>
                             </ul>
                         </div>
-                        <div class="contact-info-box">
+                        <div class="contact-info-box js-fade-up">
                             <h4>EMAIL</h4>
                             <ul>
                                 <li><a href="mailto:nadiruxdesign@gmail.com">nadiruxdesign@gmail.com</a></li>
@@ -253,39 +329,27 @@
                         </div>
                     </div>
                 </div>
-                <!-- ===== Contact Informations End ===== -->
 
-
-
-
-
-                <!-- ===== Footer Start ===== -->
+                <!-- ═══════════════════════════════════
+                     FOOTER — identical to homepage
+                ═══════════════════════════════════ -->
                 <footer class="footer-area">
                     <div class="footer-big-text">
-                        <span class="timeline-anim scroll-animation" data-animation="slide_down">UX//RAW</span>
+                        <span class="js-footer-text">UX//RAW</span>
                     </div>
-
                     <div class="copyright">
                         <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                         <div class="right">
-                            <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP</a>
+                            <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP ↑</a>
                         </div>
                     </div>
                 </footer>
-                <!-- ===== Footer End ===== -->
-
 
             </div>
         </div>
-        <!-- ===== Smooth Scroll End ===== -->
-
-
+        <!-- ===== /Smooth Scroll ===== -->
 
     </main>
-    <!-- ===== Main End ===== -->
-
-
-
 
     <!-- ===== Scripts ===== -->
     <script src="../assets/js/jquery.js"></script>
@@ -293,14 +357,14 @@
     <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/ScrollTrigger.min.js"></script>
     <script src="../assets/js/ScrollToPlugin.min.js"></script>
-
     <script src="../assets/js/ScrollSmoother.min.js"></script>
     <script src="../assets/js/SplitText.min.js"></script>
     <script src="../assets/js/jarallax.js"></script>
     <script src="../assets/js/jarallax-element.min.js"></script>
+    <script src="../assets/js/ajaxform.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/themescroll.js"></script>
-    <script src="../assets/js/ajaxform.js"></script>
+
 </body>
 
 </html>
