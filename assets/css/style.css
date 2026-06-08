@@ -74,17 +74,14 @@ body {
     color: var(--paragraph);
     background-color: var(--bg-default);
     overflow-x: hidden;
-    height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 main.bronx-main {
-    inset: 0px;
     width: 100%;
-    height: 100vh;
-    position: fixed;
-    overflow: hidden;
+    position: relative;
+    overflow: visible;
 }
 
 .sticky-statement4,
@@ -604,10 +601,16 @@ html.is-loading body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 0;
     letter-spacing: 2px;
+}
+
+/* Homepage hero centres the heading — scope this to .hero-sec only */
+.hero-sec .hero-heading {
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-line {

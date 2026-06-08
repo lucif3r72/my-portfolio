@@ -1,25 +1,28 @@
 /**
  * ================================================================
- *  MAIN.JS — UX//RAW Portfolio  v5
+ *  MAIN.JS — UX//RAW Portfolio  v6
  *
- *  FIXES in this version:
- *   • .scaleDown warning — themescroll.js removed from HTML;
- *     any needed scroll effects absorbed here
- *   • Empty GSAP target warnings — all selectors guarded with
- *     element existence checks before animating
- *   • Sticky heading broken inside ScrollSmoother — replaced
- *     CSS position:sticky with GSAP ScrollTrigger.pin() which
- *     works correctly inside transform-based scroll containers
- *   • Bootstrap col-lg-5/col-lg-7 structure used for layout;
- *     custom sticky-sec-wrap/sticky-col/scroll-col removed
+ *  CHANGES IN THIS VERSION:
+ *   • Lenis smooth scroll replaces ScrollSmoother
+ *     - Lenis loaded via CDN in HTML <head>
+ *     - ScrollTrigger ticker synced to Lenis RAF loop
+ *     - ScrollToPlugin still used for back-to-top
+ *   • Sticky pin disabled on mobile (< 809px) — experience
+ *     and favourite-stack headings no longer overlap content
+ *   • Contact/Work footer reveal fixed — start threshold
+ *     changed to '80%' so it fires even on short pages
+ *   • All GSAP targets guarded against null/empty sets
+ *   • timeScale tweened on GSAP tween object (not DOM)
  * ================================================================
  */
 
 $(function () {
   /* ═══════════════════════════════════════════════════
        1. GSAP Plugin Registration
+          NOTE: ScrollSmoother removed — Lenis handles smooth
+          scroll now. ScrollSmoother is NOT registered.
     ═══════════════════════════════════════════════════ */
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin, SplitText);
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText);
 
   /* ═══════════════════════════════════════════════════
        2. Body scroll-lock during preloader
@@ -35,7 +38,65 @@ $(function () {
   lockScroll();
 
   /* ═══════════════════════════════════════════════════
-       3. UX//RAW Preloader — CMH split-panel wipe
+       3. Lenis Smooth Scroll
+          Initialised here but NOT started until preloader
+          finishes — lenisStart() called from buildTimeline.
+          ScrollTrigger is synced via the RAF loop so all
+          scroll-based animations work correctly with Lenis.
+    ═══════════════════════════════════════════════════ */
+  let lenis = null;
+
+  function initLenis() {
+    lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: "vertical",
+      smooth: true,
+      smoothTouch: false,
+      touchMultiplier: 2,
+    });
+
+    // Sync Lenis RAF with GSAP ticker for perfect ScrollTrigger integration
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    // Tell GSAP ticker NOT to use requestAnimationFrame itself
+    gsap.ticker.lagSmoothing(0);
+
+    // Keep ScrollTrigger in sync with Lenis scroll position
+    lenis.on("scroll", ScrollTrigger.update);
+  }
+
+  function lenisStart() {
+    if (lenis) lenis.start();
+  }
+
+  function lenisPause() {
+    if (lenis) lenis.stop();
+  }
+
+  // Initialise Lenis (paused — starts after preloader)
+  initLenis();
+  lenisPause();
+
+  // Back-to-top — use Lenis scrollTo
+  const btt = document.querySelector("#back-to-top");
+  if (btt) {
+    btt.addEventListener("click", () => {
+      if (lenis) {
+        lenis.scrollTo(0, {
+          duration: 1.4,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+      } else {
+        gsap.to(window, { scrollTo: 0, duration: 1.2, ease: "power3.inOut" });
+      }
+    });
+  }
+
+  /* ═══════════════════════════════════════════════════
+       4. UX//RAW Preloader — CMH split-panel wipe
     ═══════════════════════════════════════════════════ */
   let marqueeTween = null;
 
@@ -43,6 +104,7 @@ $(function () {
     const preloader = document.getElementById("uxrPreloader");
     if (!preloader) {
       unlockScroll();
+      lenisStart();
       initPageAnims();
       return;
     }
@@ -68,6 +130,7 @@ $(function () {
 
     if (!panelL || !panelR || !lU) {
       unlockScroll();
+      lenisStart();
       initPageAnims();
       return;
     }
@@ -168,6 +231,7 @@ $(function () {
             onComplete: () => {
               gsap.set(preloader, { display: "none" });
               unlockScroll();
+              lenisStart(); // ← start smooth scroll when panels exit
             },
           },
           2.4,
@@ -198,31 +262,9 @@ $(function () {
   })();
 
   /* ═══════════════════════════════════════════════════
-       4. ScrollSmoother — single instance for the whole page
-          Exposed as window.uxrSmoother so themescroll.js
-          can reference it without creating a second instance.
-    ═══════════════════════════════════════════════════ */
-  const smoother = ScrollSmoother.create({
-    wrapper: "#smooth-wrapper",
-    content: "#smooth-content",
-    smooth: 1.4,
-    effects: true,
-    normalizeScroll: true,
-  });
-  window.uxrSmoother = smoother; // expose globally
-
-  const btt = document.querySelector("#back-to-top");
-  if (btt) {
-    btt.addEventListener("click", () => {
-      gsap.to(smoother, { scrollTop: 0, duration: 1.2, ease: "power3.inOut" });
-    });
-  }
-
-  /* ═══════════════════════════════════════════════════
        5. Hero entrance
     ═══════════════════════════════════════════════════ */
   function initHeroAnims() {
-    // Guard — hero-line-inner may not exist on non-home pages
     const heroLines = document.querySelectorAll(".hero-line-inner");
     if (heroLines.length) {
       gsap.to(heroLines, {
@@ -233,8 +275,6 @@ $(function () {
         delay: 0.05,
       });
     }
-
-    // Guard — hero-anim-item / hero-footer-wrap
     const heroItems = document.querySelectorAll(
       ".hero-anim-item, .hero-sec .hero-footer-wrap",
     );
@@ -248,8 +288,6 @@ $(function () {
         delay: 0.5,
       });
     }
-
-    // Guard — header
     const header = document.querySelector(".header-wrap");
     if (header) {
       gsap.from(header, {
@@ -262,15 +300,12 @@ $(function () {
   }
 
   /* ═══════════════════════════════════════════════════
-       6. Page animations (fired after preloader)
+       6. Page animations — fired after preloader
     ═══════════════════════════════════════════════════ */
   function initPageAnims() {
     initHeroAnims();
 
-    /* ── Marquee ──
-           Store tween ref → use gsap.to(tween, {timeScale}) NOT
-           gsap.to(domEl, {timeScale}) which causes GSAP warnings
-        ── */
+    /* ── Marquee — store tween ref, tween timeScale on object ── */
     const marqueeTrack = document.querySelector(".marquee-track");
     if (marqueeTrack) {
       const list = marqueeTrack.querySelector(".marquee-list");
@@ -285,14 +320,12 @@ $(function () {
             x: gsap.utils.unitize((x) => parseFloat(x) % listWidth),
           },
         });
-
         ScrollTrigger.create({
           trigger: ".marquee-divider",
           start: "top bottom",
           end: "bottom top",
           onUpdate: (self) => {
             const ts = Math.max(0.5, 1 + self.getVelocity() / 3000);
-            // Tween the GSAP tween object — not the DOM element
             gsap.to(marqueeTween, {
               timeScale: ts,
               duration: 0.4,
@@ -327,7 +360,7 @@ $(function () {
       });
     });
 
-    /* ── Featured / Expertise card reveals — stagger per row ── */
+    /* ── Card reveals — stagger per 3-col row ── */
     const allCards = gsap.utils.toArray(".js-card-reveal");
     for (let i = 0; i < allCards.length; i += 3) {
       const row = allCards.slice(i, i + 3);
@@ -399,7 +432,7 @@ $(function () {
       });
     });
 
-    /* ── .js-split-reveal — guarded SplitText clip ── */
+    /* ── .js-split-reveal — SplitText clip ── */
     gsap.utils.toArray(".js-split-reveal").forEach((el) => {
       if (!el) return;
       const split = new SplitText(el, {
@@ -426,7 +459,7 @@ $(function () {
       });
     });
 
-    /* ── Section header h3 clip reveals ── */
+    /* ── Section h3 clip reveals ── */
     gsap.utils.toArray(".timeline-anim .scroll-animation").forEach((el) => {
       if (!el) return;
       gsap.from(el, {
@@ -476,28 +509,16 @@ $(function () {
     /* ═══════════════════════════════════════════════════
            STICKY HEADINGS via ScrollTrigger.pin()
            ─────────────────────────────────────────────────
-           WHY NOT CSS position:sticky?
-           ScrollSmoother moves #smooth-content using
-           transform:translateY() — the browser's layout engine
-           never sees a real scrollTop change on any ancestor,
-           so position:sticky has nothing to hook onto and
-           the heading scrolls away normally.
-
-           ScrollTrigger.pin() works because it listens to
-           ScrollSmoother's virtual scroll position and uses
-           GSAP transforms to hold the element in place —
-           exactly the same mechanism ScrollSmoother itself uses.
-
-           HOW IT WORKS:
-           • pin: true — GSAP holds #expPinCol in place
-           • pinSpacing: false — the section keeps its natural
-             height (no extra spacer div added)
-           • start: "top 120px" — pin starts when col-lg-5 top
-             reaches 120px from viewport top (below header)
-           • end: "bottom bottom" — pin releases when the
-             section bottom reaches the viewport bottom
+           FIX: Skip pinning on mobile (< 809px).
+           On mobile the Bootstrap cols stack vertically —
+           the heading sits above the content naturally.
+           Pinning on mobile causes the heading to float
+           over the stacked content, which is the bug reported.
         ═══════════════════════════════════════════════════ */
     function pinSectionHeading(pinColId, sectionSel) {
+      // ← MOBILE GUARD: no pin below 809px
+      if (window.innerWidth < 809) return;
+
       const pinCol = document.getElementById(pinColId);
       const section = document.querySelector(sectionSel);
       if (!pinCol || !section) return;
@@ -515,10 +536,10 @@ $(function () {
     pinSectionHeading("expPinCol", ".experience2-sec");
     pinSectionHeading("stackPinCol", ".favourite-stack-sec");
 
-    /* ── Sticky progress lines ──
-           Injected inside the heading, animates via scrub
-        ── */
+    /* ── Progress lines — also skip on mobile ── */
     function addProgressLine(sectionSel, headingId) {
+      if (window.innerWidth < 809) return; // ← MOBILE GUARD
+
       const section = document.querySelector(sectionSel);
       const heading = document.getElementById(headingId);
       if (!section || !heading) return;
@@ -552,16 +573,22 @@ $(function () {
     addProgressLine(".experience2-sec", "expHeading");
     addProgressLine(".favourite-stack-sec", "stackHeading");
 
-    /* ── Footer clip-reveal ── */
+    /* ── Footer clip-reveal
+           FIX: Changed start to 'top 90%' so it fires even
+           on shorter pages (contact, work) where the footer
+           enters the viewport quickly.
+        ── */
     const footerText = document.querySelector(".js-footer-text");
     if (footerText) {
+      // Reset first in case CSS transform is still at 110%
+      gsap.set(footerText, { y: "110%" });
       gsap.to(footerText, {
         y: "0%",
         duration: 1.2,
         ease: "power4.out",
         scrollTrigger: {
           trigger: footerText,
-          start: "top 92%",
+          start: "top 98%", // ← generous threshold for short pages
           toggleActions: "play none none reverse",
         },
       });
@@ -572,11 +599,7 @@ $(function () {
       jarallax(document.querySelectorAll(".jarallax"), { speed: 0.6 });
     }
 
-    /* ── Work page filter ──
-           Fires only on .work-page body class.
-           Toggles .is-hidden on cards by data-category.
-           Relies on CSS display:none for .is-hidden.
-        ── */
+    /* ── Work page filter ── */
     if (document.body.classList.contains("work-page")) {
       const filters = document.querySelectorAll(".work-filter");
       const workCards = document.querySelectorAll(
@@ -585,16 +608,12 @@ $(function () {
 
       filters.forEach((btn) => {
         btn.addEventListener("click", () => {
-          // Update active state
           filters.forEach((b) => b.classList.remove("active"));
           btn.classList.add("active");
-
           const target = btn.dataset.filter;
-
           workCards.forEach((card) => {
             if (target === "all" || card.dataset.category === target) {
               card.classList.remove("is-hidden");
-              // Re-animate revealed cards
               gsap.fromTo(
                 card,
                 { opacity: 0, y: 30 },
@@ -621,13 +640,19 @@ $(function () {
     function (e) {
       e.preventDefault();
       $(".popup-menu-wrap").addClass("active");
+      // Pause Lenis while menu is open so page doesn't scroll behind it
+      lenisPause();
     },
   );
   $(document).on("click", ".popup-menu-close-btn .icon", function () {
     $(".popup-menu-wrap").removeClass("active");
+    lenisStart();
   });
   $(document).on("keyup", function (e) {
-    if (e.key === "Escape") $(".popup-menu-wrap").removeClass("active");
+    if (e.key === "Escape") {
+      $(".popup-menu-wrap").removeClass("active");
+      lenisStart();
+    }
   });
 
   /* ═══════════════════════════════════════════════════
@@ -648,7 +673,7 @@ $(function () {
   }
 
   /* ═══════════════════════════════════════════════════
-       9. Coordinates (Weather API)
+       9. Coordinates
     ═══════════════════════════════════════════════════ */
   const coordEl = document.getElementById("coordinates");
   if (coordEl) {
@@ -722,8 +747,7 @@ $(function () {
 }); // end jQuery ready
 
 /* ─────────────────────────────────────────────────────
-   Legacy scroll_animations — data-animation fallback
-   (guards added: skips unknown animKey silently)
+   Legacy scroll_animations
 ───────────────────────────────────────────────────── */
 function scroll_animations() {
   const transWidth = window.innerWidth > 809 ? "10%" : "30%";
@@ -740,11 +764,10 @@ function scroll_animations() {
     rotate_up: { y: 180, rotation: 10, opacity: 0 },
     bronx_zoom_out: { scale: 2 },
   };
-
   gsap.utils.toArray(".scroll-animation").forEach((box) => {
     if (!box) return;
     const animKey = box.dataset.animation || "fade_from_bottom";
-    if (!animations[animKey]) return; // silently skip unknown keys (e.g. scaleDown)
+    if (!animations[animKey]) return;
     gsap.from(box, {
       ...animations[animKey],
       duration: parseFloat(box.dataset.animationDuration) || 0.9,
