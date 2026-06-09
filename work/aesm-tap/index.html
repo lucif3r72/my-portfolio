@@ -2,43 +2,31 @@
 <html lang="en">
 
 <head>
-    <!-- ===== Meta ===== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===== Favicon ===== -->
     <link rel="icon" type="image/x-icon" href="../../assets/imgs/favicon.png">
-
-    <!-- ===== Title ===== -->
     <title>AESM TAP — UX//Raw</title>
-
-    <!-- ===== LineAwesome ===== -->
     <link rel="stylesheet" href="../../assets/css/line-awesome.min.css">
-
-    <!-- ===== Fonts — full stack matching home page ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap"
         rel="stylesheet">
 
-    <!-- ===== Stylesheet ===== -->
-    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/dark-mode.css">
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <!-- Lenis Smooth Scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
 
-    <!-- ===== Image Comparison Slider ===== -->
+    <!-- Image Comparison Slider -->
     <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
 
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
     <style>
-        /* ── Seamless marquee fix ──────────────────────────────
-           The global CSS animates each li independently with a
-           hardcoded pixel value — that creates the visible jump.
-           We cancel that, animate the ul instead, and use -50%
-           so the loop point is always exact regardless of width.
-        ────────────────────────────────────────────────────── */
+        /* Seamless marquee — animate ul at -50%, cancel per-li animation */
         .work-detail-text-anim-wrap ul {
             animation: marqueeTrack 22s infinite linear;
             width: max-content;
@@ -62,58 +50,46 @@
 
 <body>
 
-    <!-- ===== Magic Cursor Start ===== -->
+    <!-- ===== Magic Cursor ===== -->
     <div id="magic-cursor">
         <div id="ball"></div>
     </div>
-    <!-- ===== Magic Cursor End ===== -->
 
-
-    <!-- ═══════════════════════════════════════════════════════
-         UX//RAW Preloader — split-panel wipe (matches all pages)
-    ════════════════════════════════════════════════════════ -->
+    <!-- ═══════════════════════════════════════════
+         PRELOADER — canonical UX//RAW structure
+    ═══════════════════════════════════════════ -->
     <div id="uxrPreloader" class="uxr-preloader">
-
-        <div id="uxrPanelL" class="uxr-panel uxr-panel--l">
-            <div id="uxrProgress" class="uxr-progress-line"></div>
-        </div>
+        <div id="uxrPanelL" class="uxr-panel uxr-panel--l"></div>
         <div id="uxrPanelR" class="uxr-panel uxr-panel--r"></div>
-
+        <div class="uxr-progress-line" id="uxrProgress"></div>
+        <div class="uxr-corner uxr-corner--tl" id="ccTL"></div>
+        <div class="uxr-corner uxr-corner--tr" id="ccTR"></div>
+        <div class="uxr-corner uxr-corner--bl" id="ccBL"></div>
+        <div class="uxr-corner uxr-corner--br" id="ccBR"></div>
+        <div class="uxr-counter" id="uxrCounter">000</div>
+        <div class="uxr-divider" id="uxrDivider"></div>
         <div class="uxr-logo">
-            <div id="ccTL" class="uxr-corner uxr-corner--tl"></div>
-            <div id="ccTR" class="uxr-corner uxr-corner--tr"></div>
-            <div id="ccBL" class="uxr-corner uxr-corner--bl"></div>
-            <div id="ccBR" class="uxr-corner uxr-corner--br"></div>
-
-            <div id="uxrCounter" class="uxr-counter">000</div>
-
-            <div class="uxr-word">
-                <div class="uxr-clip"><span id="lU" class="uxr-letter">U</span></div>
-                <div id="gX" class="uxr-gap">
-                    <div class="uxr-clip"><span id="lX" class="uxr-letter">X</span></div>
+            <div class="uxr-word" id="uxrWord">
+                <div class="uxr-clip"><span class="uxr-letter" id="lU">U</span></div>
+                <div class="uxr-gap" id="gX">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lX">X</span></div>
                 </div>
-                <div class="uxr-clip"><span id="lSep" class="uxr-letter uxr-letter--sep">//</span></div>
-                <div id="gR" class="uxr-gap">
-                    <div class="uxr-clip"><span id="lR" class="uxr-letter">R</span></div>
+                <div class="uxr-clip"><span class="uxr-letter uxr-letter--sep" id="lSep">//</span></div>
+                <div class="uxr-gap" id="gR">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lR">R</span></div>
                 </div>
-                <div class="uxr-clip"><span id="lA" class="uxr-letter">A</span></div>
-                <div id="gW" class="uxr-gap">
-                    <div class="uxr-clip"><span id="lW" class="uxr-letter">W</span></div>
+                <div class="uxr-clip"><span class="uxr-letter" id="lA">A</span></div>
+                <div class="uxr-gap" id="gW">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lW">W</span></div>
                 </div>
             </div>
-
-            <div id="uxrSub" class="uxr-sub">UX Designer &amp; Creative Developer</div>
-            <div id="uxrDivider" class="uxr-divider"></div>
+            <div class="uxr-sub" id="uxrSub">Visual & Experience Design</div>
         </div>
-
     </div>
-    <!-- ===== Preloader End ===== -->
 
-
-    <!-- ===== Main Start ===== -->
     <main class="bronx-main work-detail-page">
 
-        <!-- ===== Popup Menu Start ===== -->
+        <!-- ===== Popup Menu ===== -->
         <div class="popup-menu-wrap">
             <div class="popup-menu-header">
                 <div class="local-temperature">
@@ -122,7 +98,7 @@
                 <div class="popup-menu-close-btn">
                     <div class="icon">
                         <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" color="rgba(214, 214, 215, 0.7)">
+                            xmlns="http://www.w3.org/2000/svg" color="rgba(214,214,215,0.7)">
                             <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round"></path>
                         </svg>
@@ -135,297 +111,354 @@
             <div class="popup-menu">
                 <nav>
                     <ul>
-                        <li>
-                            <a href="../../">
-                                <span class="count">(1)</span>
-                                <span>Home</span>
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="../">
-                                <span class="count">(2)</span>
-                                <span>Work</span>
-                                <span>Work</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../../contact/">
-                                <span class="count">(3)</span>
-                                <span>Contact</span>
-                                <span>Contact</span>
-                            </a>
-                        </li>
+                        <li><a href="../../"><span class="count">(1)</span><span>Home</span><span>Home</span></a></li>
+                        <li class="active"><a href="../"><span
+                                    class="count">(2)</span><span>Work</span><span>Work</span></a></li>
+                        <li><a href="../../contact/"><span
+                                    class="count">(3)</span><span>Contact</span><span>Contact</span></a></li>
                     </ul>
                 </nav>
             </div>
             <div class="popup-menu-footer">
                 <div class="copyright">
                     <ul class="social-links">
-                        <li>
-                            <a href="https://www.instagram.com/de_str0yed/" target="_blank">Instagram <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
+                        <li><a href="https://www.instagram.com/de_str0yed/" target="_blank">Instagram <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
-                                </svg></a>
-                        </li>
-                        <li>
-                            <a href="https://dribbble.com/Lucif3r72" target="_blank">Dribbble <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
+                                </svg></a></li>
+                        <li><a href="https://dribbble.com/Lucif3r72" target="_blank">Dribbble <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
-                                </svg></a>
-                        </li>
-                        <li>
-                            <a href="https://in.pinterest.com/Lucif3r72/" target="_blank">Pinterest <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
+                                </svg></a></li>
+                        <li><a href="https://in.pinterest.com/Lucif3r72/" target="_blank">Pinterest <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
-                                </svg></a>
-                        </li>
+                                </svg></a></li>
                     </ul>
                     <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                 </div>
             </div>
         </div>
-        <!-- ===== Popup Menu End ===== -->
 
-
-        <!-- ===== Smooth Scroll Start ===== -->
-        <div id="smooth-wrapper">
-            <div id="smooth-content">
-
-                <!-- ===== Header Start ===== -->
-                <section class="hero-sec hero-sec3">
-                    <header class="header-wrap">
-                        <div class="custom-row">
-
-                            <div class="header-local-time-box">
-                                <a href="../../"><span>Local/</span></a>
-                                <span id="realtime">00:00</span>
-                            </div>
-
-                            <div class="header-middle">
-                                <div class="humberg-menu">
-                                    <a href="mailto:nadiruxdesign@gmail.com">
-                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
-                                            <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path
-                                                d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
-                                                stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="header-right">
-                                <a href="javascript:void(0);" class="theme-btn">MENU</a>
-                            </div>
-
-                        </div>
-                    </header>
-                </section>
-                <!-- ===== Header End ===== -->
-
-
-                <!-- ===== Project Info Start ===== -->
-                <section class="work-detail-header-infos">
-                    <div class="work-detail-header-left">
-                        <h1 class="js-split-reveal">AESM TAP<br>Talent Acquisition Portal</h1>
-                        <p class="js-fade-up">A dual-platform recruitment system for Anglo-Eastern Shipping Management
-                            — a web app for HR teams to manage pipelines and approvals, and a mobile app for candidates
-                            to complete applications and participate in AI-powered interviews.</p>
-                    </div>
-                    <div class="work-detail-header-right js-fade-up">
-                        <ul>
-                            <li><span>CLIENT</span> Anglo-Eastern</li>
-                            <li><span>ROLE</span> UI/UX Designer</li>
-                            <li><span>PLATFORM</span> Web + Mobile</li>
-                            <li><span>STATUS</span> Internal Platform</li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- ===== Project Info End ===== -->
-
-
-                <!-- ===== Hero Image Start ===== -->
-                <div class="work-detail-full-img-wrap">
-                    <div class="work-detail-full-img">
-                        <div class="work-detail-full-img-inner">
-                            <img src="../../assets/imgs/dark-mode/work-2.png" alt="AESM TAP Platform Overview">
-                        </div>
+        <!-- ═══════════════════════════════════
+             HEADER
+        ═══════════════════════════════════ -->
+        <header class="header-wrap">
+            <div class="custom-row">
+                <div class="header-local-time-box">
+                    <a href="../../"><span>Local/</span></a>
+                    <span id="realtime">00:00</span>
+                </div>
+                <div class="header-middle">
+                    <div class="humberg-menu">
+                        <a href="mailto:nadiruxdesign@gmail.com">
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
+                                <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
+                                    stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <!-- ===== Hero Image End ===== -->
-
-
-                <!-- ===== Overview + Approach Start ===== -->
-                <div class="work-detail2-content-wrap">
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Overview</h4>
-                        </div>
-                        <div class="right">
-                            <p class="js-fade-up">Anglo-Eastern's recruitment ran on 10+ paper forms and
-                                disconnected systems. HR teams had no efficient way to search vast candidate databases,
-                                and approval hierarchies lived in email threads. The goal was to digitize the entire
-                                workflow — intelligent search, RBAC-based approvals, and seamless form completion —
-                                without breaking from the established design system.</p>
-                        </div>
-                    </div>
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Approach</h4>
-                        </div>
-                        <div class="right">
-                            <p class="js-fade-up">The web platform centres on an advanced search architecture with
-                                maritime-specific filters for precise candidate discovery. Interfaces adapt dynamically
-                                based on RBAC permissions, with smart approval routing replacing email chains. Paper
-                                forms became progressive, contextual digital experiences. The mobile app integrates an
-                                AI conversational interview agent via phone — both platforms sharing the same visual
-                                language throughout.</p>
-                        </div>
-                    </div>
-
+                <div class="header-right">
+                    <a href="javascript:void(0);" class="theme-btn menu-trigger">MENU</a>
                 </div>
-                <!-- ===== Overview + Approach End ===== -->
+            </div>
+        </header>
 
+        <!-- ═══════════════════════════════════
+             PROJECT HERO — title + meta
+        ═══════════════════════════════════ -->
+        <section class="wd-hero">
+            <div class="wd-hero-inner">
 
-                <!-- ===== Comparison Slider 1 Start ===== -->
-                <div class="work-detail-full-img-wrap">
-                    <div class="work-detail-full-img comparison-slider">
-                        <img-comparison-slider>
-                            <img slot="first" src="../../assets/imgs/dark-mode/work-2-1-before.png" alt="Before">
-                            <img slot="second" src="../../assets/imgs/dark-mode/work-2-1-after.png" alt="After">
-                        </img-comparison-slider>
-                    </div>
+                <!-- Breadcrumb -->
+                <div class="wd-breadcrumb hero-anim-item">
+                    <a href="../">WORK</a>
+                    <span>/</span>
+                    <span>AESM TAP</span>
                 </div>
-                <!-- ===== Comparison Slider 1 End ===== -->
 
+                <!-- Title block -->
+                <div class="wd-hero-title-wrap">
+                    <h1 class="wd-hero-title">
+                        <span class="hero-line"><span class="hero-line-inner">AESM TAP</span></span>
+                    </h1>
+                    <p class="wd-hero-subtitle hero-anim-item">Talent Acquisition Portal</p>
+                </div>
 
-                <!-- ===== Results Start ===== -->
-                <div class="work-detail2-content-wrap work-detail2-content-wrap2">
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Results</h4>
-                        </div>
-                        <div class="right">
-                            <p class="js-fade-up">The platform eliminated paper-based delays across the full hiring
-                                cycle. Advanced maritime search filters now let HR teams navigate large candidate pools
-                                in seconds. RBAC ensures secure, role-appropriate access while automating approval
-                                routing. Currently in Phase 3 — expanding social integration and AI automation —
-                                targeting measurable gains in recruitment throughput and candidate experience.</p>
-                        </div>
+                <!-- Meta strip -->
+                <div class="wd-meta-strip hero-anim-item">
+                    <div class="wd-meta-item">
+                        <span class="wd-meta-label">CLIENT</span>
+                        <span class="wd-meta-value">Anglo-Eastern</span>
+                    </div>
+                    <div class="wd-meta-divider"></div>
+                    <div class="wd-meta-item">
+                        <span class="wd-meta-label">ROLE</span>
+                        <span class="wd-meta-value">UI/UX Designer</span>
+                    </div>
+                    <div class="wd-meta-divider"></div>
+                    <div class="wd-meta-item">
+                        <span class="wd-meta-label">PLATFORM</span>
+                        <span class="wd-meta-value">Web + Mobile</span>
+                    </div>
+                    <div class="wd-meta-divider"></div>
+                    <div class="wd-meta-item">
+                        <span class="wd-meta-label">STATUS</span>
+                        <span class="wd-meta-value">Internal Platform</span>
+                    </div>
+                    <div class="wd-meta-divider"></div>
+                    <div class="wd-meta-item">
+                        <span class="wd-meta-label">YEAR</span>
+                        <span class="wd-meta-value">2025</span>
                     </div>
                 </div>
-                <!-- ===== Results End ===== -->
-
-
-                <!-- ===== Comparison Slider 2 Start ===== -->
-                <div class="work-detail-full-img-wrap">
-                    <div class="work-detail-full-img comparison-slider">
-                        <img-comparison-slider>
-                            <img slot="first" src="../../assets/imgs/dark-mode/work-2-2-before.png" alt="Before">
-                            <img slot="second" src="../../assets/imgs/dark-mode/work-2-2-after.png" alt="After">
-                        </img-comparison-slider>
-                    </div>
-                </div>
-                <!-- ===== Comparison Slider 2 End ===== -->
-
-
-                <!-- ===== MORE WORKS Marquee Start ===== -->
-                <div class="work-detail-text-anim-wrap">
-                    <ul>
-                        <!-- First set -->
-                        <li>MORE WORKS <span>·</span></li>
-                        <li>MORE WORKS <span>·</span></li>
-                        <li>MORE WORKS <span>·</span></li>
-                        <li>MORE WORKS <span>·</span></li>
-                        <li>MORE WORKS <span>·</span></li>
-                        <li>MORE WORKS <span>·</span></li>
-                        <!-- Duplicate set — seamless join at -50% -->
-                        <li>MORE WORKS <span>·</span></li>
-                        <li>MORE WORKS <span>·</span></li>
-                        <li>MORE WORKS <span>·</span></li>
-                        <li>MORE WORKS <span>·</span></li>
-                        <li>MORE WORKS <span>·</span></li>
-                        <li>MORE WORKS <span>·</span></li>
-                    </ul>
-                </div>
-                <!-- ===== MORE WORKS Marquee End ===== -->
-
-
-                <!-- ===== Next Projects Start ===== -->
-                <div class="work-detail-featured-work-wrap">
-                    <div class="featured-work-lists">
-
-                        <div class="featured-card js-card-reveal">
-                            <a class="link-overlay" href="../we-care-aesm/"></a>
-                            <div class="img-box">
-                                <img src="../../assets/imgs/dark-mode/work-1.png" alt="We Care Redesign">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">We Care (Redesign)</p>
-                                    <p class="subtitle">Healthcare · Mobile App</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2025</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="featured-card js-card-reveal">
-                            <a class="link-overlay" href="../renttro/"></a>
-                            <div class="img-box">
-                                <img src="../../assets/imgs/dark-mode/work-renttro.png" alt="Renttro">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">Renttro</p>
-                                    <p class="subtitle">Marketplace · Web & Mobile</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2025</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- ===== Next Projects End ===== -->
-
-
-                <!-- ===== Footer Start ===== -->
-                <footer class="footer-area">
-                    <div class="footer-big-text">
-                        <span class="js-footer-text">UX//RAW</span>
-                    </div>
-                    <div class="copyright">
-                        <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
-                        <div class="right">
-                            <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP</a>
-                        </div>
-                    </div>
-                </footer>
-                <!-- ===== Footer End ===== -->
-
 
             </div>
+            <div class="wd-hero-rule"></div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             HERO IMAGE
+        ═══════════════════════════════════ -->
+        <div class="wd-cover-wrap">
+            <div class="wd-cover">
+                <img src="../../assets/imgs/dark-mode/work-2.png" alt="AESM TAP Platform Overview">
+            </div>
         </div>
-        <!-- ===== Smooth Scroll End ===== -->
+
+        <!-- ═══════════════════════════════════
+             CASE STUDY BODY
+             col-lg-4 labels | col-lg-8 content
+        ═══════════════════════════════════ -->
+        <section class="wd-body">
+
+            <!-- ── Overview ── -->
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">01 — OVERVIEW</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">The Problem</h2>
+                                <p>Anglo-Eastern's recruitment ran on 10+ paper forms and disconnected systems. HR teams
+                                    had no efficient way to search vast candidate databases, and approval hierarchies
+                                    lived in email threads.</p>
+                                <p>The goal was to digitise the entire workflow — intelligent search, RBAC-based
+                                    approvals, and seamless form completion — without breaking from the established
+                                    design language.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Approach ── -->
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">02 — APPROACH</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">How We Solved It</h2>
+                                <p>The web platform centres on an advanced search architecture with maritime-specific
+                                    filters for precise candidate discovery. Interfaces adapt dynamically based on RBAC
+                                    permissions, with smart approval routing replacing email chains.</p>
+                                <p>Paper forms became progressive, contextual digital experiences. The mobile app
+                                    integrates an AI conversational interview agent via phone — both platforms sharing
+                                    the same visual language throughout.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ═══════════════════════════════════
+             UX PROCESS STRIP — 4 phases
+        ═══════════════════════════════════ -->
+        <section class="wd-process-strip js-fade-up">
+            <div class="wd-process-label">UX PROCESS</div>
+            <div class="wd-process-steps">
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">01</span>
+                    <span class="wd-ps-name">Discovery</span>
+                    <span class="wd-ps-detail">Stakeholder interviews, workflow audit, user journey mapping</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">02</span>
+                    <span class="wd-ps-name">Definition</span>
+                    <span class="wd-ps-detail">Information architecture, RBAC permission matrix, IA map</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">03</span>
+                    <span class="wd-ps-name">Design</span>
+                    <span class="wd-ps-detail">Wireframes, high-fidelity UI, component system, prototypes</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">04</span>
+                    <span class="wd-ps-name">Delivery</span>
+                    <span class="wd-ps-detail">Dev handoff, QA collaboration, iterative post-launch refinement</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             COMPARISON SLIDER 1
+        ═══════════════════════════════════ -->
+        <div class="wd-img-wrap js-fade-up">
+            <span class="wd-img-label">BEFORE / AFTER — Candidate Search</span>
+            <div class="wd-img wd-img--slider">
+                <img-comparison-slider>
+                    <img slot="first" src="../../assets/imgs/dark-mode/work-2-1-before.png" alt="Before">
+                    <img slot="second" src="../../assets/imgs/dark-mode/work-2-1-after.png" alt="After">
+                </img-comparison-slider>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             RESULTS
+        ═══════════════════════════════════ -->
+        <section class="wd-body">
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">03 — RESULTS</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">Outcome</h2>
+                                <p>The platform eliminated paper-based delays across the full hiring cycle. Advanced
+                                    maritime search filters now let HR teams navigate large candidate pools in seconds.
+                                    RBAC ensures secure, role-appropriate access while automating approval routing.</p>
+
+                                <!-- Outcome metrics strip -->
+                                <div class="wd-outcomes">
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">10+</span>
+                                        <span class="wd-outcome-label">Paper forms digitised</span>
+                                    </div>
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">3</span>
+                                        <span class="wd-outcome-label">Platforms unified</span>
+                                    </div>
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">Phase 3</span>
+                                        <span class="wd-outcome-label">Currently in progress</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             COMPARISON SLIDER 2
+        ═══════════════════════════════════ -->
+        <div class="wd-img-wrap js-fade-up">
+            <span class="wd-img-label">BEFORE / AFTER — Approval Workflow</span>
+            <div class="wd-img wd-img--slider">
+                <img-comparison-slider>
+                    <img slot="first" src="../../assets/imgs/dark-mode/work-2-2-before.png" alt="Before">
+                    <img slot="second" src="../../assets/imgs/dark-mode/work-2-2-after.png" alt="After">
+                </img-comparison-slider>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             MORE WORKS MARQUEE
+        ═══════════════════════════════════ -->
+        <div class="work-detail-text-anim-wrap">
+            <ul>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+            </ul>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             NEXT PROJECTS
+        ═══════════════════════════════════ -->
+        <div class="wd-next-projects">
+            <div class="wd-next-label">
+                <span class="wd-section-label">NEXT PROJECTS</span>
+            </div>
+            <div class="featured-work-lists wd-next-grid">
+                <div class="featured-card js-card-reveal">
+                    <a class="link-overlay" href="../we-care-aesm/"></a>
+                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-1.png" alt="We Care Redesign"></div>
+                    <div class="content">
+                        <div class="left">
+                            <p class="title">We Care (Redesign)</p>
+                            <p class="subtitle">Healthcare · Mobile App</p>
+                        </div>
+                        <div class="right"><span class="date">2025</span></div>
+                    </div>
+                </div>
+                <div class="featured-card js-card-reveal">
+                    <a class="link-overlay" href="../renttro/"></a>
+                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-renttro.png" alt="Renttro"></div>
+                    <div class="content">
+                        <div class="left">
+                            <p class="title">Renttro</p>
+                            <p class="subtitle">Marketplace · Web & Mobile</p>
+                        </div>
+                        <div class="right"><span class="date">2025</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             FOOTER — identical to all pages
+        ═══════════════════════════════════ -->
+        <footer class="footer-area">
+            <div class="footer-big-text">
+                <span class="js-footer-text">UX//RAW</span>
+            </div>
+            <div class="copyright">
+                <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
+                <div class="right">
+                    <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP ↑</a>
+                </div>
+            </div>
+        </footer>
 
     </main>
-    <!-- ===== Main End ===== -->
-
 
     <!-- ===== Scripts ===== -->
     <script src="../../assets/js/jquery.js"></script>
@@ -433,7 +466,6 @@
     <script src="../../assets/js/gsap.min.js"></script>
     <script src="../../assets/js/ScrollTrigger.min.js"></script>
     <script src="../../assets/js/ScrollToPlugin.min.js"></script>
-    <script src="../../assets/js/ScrollSmoother.min.js"></script>
     <script src="../../assets/js/SplitText.min.js"></script>
     <script src="../../assets/js/jarallax.js"></script>
     <script src="../../assets/js/jarallax-element.min.js"></script>

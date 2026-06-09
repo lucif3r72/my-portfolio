@@ -276,6 +276,36 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
+    /* Work detail page */
+    .wd-hero {
+        padding: 60px 30px 0;
+    }
+
+    .wd-hero-title {
+        font-size: 96px;
+    }
+
+    .wd-cover-wrap {
+        padding: 0 30px;
+    }
+
+    .wd-body {
+        padding: 0 30px;
+    }
+
+    .wd-process-strip {
+        margin: 0 30px;
+        padding: 40px;
+    }
+
+    .wd-img-wrap {
+        padding: 50px 30px 0;
+    }
+
+    .wd-next-label {
+        padding: 0 20px 28px;
+    }
+
     /* Work page */
     .work-hero-inner {
         gap: 40px;
@@ -320,14 +350,14 @@
 
     /* Popup menu */
     .popup-menu ul li a {
-        font-size: 50px;
+        font-size: 40px;
         letter-spacing: -1.3px;
-        line-height: 44px;
-        height: 44px;
+        line-height: 30px;
+        height: 30px;
     }
 
     .popup-menu ul li a:hover span:nth-child(2) {
-        margin-top: -50px;
+        margin-top: -40px;
     }
 
     .popup-menu-wrap .popup-menu-header {
@@ -356,7 +386,7 @@
 
     /* Hero */
     .hero-heading {
-        font-size: 70px;
+        font-size: 56px;
         letter-spacing: -1px;
     }
 
@@ -649,8 +679,8 @@
 
     /* Footer */
     .footer-area .footer-big-text {
-        font-size: 96px;
-        line-height: 98px;
+        font-size: 56px;
+        line-height: 58px;
         letter-spacing: 1px;
     }
 
@@ -659,6 +689,8 @@
         gap: 16px;
         padding: 24px 20px 40px;
     }
+
+
 
     /* Work page */
     .work-page .featured-work-lists {
@@ -731,6 +763,107 @@
     .contact-infos-wrap .contact-infos {
         padding-top: 40px;
         padding-bottom: 40px;
+    }
+
+    /* Work detail — mobile */
+    .wd-hero {
+        padding: 40px 20px 0;
+    }
+
+    .wd-hero-title {
+        font-size: 64px;
+    }
+
+    .wd-hero-subtitle {
+        font-size: 18px;
+    }
+
+    .wd-meta-strip {
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .wd-meta-item {
+        padding-right: 0;
+        flex: 0 0 40%;
+    }
+
+    .wd-meta-divider {
+        display: none;
+    }
+
+    .wd-cover-wrap {
+        padding: 0 20px;
+    }
+
+    .wd-cover {
+        height: 50vw;
+        min-height: 240px;
+        box-shadow: 6px 6px 0px var(--dark);
+    }
+
+    .wd-body {
+        padding: 0 20px;
+    }
+
+    .wd-section {
+        padding: 50px 0;
+    }
+
+    .wd-label-col {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .wd-section-title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .wd-content-col p {
+        font-size: 18px;
+        line-height: 29px;
+    }
+
+    .wd-process-strip {
+        margin: 0 20px;
+        padding: 32px 24px;
+    }
+
+    .wd-process-steps {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .wd-ps-arrow {
+        padding: 0;
+        transform: rotate(90deg);
+    }
+
+    .wd-ps-name {
+        font-size: 30px;
+    }
+
+    .wd-img-wrap {
+        padding: 40px 20px 0;
+    }
+
+    .wd-img--slider img-comparison-slider {
+        height: 340px;
+    }
+
+    .wd-outcomes {
+        gap: 28px;
+    }
+
+    .wd-outcome-num {
+        font-size: 40px;
+        line-height: 36px;
+    }
+
+    .wd-next-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+        padding: 30px 15px 40px !important;
     }
 
     /* Work page — mobile */
@@ -1004,8 +1137,8 @@
 
     /* Footer */
     .footer-area .footer-big-text {
-        font-size: 70px;
-        line-height: 76px;
+        font-size: 42px;
+        line-height: 46px;
     }
 }
 
