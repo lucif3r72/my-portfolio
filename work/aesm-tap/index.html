@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../assets/imgs/favicon.png">
-    <title>AESM TAP — UX//Raw</title>
+    <title>AESM TAP | UX//Raw</title>
     <link rel="stylesheet" href="../../assets/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="../../assets/css/responsive.css">
 
     <style>
-        /* Seamless marquee — animate ul at -50%, cancel per-li animation */
+        /* ── Seamless marquee — animate ul at -50% ── */
         .work-detail-text-anim-wrap ul {
             animation: marqueeTrack 22s infinite linear;
             width: max-content;
@@ -43,6 +43,625 @@
 
             to {
                 transform: translateX(-50%);
+            }
+        }
+
+        /* ══════════════════════════════════════════
+           NEW LAYOUT COMPONENTS
+           All color/font/typography vars unchanged —
+           only structure, spacing, and arrangement.
+        ══════════════════════════════════════════ */
+
+        /* ── Hero: 2-column editorial split ── */
+        .wd-hero {
+            padding: 80px 40px 0;
+        }
+
+        .wd-hero-grid {
+            display: grid;
+            grid-template-columns: 55fr 45fr;
+            gap: 80px;
+            align-items: flex-end;
+            padding-bottom: 48px;
+        }
+
+        .wd-hero-left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .wd-hero-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 28px;
+            padding-bottom: 4px;
+        }
+
+        .wd-hero-summary {
+            font-family: var(--font_instrument);
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 500;
+            color: rgba(29, 29, 31, 0.65);
+            margin: 0;
+            padding-top: 24px;
+            border-top: 1px solid rgba(29, 29, 31, 0.12);
+        }
+
+        .wd-hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .wd-hero-tag {
+            font-family: var(--font_inter_tight);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--dark);
+            border: 1.5px solid rgba(29, 29, 31, 0.18);
+            padding: 6px 14px;
+            display: inline-block;
+            line-height: 18px;
+        }
+
+        /* ── Sticky in-page navigation ── */
+        .wd-inpage-nav {
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            background: var(--bg-default);
+            border-bottom: 1px solid rgba(29, 29, 31, 0.1);
+        }
+
+        .wd-inpage-nav-inner {
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            height: 52px;
+            gap: 0;
+        }
+
+        .wd-inpage-link {
+            font-family: var(--font_inter_tight);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(29, 29, 31, 0.38);
+            text-decoration: none;
+            padding: 0 18px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid transparent;
+            transition: color .2s ease, border-color .2s ease;
+            position: relative;
+            top: 1px;
+        }
+
+        .wd-inpage-link:first-child {
+            padding-left: 0;
+        }
+
+        .wd-inpage-link:hover,
+        .wd-inpage-link.is-active {
+            color: var(--dark);
+            border-bottom-color: var(--dark);
+        }
+
+        /* ── Role / Contribution callout ── */
+        .wd-role-callout {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 28px 28px 28px 24px;
+            border: 1.5px solid rgba(29, 29, 31, 0.1);
+            border-left: 3px solid var(--primary);
+        }
+
+        .wd-role-callout-label {
+            font-family: var(--font_inter_tight);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(29, 29, 31, 0.38);
+            display: block;
+        }
+
+        .wd-role-callout-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .wd-role-callout-item {
+            font-family: var(--font_inter_tight);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--dark);
+            border: 1.5px solid rgba(29, 29, 31, 0.15);
+            padding: 6px 14px;
+            display: inline-block;
+            line-height: 18px;
+        }
+
+        /* ── Key Research Findings strip ── */
+        .wd-insights-strip {
+            margin: 0 40px;
+            padding: 72px 0 64px;
+            border-bottom: 1px solid rgba(29, 29, 31, 0.1);
+        }
+
+        .wd-insights-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 48px;
+        }
+
+        .wd-insights-eyebrow {
+            font-family: var(--font_inter_tight);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(29, 29, 31, 0.38);
+            display: block;
+        }
+
+        .wd-insights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .wd-insight-card {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding-right: 40px;
+            border-right: 1px solid rgba(29, 29, 31, 0.1);
+        }
+
+        .wd-insight-card+.wd-insight-card {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .wd-insight-card:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .wd-insight-num {
+            font-family: var(--font_bebas);
+            font-size: 52px;
+            line-height: 46px;
+            font-weight: 400;
+            color: rgba(29, 29, 31, 0.1);
+            display: block;
+        }
+
+        .wd-insight-heading {
+            font-family: var(--font_syne);
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--dark);
+            margin: 0 0 4px;
+            line-height: 24px;
+        }
+
+        .wd-insight-text {
+            font-family: var(--font_instrument);
+            font-size: 16px;
+            line-height: 27px;
+            font-weight: 500;
+            color: rgba(29, 29, 31, 0.6);
+            margin: 0;
+        }
+
+        /* ── Key Design Decisions: feature grid ── */
+        .wd-features {
+            padding: 80px 40px;
+        }
+
+        .wd-features-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .wd-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border: 1px solid rgba(29, 29, 31, 0.1);
+        }
+
+        .wd-feature-item {
+            padding: 40px;
+            border-right: 1px solid rgba(29, 29, 31, 0.1);
+            border-bottom: 1px solid rgba(29, 29, 31, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .wd-feature-item:nth-child(even) {
+            border-right: none;
+        }
+
+        .wd-feature-item:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+
+        .wd-feature-tag {
+            font-family: var(--font_inter_tight);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(29, 29, 31, 0.38);
+            display: block;
+        }
+
+        .wd-feature-title {
+            font-family: var(--font_syne);
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--dark);
+            margin: 0;
+            line-height: 28px;
+            letter-spacing: -0.2px;
+        }
+
+        .wd-feature-item p {
+            font-family: var(--font_instrument);
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 500;
+            color: rgba(29, 29, 31, 0.62);
+            margin: 0;
+        }
+
+        /* ── Reflection section title adjustment ── */
+        .wd-reflection-note {
+            font-family: var(--font_instrument);
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: 500;
+            color: rgba(29, 29, 31, 0.4);
+            font-style: italic;
+            border-top: 1px solid rgba(29, 29, 31, 0.08);
+            padding-top: 20px;
+            margin: 0;
+        }
+
+        /* ── Comparison slider: force both images to align top-left
+           so before/after show the same viewport region ── */
+        .wd-img--slider img-comparison-slider img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: top left !important;
+        }
+
+        /* ══════════════════════════════════════════
+           RESPONSIVE — tablet (≤991px)
+        ══════════════════════════════════════════ */
+        @media (max-width: 991px) {
+            .wd-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .wd-hero-right {
+                padding-bottom: 0;
+            }
+
+            .wd-hero-summary {
+                border-top: none;
+                padding-top: 0;
+            }
+
+            .wd-inpage-nav-inner {
+                padding: 0 20px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .wd-inpage-nav-inner::-webkit-scrollbar {
+                display: none;
+            }
+
+            .wd-inpage-link {
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            .wd-insights-strip {
+                margin: 0 24px;
+            }
+
+            .wd-insights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wd-insight-card,
+            .wd-insight-card+.wd-insight-card {
+                padding: 0 0 32px 0;
+                border-right: none;
+                border-bottom: 1px solid rgba(29, 29, 31, 0.1);
+            }
+
+            .wd-insight-card:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            .wd-features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wd-feature-item,
+            .wd-feature-item:nth-child(even),
+            .wd-feature-item:nth-last-child(-n+2) {
+                border-right: none;
+                border-bottom: 1px solid rgba(29, 29, 31, 0.1);
+            }
+
+            .wd-feature-item:last-child {
+                border-bottom: none;
+            }
+        }
+
+        /* ══════════════════════════════════════════
+           RESPONSIVE — mobile (≤767px)
+        ══════════════════════════════════════════ */
+        @media (max-width: 767px) {
+
+            /* ── Hero ── */
+            .wd-hero {
+                padding: 60px 20px 0;
+            }
+
+            .wd-hero-grid {
+                gap: 24px;
+                padding-bottom: 32px;
+            }
+
+            .wd-hero-title {
+                font-size: 72px !important;
+                line-height: 0.9 !important;
+            }
+
+            .wd-hero-subtitle {
+                font-size: 17px !important;
+            }
+
+            .wd-hero-summary {
+                font-size: 16px;
+                line-height: 27px;
+            }
+
+            /* ── Meta strip ── */
+            .wd-meta-strip {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+                padding-bottom: 32px;
+            }
+
+            .wd-meta-divider {
+                display: none;
+            }
+
+            .wd-meta-item {
+                padding-right: 0;
+            }
+
+            /* ── Cover image ── */
+            .wd-cover-wrap {
+                padding: 0 20px;
+            }
+
+            .wd-cover {
+                height: 56vw;
+                min-height: 220px;
+                box-shadow: 6px 6px 0px var(--dark);
+            }
+
+            /* ── Sticky nav ── */
+            .wd-inpage-nav-inner {
+                padding: 0 16px;
+                height: 46px;
+            }
+
+            .wd-inpage-link {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+                padding: 0 12px;
+            }
+
+            .wd-inpage-link:first-child {
+                padding-left: 0;
+            }
+
+            /* ── Body sections ── */
+            .wd-body {
+                padding: 0 20px;
+            }
+
+            .wd-section {
+                padding: 48px 0;
+            }
+
+            .wd-section-title {
+                font-size: 24px !important;
+                line-height: 30px !important;
+            }
+
+            .wd-content-col p {
+                font-size: 17px !important;
+                line-height: 28px !important;
+            }
+
+            .wd-label-col {
+                padding-bottom: 12px;
+            }
+
+            /* ── Role callout ── */
+            .wd-role-callout {
+                padding: 20px 20px 20px 16px;
+            }
+
+            /* ── Insights strip ── */
+            .wd-insights-strip {
+                margin: 0 20px;
+                padding: 48px 0 40px;
+            }
+
+            .wd-insights-header {
+                margin-bottom: 32px;
+            }
+
+            /* ── Process strip ── */
+            .wd-process-strip {
+                margin: 0 20px;
+                padding: 32px 24px;
+            }
+
+            .wd-process-steps {
+                flex-direction: column;
+                gap: 28px;
+            }
+
+            .wd-ps-arrow {
+                display: inline-block;
+                transform: rotate(90deg);
+                padding: 0;
+                align-self: flex-start;
+                margin-left: 0;
+            }
+
+            .wd-ps-name {
+                font-size: 28px !important;
+                line-height: 26px !important;
+            }
+
+            /* ── Slider ── */
+            .wd-img-wrap {
+                padding: 40px 20px 0;
+            }
+
+            .wd-img--slider img-comparison-slider {
+                height: 56vw;
+                min-height: 220px;
+            }
+
+            .wd-img {
+                box-shadow: 5px 5px 0px var(--dark);
+            }
+
+            /* ── Feature grid ── */
+            .wd-features {
+                padding: 48px 20px;
+            }
+
+            .wd-feature-item {
+                padding: 28px 24px;
+            }
+
+            .wd-feature-title {
+                font-size: 18px !important;
+            }
+
+            .wd-feature-item p {
+                font-size: 15px !important;
+                line-height: 24px !important;
+            }
+
+            /* ── Outcomes ── */
+            .wd-outcomes {
+                gap: 24px;
+                flex-direction: column;
+            }
+
+            .wd-outcome-num {
+                font-size: 42px !important;
+                line-height: 38px !important;
+            }
+
+            /* ── Reflection note ── */
+            .wd-reflection-note {
+                font-size: 14px !important;
+            }
+
+            /* ── Next projects ── */
+            .wd-next-label {
+                padding: 0 20px 24px;
+            }
+
+            .wd-next-grid {
+                padding: 24px 20px 40px !important;
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+
+            /* ── Footer ── */
+            .footer-area {
+                padding-top: 40px;
+            }
+
+            .footer-area .footer-big-text {
+                font-size: 22vw !important;
+                line-height: 0.9 !important;
+            }
+
+            .copyright {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                padding: 24px 20px;
+                text-align: center;
+            }
+
+            .copyright p {
+                min-width: unset;
+            }
+
+            .copyright .right {
+                width: auto;
+            }
+        }
+
+        /* ── Extra small (≤480px) ── */
+        @media (max-width: 480px) {
+            .wd-hero-title {
+                font-size: 56px !important;
+            }
+
+            .wd-hero-tags {
+                gap: 6px;
+            }
+
+            .wd-hero-tag {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+                padding: 5px 10px;
+            }
+
+            .wd-role-callout-item {
+                font-size: 9px;
+                padding: 5px 10px;
             }
         }
     </style>
@@ -174,60 +793,81 @@
         </header>
 
         <!-- ═══════════════════════════════════
-             PROJECT HERO — title + meta
+             PROJECT HERO — 2-column editorial split
+             Left: breadcrumb + big title + subtitle
+             Right: project summary + discipline tags
+             Below (full-width): meta strip
         ═══════════════════════════════════ -->
         <section class="wd-hero">
-            <div class="wd-hero-inner">
 
-                <!-- Breadcrumb -->
-                <div class="wd-breadcrumb hero-anim-item">
-                    <a href="../">WORK</a>
-                    <span>/</span>
-                    <span>AESM TAP</span>
+            <div class="wd-hero-grid">
+
+                <!-- ── Left: Identity block ── -->
+                <div class="wd-hero-left">
+                    <div class="wd-breadcrumb hero-anim-item">
+                        <a href="../">WORK</a>
+                        <span>/</span>
+                        <span>AESM TAP</span>
+                    </div>
+                    <div class="wd-hero-title-wrap">
+                        <h1 class="wd-hero-title">
+                            <span class="hero-line"><span class="hero-line-inner">AESM TAP</span></span>
+                        </h1>
+                        <p class="wd-hero-subtitle hero-anim-item">Talent Acquisition Portal</p>
+                    </div>
                 </div>
 
-                <!-- Title block -->
-                <div class="wd-hero-title-wrap">
-                    <h1 class="wd-hero-title">
-                        <span class="hero-line"><span class="hero-line-inner">AESM TAP</span></span>
-                    </h1>
-                    <p class="wd-hero-subtitle hero-anim-item">Talent Acquisition Portal</p>
-                </div>
-
-                <!-- Meta strip -->
-                <div class="wd-meta-strip hero-anim-item">
-                    <div class="wd-meta-item">
-                        <span class="wd-meta-label">CLIENT</span>
-                        <span class="wd-meta-value">Anglo-Eastern</span>
-                    </div>
-                    <div class="wd-meta-divider"></div>
-                    <div class="wd-meta-item">
-                        <span class="wd-meta-label">ROLE</span>
-                        <span class="wd-meta-value">UI/UX Designer</span>
-                    </div>
-                    <div class="wd-meta-divider"></div>
-                    <div class="wd-meta-item">
-                        <span class="wd-meta-label">PLATFORM</span>
-                        <span class="wd-meta-value">Web + Mobile</span>
-                    </div>
-                    <div class="wd-meta-divider"></div>
-                    <div class="wd-meta-item">
-                        <span class="wd-meta-label">STATUS</span>
-                        <span class="wd-meta-value">Internal Platform</span>
-                    </div>
-                    <div class="wd-meta-divider"></div>
-                    <div class="wd-meta-item">
-                        <span class="wd-meta-label">YEAR</span>
-                        <span class="wd-meta-value">2025</span>
+                <!-- ── Right: Summary + Disciplines ── -->
+                <div class="wd-hero-right hero-anim-item">
+                    <p class="wd-hero-summary">Digitised Anglo-Eastern's full talent pipeline: candidate discovery,
+                        approval routing, and conditional digital forms, across web and mobile, for a shipping group
+                        managing 80,000+ seafarers globally.</p>
+                    <div class="wd-hero-tags">
+                        <span class="wd-hero-tag">UX Research</span>
+                        <span class="wd-hero-tag">UI Design</span>
+                        <span class="wd-hero-tag">Design System</span>
+                        <span class="wd-hero-tag">Prototyping</span>
+                        <span class="wd-hero-tag">Dev Handoff</span>
                     </div>
                 </div>
 
             </div>
-            <div class="wd-hero-rule"></div>
+
+            <!-- ── Meta strip — full-width below the grid ── -->
+            <div class="wd-meta-strip hero-anim-item">
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">CLIENT</span>
+                    <span class="wd-meta-value">Anglo-Eastern</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">ROLE</span>
+                    <span class="wd-meta-value">UI/UX Designer</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">PLATFORM</span>
+                    <span class="wd-meta-value">Web + Mobile</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">STATUS</span>
+                    <span class="wd-meta-value">Internal Platform</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">YEAR</span>
+                    <span class="wd-meta-value">2025</span>
+                </div>
+            </div>
+
         </section>
 
+        <!-- thick rule closing the hero -->
+        <div class="wd-hero-rule"></div>
+
         <!-- ═══════════════════════════════════
-             HERO IMAGE
+             HERO IMAGE — full bleed cover
         ═══════════════════════════════════ -->
         <div class="wd-cover-wrap">
             <div class="wd-cover">
@@ -236,18 +876,35 @@
         </div>
 
         <!-- ═══════════════════════════════════
-             CASE STUDY BODY
-             col-lg-4 labels | col-lg-8 content
+             IN-PAGE STICKY NAVIGATION
+             Anchors to major sections for skimmers
+             (recruiters never read top-to-bottom)
         ═══════════════════════════════════ -->
-        <section class="wd-body">
+        <nav class="wd-inpage-nav" id="wdInpageNav" aria-label="Case study sections">
+            <div class="wd-inpage-nav-inner">
+                <a class="wd-inpage-link is-active" href="#wd-overview">Overview</a>
+                <a class="wd-inpage-link" href="#wd-research">Research</a>
+                <a class="wd-inpage-link" href="#wd-process">Process</a>
+                <a class="wd-inpage-link" href="#wd-design">Design</a>
+                <a class="wd-inpage-link" href="#wd-results">Results</a>
+                <a class="wd-inpage-link" href="#wd-reflection">Reflection</a>
+            </div>
+        </nav>
 
-            <!-- ── Overview ── -->
+        <!-- ═══════════════════════════════════
+             CASE STUDY BODY
+             01 — Overview  (problem + my role callout)
+             02 — Approach
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-overview">
+
+            <!-- ── 01 Overview ── -->
             <div class="wd-section js-fade-up">
                 <div class="container-fluid px-0">
                     <div class="row g-0">
                         <div class="col-lg-4">
                             <div class="wd-label-col">
-                                <span class="wd-section-label">01 — OVERVIEW</span>
+                                <span class="wd-section-label">01 · OVERVIEW</span>
                             </div>
                         </div>
                         <div class="col-lg-8">
@@ -256,22 +913,36 @@
                                 <p>Anglo-Eastern's recruitment ran on 10+ paper forms and disconnected systems. HR teams
                                     had no efficient way to search vast candidate databases, and approval hierarchies
                                     lived in email threads.</p>
-                                <p>The goal was to digitise the entire workflow — intelligent search, RBAC-based
-                                    approvals, and seamless form completion — without breaking from the established
+                                <p>The goal was to digitise the entire workflow: intelligent search, RBAC-based
+                                    approvals, and seamless form completion, without breaking from the established
                                     design language.</p>
+
+                                <!-- ── My Contribution callout ── -->
+                                <div class="wd-role-callout">
+                                    <span class="wd-role-callout-label">My Contribution</span>
+                                    <div class="wd-role-callout-items">
+                                        <span class="wd-role-callout-item">End-to-End UX</span>
+                                        <span class="wd-role-callout-item">Information Architecture</span>
+                                        <span class="wd-role-callout-item">Design System</span>
+                                        <span class="wd-role-callout-item">Prototyping</span>
+                                        <span class="wd-role-callout-item">Dev Handoff</span>
+                                        <span class="wd-role-callout-item">Stakeholder Presentations</span>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ── Approach ── -->
+            <!-- ── 02 Approach ── -->
             <div class="wd-section js-fade-up">
                 <div class="container-fluid px-0">
                     <div class="row g-0">
                         <div class="col-lg-4">
                             <div class="wd-label-col">
-                                <span class="wd-section-label">02 — APPROACH</span>
+                                <span class="wd-section-label">02 · APPROACH</span>
                             </div>
                         </div>
                         <div class="col-lg-8">
@@ -281,7 +952,7 @@
                                     filters for precise candidate discovery. Interfaces adapt dynamically based on RBAC
                                     permissions, with smart approval routing replacing email chains.</p>
                                 <p>Paper forms became progressive, contextual digital experiences. The mobile app
-                                    integrates an AI conversational interview agent via phone — both platforms sharing
+                                    integrates an AI conversational interview agent via phone, both platforms sharing
                                     the same visual language throughout.</p>
                             </div>
                         </div>
@@ -292,9 +963,46 @@
         </section>
 
         <!-- ═══════════════════════════════════
+             KEY RESEARCH FINDINGS
+             Three insight cards — the "why" behind
+             every design decision that follows.
+        ═══════════════════════════════════ -->
+        <div class="wd-insights-strip js-fade-up" id="wd-research">
+            <div class="wd-insights-header">
+                <span class="wd-insights-eyebrow">Key Research Findings</span>
+            </div>
+            <div class="wd-insights-grid">
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">01</span>
+                    <div>
+                        <h3 class="wd-insight-heading">Duplicate Data Entry</h3>
+                        <p class="wd-insight-text">HR teams re-entered the same candidate data across three disconnected
+                            platforms. No single source of truth existed for the full hiring record.</p>
+                    </div>
+                </div>
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">02</span>
+                    <div>
+                        <h3 class="wd-insight-heading">Invisible Approvals</h3>
+                        <p class="wd-insight-text">Decisions lived entirely in email threads. No audit trail, no
+                            accountability, and no visibility for the candidate or the approving manager.</p>
+                    </div>
+                </div>
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">03</span>
+                    <div>
+                        <h3 class="wd-insight-heading">Search That Fails Expertise</h3>
+                        <p class="wd-insight-text">Senior seafarers with 15+ years of niche certifications were filtered
+                            out by keyword search. The system had no concept of maritime rank or vessel hierarchy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
              UX PROCESS STRIP — 4 phases
         ═══════════════════════════════════ -->
-        <section class="wd-process-strip js-fade-up">
+        <section class="wd-process-strip js-fade-up" id="wd-process">
             <div class="wd-process-label">UX PROCESS</div>
             <div class="wd-process-steps">
                 <div class="wd-process-step">
@@ -327,7 +1035,7 @@
              COMPARISON SLIDER 1
         ═══════════════════════════════════ -->
         <div class="wd-img-wrap js-fade-up">
-            <span class="wd-img-label">BEFORE / AFTER — Candidate Search</span>
+            <span class="wd-img-label">BEFORE / AFTER: Candidate Search</span>
             <div class="wd-img wd-img--slider">
                 <img-comparison-slider>
                     <img slot="first" src="../../assets/imgs/dark-mode/work-2-1-before.png" alt="Before">
@@ -337,15 +1045,56 @@
         </div>
 
         <!-- ═══════════════════════════════════
+             KEY DESIGN DECISIONS
+             2×2 grid of feature tiles — shows the
+             "what & why" behind each major screen.
+        ═══════════════════════════════════ -->
+        <div class="wd-features js-fade-up" id="wd-design">
+            <div class="wd-features-header">
+                <span class="wd-section-label">KEY DESIGN DECISIONS</span>
+            </div>
+            <div class="wd-features-grid">
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Search Architecture</span>
+                    <h3 class="wd-feature-title">Maritime-Specific Filters</h3>
+                    <p>Built filter taxonomies around vessel types, rank hierarchies, and certification matrices,
+                        replacing generic keyword search with structured maritime logic that surfaces the right
+                        candidate every time.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Permissions</span>
+                    <h3 class="wd-feature-title">RBAC-Driven Interface</h3>
+                    <p>Interfaces adapt to the logged-in role: recruiters see candidate pools, managers see approval
+                        queues, admins see the full audit trail. No single user is overwhelmed by what is not theirs to
+                        action.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Mobile · AI</span>
+                    <h3 class="wd-feature-title">Conversational Interview Agent</h3>
+                    <p>A phone-based AI handles initial candidate screening, feeding structured data back into the
+                        platform automatically, eliminating the manual transcription step that previously took hours per
+                        candidate.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Forms</span>
+                    <h3 class="wd-feature-title">Progressive Digitisation</h3>
+                    <p>Ten paper forms rebuilt as contextual, conditional digital experiences, each showing only what
+                        the current role needs at the current stage, cutting form completion time and reducing input
+                        errors.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
              RESULTS
         ═══════════════════════════════════ -->
-        <section class="wd-body">
+        <section class="wd-body" id="wd-results">
             <div class="wd-section js-fade-up">
                 <div class="container-fluid px-0">
                     <div class="row g-0">
                         <div class="col-lg-4">
                             <div class="wd-label-col">
-                                <span class="wd-section-label">03 — RESULTS</span>
+                                <span class="wd-section-label">03 · RESULTS</span>
                             </div>
                         </div>
                         <div class="col-lg-8">
@@ -381,7 +1130,7 @@
              COMPARISON SLIDER 2
         ═══════════════════════════════════ -->
         <div class="wd-img-wrap js-fade-up">
-            <span class="wd-img-label">BEFORE / AFTER — Approval Workflow</span>
+            <span class="wd-img-label">BEFORE / AFTER: Approval Workflow</span>
             <div class="wd-img wd-img--slider">
                 <img-comparison-slider>
                     <img slot="first" src="../../assets/imgs/dark-mode/work-2-2-before.png" alt="Before">
@@ -389,6 +1138,41 @@
                 </img-comparison-slider>
             </div>
         </div>
+
+        <!-- ═══════════════════════════════════
+             REFLECTION
+             Professional maturity signal — shows
+             design directors you think beyond delivery.
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-reflection">
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">04 · REFLECTION</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">What I Learned</h2>
+                                <p>Enterprise UX at this scale taught me that the most impactful design decisions are
+                                    organisational, not visual. Mapping RBAC permission hierarchies before touching a
+                                    wireframe saved weeks of rework. The approval model had to be fully understood
+                                    before any screen could be designed responsibly.</p>
+                                <p>If I were starting over, I would push harder for a unified onboarding flow between
+                                    the web platform and mobile app. The two currently share a visual language but
+                                    diverge in interaction patterns, a tension worth resolving in Phase 4, and a
+                                    reminder that design system parity is a product strategy problem, not just a
+                                    component problem.</p>
+                                <p class="wd-reflection-note">This project is ongoing. Findings and design decisions
+                                    documented here reflect Phases 1–2.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- ═══════════════════════════════════
              MORE WORKS MARQUEE
@@ -472,6 +1256,31 @@
     <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/themescroll.js"></script>
     <script type="module" src="https://unpkg.com/img-comparison-slider@8/dist/index.js"></script>
+
+    <!-- ── In-page nav: active link on scroll ── -->
+    <script>
+        (function () {
+            const nav = document.getElementById('wdInpageNav');
+            if (!nav) return;
+            const links = nav.querySelectorAll('.wd-inpage-link');
+            const sectionIds = ['wd-overview', 'wd-research', 'wd-process', 'wd-design', 'wd-results', 'wd-reflection'];
+            const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+            function onScroll() {
+                const scrollY = window.scrollY + 80; // offset for sticky nav height
+                let current = sections[0];
+                sections.forEach(sec => {
+                    if (sec && sec.offsetTop <= scrollY) current = sec;
+                });
+                links.forEach(link => {
+                    link.classList.toggle('is-active', link.getAttribute('href') === '#' + (current && current.id));
+                });
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
 
 </body>
 

@@ -3278,6 +3278,7 @@ html.is-loading body {
     flex-wrap: wrap;
     gap: 0;
     padding-top: 32px;
+    margin-bottom: 32px;
     border-top: 1px solid rgba(29, 29, 31, 0.12);
     opacity: 0;
 }
@@ -3314,12 +3315,6 @@ html.is-loading body {
     flex: none;
     margin-right: 40px;
     align-self: center;
-}
-
-.wd-hero-rule {
-    height: 2px;
-    background: var(--dark);
-    width: 100%;
 }
 
 /* ── Cover image ── */
