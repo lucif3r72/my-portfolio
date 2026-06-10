@@ -1,4 +1,64 @@
+# robots.txt — uxraw.vercel.app
+# Nadir Shaikh · UI/UX Designer & Frontend Developer
+
+# ═══════════════════════════════
+# STANDARD CRAWLERS
+# ═══════════════════════════════
+
 User-agent: *
 Allow: /
+Disallow: /assets/
 
 Sitemap: https://uxraw.vercel.app/sitemap.xml
+
+# ═══════════════════════════════
+# AI / LLM CRAWLERS
+# Explicitly allowed for GEO —
+# these feed ChatGPT, Perplexity,
+# Claude, Copilot, and Gemini.
+# ═══════════════════════════════
+
+# OpenAI (ChatGPT, SearchGPT)
+User-agent: GPTBot
+Allow: /
+
+# OpenAI link previews
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+# Google (Gemini, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft (Copilot, Bing AI)
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# Apple (Siri, Apple Intelligence)
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta (Meta AI)
+User-agent: FacebookBot
+Allow: /
+
+# Common AI research crawlers
+User-agent: CCBot
+Allow: /
+
+User-agent: DataForSeoBot
+Allow: /
