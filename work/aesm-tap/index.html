@@ -6,7 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../assets/imgs/favicon.png">
-    <title>AESM TAP | UX//Raw</title>
+    <title>AESM TAP - Enterprise Talent Acquisition Portal Case Study | UX//Raw</title>
+
+    <!-- ===== SEO: Core Meta ===== -->
+    <meta name="description"
+        content="Case study: AESM TAP - a talent acquisition portal designed for Anglo-Eastern, a shipping group managing 80,000+ seafarers globally. End-to-end UX across web and mobile: candidate discovery, RBAC approval routing, and digital form workflows. By Nadir Shaikh.">
+    <meta name="author" content="Nadir Shaikh">
+    <meta name="robots" content="index, follow">
+
+    <!-- ===== SEO: Canonical ===== -->
+    <link rel="canonical" href="https://uxraw.vercel.app/work/aesm-tap/">
+
+    <!-- ===== SEO: Open Graph ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://uxraw.vercel.app/work/aesm-tap/">
+    <meta property="og:title" content="AESM TAP - Enterprise Talent Acquisition Portal Case Study | UX//Raw">
+    <meta property="og:description"
+        content="How Nadir Shaikh digitised Anglo-Eastern's full talent pipeline - candidate discovery, approval routing, and conditional digital forms across web and mobile, for a shipping group managing 80,000+ seafarers globally.">
+    <meta property="og:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/work-2.png">
+    <meta property="og:site_name" content="UX//Raw">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- ===== SEO: Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AESM TAP - Enterprise Talent Acquisition Portal Case Study | UX//Raw">
+    <meta name="twitter:description"
+        content="End-to-end UX design for Anglo-Eastern's talent acquisition portal - maritime candidate search, RBAC approvals, and digital form workflows across web and mobile.">
+    <meta name="twitter:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/work-2.png">
+
+    <!-- ===== SEO: JSON-LD Structured Data ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CreativeWork",
+          "@id": "https://uxraw.vercel.app/work/aesm-tap/#project",
+          "url": "https://uxraw.vercel.app/work/aesm-tap/",
+          "name": "AESM TAP - Talent Acquisition Portal",
+          "description": "End-to-end UX design for Anglo-Eastern's enterprise talent acquisition portal. Digitised 10+ paper forms, unified 3 disconnected platforms, and introduced maritime-specific candidate search with RBAC approval routing across web and mobile.",
+          "image": "https://uxraw.vercel.app/assets/imgs/dark-mode/work-2.png",
+          "dateCreated": "2025",
+          "genre": "UX/UI Design Case Study",
+          "keywords": "UX Design, UI Design, Enterprise Design, Maritime, Talent Acquisition, RBAC, Design System, Prototyping, Web App, Mobile App",
+          "creator": {
+            "@type": "Person",
+            "@id": "https://uxraw.vercel.app/#nadir",
+            "name": "Nadir Shaikh",
+            "url": "https://uxraw.vercel.app/",
+            "jobTitle": "UI/UX Designer & Frontend Developer"
+          },
+          "contributor": {
+            "@type": "Organization",
+            "name": "Anglo-Eastern",
+            "description": "Global maritime shipping group managing 80,000+ seafarers worldwide."
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://uxraw.vercel.app/work/#collectionpage",
+            "url": "https://uxraw.vercel.app/work/",
+            "name": "Work - UI/UX Design Portfolio of Nadir Shaikh"
+          },
+          "about": [
+            "Enterprise UX Design",
+            "Talent Acquisition Platform",
+            "Maritime Industry",
+            "Role-Based Access Control",
+            "Information Architecture",
+            "Digital Transformation"
+          ]
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="../../assets/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,647 +97,6 @@
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/responsive.css">
-
-    <style>
-        /* ── Seamless marquee — animate ul at -50% ── */
-        .work-detail-text-anim-wrap ul {
-            animation: marqueeTrack 22s infinite linear;
-            width: max-content;
-        }
-
-        .work-detail-text-anim-wrap ul li {
-            animation: none !important;
-        }
-
-        @keyframes marqueeTrack {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-50%);
-            }
-        }
-
-        /* ══════════════════════════════════════════
-           NEW LAYOUT COMPONENTS
-           All color/font/typography vars unchanged —
-           only structure, spacing, and arrangement.
-        ══════════════════════════════════════════ */
-
-        /* ── Hero: 2-column editorial split ── */
-        .wd-hero {
-            padding: 80px 40px 0;
-        }
-
-        .wd-hero-grid {
-            display: grid;
-            grid-template-columns: 55fr 45fr;
-            gap: 80px;
-            align-items: flex-end;
-            padding-bottom: 48px;
-        }
-
-        .wd-hero-left {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .wd-hero-right {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            gap: 28px;
-            padding-bottom: 4px;
-        }
-
-        .wd-hero-summary {
-            font-family: var(--font_instrument);
-            font-size: 18px;
-            line-height: 30px;
-            font-weight: 500;
-            color: rgba(29, 29, 31, 0.65);
-            margin: 0;
-            padding-top: 24px;
-            border-top: 1px solid rgba(29, 29, 31, 0.12);
-        }
-
-        .wd-hero-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .wd-hero-tag {
-            font-family: var(--font_inter_tight);
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--dark);
-            border: 1.5px solid rgba(29, 29, 31, 0.18);
-            padding: 6px 14px;
-            display: inline-block;
-            line-height: 18px;
-        }
-
-        /* ── Sticky in-page navigation ── */
-        .wd-inpage-nav {
-            position: sticky;
-            top: 0;
-            z-index: 90;
-            background: var(--bg-default);
-            border-bottom: 1px solid rgba(29, 29, 31, 0.1);
-        }
-
-        .wd-inpage-nav-inner {
-            display: flex;
-            align-items: center;
-            padding: 0 40px;
-            height: 52px;
-            gap: 0;
-        }
-
-        .wd-inpage-link {
-            font-family: var(--font_inter_tight);
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: rgba(29, 29, 31, 0.38);
-            text-decoration: none;
-            padding: 0 18px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            border-bottom: 2px solid transparent;
-            transition: color .2s ease, border-color .2s ease;
-            position: relative;
-            top: 1px;
-        }
-
-        .wd-inpage-link:first-child {
-            padding-left: 0;
-        }
-
-        .wd-inpage-link:hover,
-        .wd-inpage-link.is-active {
-            color: var(--dark);
-            border-bottom-color: var(--dark);
-        }
-
-        /* ── Role / Contribution callout ── */
-        .wd-role-callout {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            padding: 28px 28px 28px 24px;
-            border: 1.5px solid rgba(29, 29, 31, 0.1);
-            border-left: 3px solid var(--primary);
-        }
-
-        .wd-role-callout-label {
-            font-family: var(--font_inter_tight);
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: rgba(29, 29, 31, 0.38);
-            display: block;
-        }
-
-        .wd-role-callout-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .wd-role-callout-item {
-            font-family: var(--font_inter_tight);
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--dark);
-            border: 1.5px solid rgba(29, 29, 31, 0.15);
-            padding: 6px 14px;
-            display: inline-block;
-            line-height: 18px;
-        }
-
-        /* ── Key Research Findings strip ── */
-        .wd-insights-strip {
-            margin: 0 40px;
-            padding: 72px 0 64px;
-            border-bottom: 1px solid rgba(29, 29, 31, 0.1);
-        }
-
-        .wd-insights-header {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            margin-bottom: 48px;
-        }
-
-        .wd-insights-eyebrow {
-            font-family: var(--font_inter_tight);
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: rgba(29, 29, 31, 0.38);
-            display: block;
-        }
-
-        .wd-insights-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        .wd-insight-card {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            padding-right: 40px;
-            border-right: 1px solid rgba(29, 29, 31, 0.1);
-        }
-
-        .wd-insight-card+.wd-insight-card {
-            padding-left: 40px;
-            padding-right: 40px;
-        }
-
-        .wd-insight-card:last-child {
-            border-right: none;
-            padding-right: 0;
-        }
-
-        .wd-insight-num {
-            font-family: var(--font_bebas);
-            font-size: 52px;
-            line-height: 46px;
-            font-weight: 400;
-            color: rgba(29, 29, 31, 0.1);
-            display: block;
-        }
-
-        .wd-insight-heading {
-            font-family: var(--font_syne);
-            font-size: 17px;
-            font-weight: 800;
-            color: var(--dark);
-            margin: 0 0 4px;
-            line-height: 24px;
-        }
-
-        .wd-insight-text {
-            font-family: var(--font_instrument);
-            font-size: 16px;
-            line-height: 27px;
-            font-weight: 500;
-            color: rgba(29, 29, 31, 0.6);
-            margin: 0;
-        }
-
-        /* ── Key Design Decisions: feature grid ── */
-        .wd-features {
-            padding: 80px 40px;
-        }
-
-        .wd-features-header {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-
-        .wd-features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            border: 1px solid rgba(29, 29, 31, 0.1);
-        }
-
-        .wd-feature-item {
-            padding: 40px;
-            border-right: 1px solid rgba(29, 29, 31, 0.1);
-            border-bottom: 1px solid rgba(29, 29, 31, 0.1);
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .wd-feature-item:nth-child(even) {
-            border-right: none;
-        }
-
-        .wd-feature-item:nth-last-child(-n+2) {
-            border-bottom: none;
-        }
-
-        .wd-feature-tag {
-            font-family: var(--font_inter_tight);
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: rgba(29, 29, 31, 0.38);
-            display: block;
-        }
-
-        .wd-feature-title {
-            font-family: var(--font_syne);
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--dark);
-            margin: 0;
-            line-height: 28px;
-            letter-spacing: -0.2px;
-        }
-
-        .wd-feature-item p {
-            font-family: var(--font_instrument);
-            font-size: 16px;
-            line-height: 26px;
-            font-weight: 500;
-            color: rgba(29, 29, 31, 0.62);
-            margin: 0;
-        }
-
-        /* ── Reflection section title adjustment ── */
-        .wd-reflection-note {
-            font-family: var(--font_instrument);
-            font-size: 15px;
-            line-height: 24px;
-            font-weight: 500;
-            color: rgba(29, 29, 31, 0.4);
-            font-style: italic;
-            border-top: 1px solid rgba(29, 29, 31, 0.08);
-            padding-top: 20px;
-            margin: 0;
-        }
-
-        /* ── Comparison slider: force both images to align top-left
-           so before/after show the same viewport region ── */
-        .wd-img--slider img-comparison-slider img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            object-position: top left !important;
-        }
-
-        /* ══════════════════════════════════════════
-           RESPONSIVE — tablet (≤991px)
-        ══════════════════════════════════════════ */
-        @media (max-width: 991px) {
-            .wd-hero-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .wd-hero-right {
-                padding-bottom: 0;
-            }
-
-            .wd-hero-summary {
-                border-top: none;
-                padding-top: 0;
-            }
-
-            .wd-inpage-nav-inner {
-                padding: 0 20px;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-            }
-
-            .wd-inpage-nav-inner::-webkit-scrollbar {
-                display: none;
-            }
-
-            .wd-inpage-link {
-                white-space: nowrap;
-                flex-shrink: 0;
-            }
-
-            .wd-insights-strip {
-                margin: 0 24px;
-            }
-
-            .wd-insights-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .wd-insight-card,
-            .wd-insight-card+.wd-insight-card {
-                padding: 0 0 32px 0;
-                border-right: none;
-                border-bottom: 1px solid rgba(29, 29, 31, 0.1);
-            }
-
-            .wd-insight-card:last-child {
-                border-bottom: none;
-                padding-bottom: 0;
-            }
-
-            .wd-features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .wd-feature-item,
-            .wd-feature-item:nth-child(even),
-            .wd-feature-item:nth-last-child(-n+2) {
-                border-right: none;
-                border-bottom: 1px solid rgba(29, 29, 31, 0.1);
-            }
-
-            .wd-feature-item:last-child {
-                border-bottom: none;
-            }
-        }
-
-        /* ══════════════════════════════════════════
-           RESPONSIVE — mobile (≤767px)
-        ══════════════════════════════════════════ */
-        @media (max-width: 767px) {
-
-            /* ── Hero ── */
-            .wd-hero {
-                padding: 60px 20px 0;
-            }
-
-            .wd-hero-grid {
-                gap: 24px;
-                padding-bottom: 32px;
-            }
-
-            .wd-hero-title {
-                font-size: 72px !important;
-                line-height: 0.9 !important;
-            }
-
-            .wd-hero-subtitle {
-                font-size: 17px !important;
-            }
-
-            .wd-hero-summary {
-                font-size: 16px;
-                line-height: 27px;
-            }
-
-            /* ── Meta strip ── */
-            .wd-meta-strip {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 16px;
-                padding-bottom: 32px;
-            }
-
-            .wd-meta-divider {
-                display: none;
-            }
-
-            .wd-meta-item {
-                padding-right: 0;
-            }
-
-            /* ── Cover image ── */
-            .wd-cover-wrap {
-                padding: 0 20px;
-            }
-
-            .wd-cover {
-                height: 56vw;
-                min-height: 220px;
-                box-shadow: 6px 6px 0px var(--dark);
-            }
-
-            /* ── Sticky nav ── */
-            .wd-inpage-nav-inner {
-                padding: 0 16px;
-                height: 46px;
-            }
-
-            .wd-inpage-link {
-                font-size: 10px;
-                letter-spacing: 1.5px;
-                padding: 0 12px;
-            }
-
-            .wd-inpage-link:first-child {
-                padding-left: 0;
-            }
-
-            /* ── Body sections ── */
-            .wd-body {
-                padding: 0 20px;
-            }
-
-            .wd-section {
-                padding: 48px 0;
-            }
-
-            .wd-section-title {
-                font-size: 24px !important;
-                line-height: 30px !important;
-            }
-
-            .wd-content-col p {
-                font-size: 17px !important;
-                line-height: 28px !important;
-            }
-
-            .wd-label-col {
-                padding-bottom: 12px;
-            }
-
-            /* ── Role callout ── */
-            .wd-role-callout {
-                padding: 20px 20px 20px 16px;
-            }
-
-            /* ── Insights strip ── */
-            .wd-insights-strip {
-                margin: 0 20px;
-                padding: 48px 0 40px;
-            }
-
-            .wd-insights-header {
-                margin-bottom: 32px;
-            }
-
-            /* ── Process strip ── */
-            .wd-process-strip {
-                margin: 0 20px;
-                padding: 32px 24px;
-            }
-
-            .wd-process-steps {
-                flex-direction: column;
-                gap: 28px;
-            }
-
-            .wd-ps-arrow {
-                display: inline-block;
-                transform: rotate(90deg);
-                padding: 0;
-                align-self: flex-start;
-                margin-left: 0;
-            }
-
-            .wd-ps-name {
-                font-size: 28px !important;
-                line-height: 26px !important;
-            }
-
-            /* ── Slider ── */
-            .wd-img-wrap {
-                padding: 40px 20px 0;
-            }
-
-            .wd-img--slider img-comparison-slider {
-                height: 56vw;
-                min-height: 220px;
-            }
-
-            .wd-img {
-                box-shadow: 5px 5px 0px var(--dark);
-            }
-
-            /* ── Feature grid ── */
-            .wd-features {
-                padding: 48px 20px;
-            }
-
-            .wd-feature-item {
-                padding: 28px 24px;
-            }
-
-            .wd-feature-title {
-                font-size: 18px !important;
-            }
-
-            .wd-feature-item p {
-                font-size: 15px !important;
-                line-height: 24px !important;
-            }
-
-            /* ── Outcomes ── */
-            .wd-outcomes {
-                gap: 24px;
-                flex-direction: column;
-            }
-
-            .wd-outcome-num {
-                font-size: 42px !important;
-                line-height: 38px !important;
-            }
-
-            /* ── Reflection note ── */
-            .wd-reflection-note {
-                font-size: 14px !important;
-            }
-
-            /* ── Next projects ── */
-            .wd-next-label {
-                padding: 0 20px 24px;
-            }
-
-            .wd-next-grid {
-                padding: 24px 20px 40px !important;
-                grid-template-columns: 1fr !important;
-                gap: 20px !important;
-            }
-
-            /* ── Footer ── */
-            .footer-area {
-                padding-top: 40px;
-            }
-
-            .footer-area .footer-big-text {
-                font-size: 22vw !important;
-                line-height: 0.9 !important;
-            }
-
-            .copyright {
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-                padding: 24px 20px;
-                text-align: center;
-            }
-
-            .copyright p {
-                min-width: unset;
-            }
-
-            .copyright .right {
-                width: auto;
-            }
-        }
-
-        /* ── Extra small (≤480px) ── */
-        @media (max-width: 480px) {
-            .wd-hero-title {
-                font-size: 56px !important;
-            }
-
-            .wd-hero-tags {
-                gap: 6px;
-            }
-
-            .wd-hero-tag {
-                font-size: 9px;
-                letter-spacing: 1.5px;
-                padding: 5px 10px;
-            }
-
-            .wd-role-callout-item {
-                font-size: 9px;
-                padding: 5px 10px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -728,7 +160,7 @@
                 </div>
             </div>
             <div class="popup-menu">
-                <nav>
+                <nav aria-label="Main navigation">
                     <ul>
                         <li><a href="../../"><span class="count">(1)</span><span>Home</span><span>Home</span></a></li>
                         <li class="active"><a href="../"><span
@@ -741,16 +173,18 @@
             <div class="popup-menu-footer">
                 <div class="copyright">
                     <ul class="social-links">
-                        <li><a href="https://www.instagram.com/de_str0yed/" target="_blank">Instagram <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                        <li><a href="https://www.instagram.com/de_str0yed/" target="_blank"
+                                rel="noopener noreferrer">Instagram <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
                                 </svg></a></li>
-                        <li><a href="https://dribbble.com/Lucif3r72" target="_blank">Dribbble <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                        <li><a href="https://dribbble.com/Lucif3r72" target="_blank" rel="noopener noreferrer">Dribbble
+                                <svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
                                 </svg></a></li>
-                        <li><a href="https://in.pinterest.com/Lucif3r72/" target="_blank">Pinterest <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                        <li><a href="https://in.pinterest.com/Lucif3r72/" target="_blank"
+                                rel="noopener noreferrer">Pinterest <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
                                 </svg></a></li>
                     </ul>

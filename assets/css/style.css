@@ -4339,3 +4339,330 @@ html.is-loading body {
         transform: translateY(0);
     }
 }
+
+/* ── Seamless marquee — animate ul at -50% ── */
+.work-detail-text-anim-wrap ul {
+    animation: marqueeTrack 22s infinite linear;
+    width: max-content;
+}
+
+.work-detail-text-anim-wrap ul li {
+    animation: none !important;
+}
+
+@keyframes marqueeTrack {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ══════════════════════════════════════════
+           NEW LAYOUT COMPONENTS
+           All color/font/typography vars unchanged —
+           only structure, spacing, and arrangement.
+        ══════════════════════════════════════════ */
+
+/* ── Hero: 2-column editorial split ── */
+.wd-hero {
+    padding: 80px 40px 0;
+}
+
+.wd-hero-grid {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    gap: 80px;
+    align-items: flex-end;
+    padding-bottom: 48px;
+}
+
+.wd-hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wd-hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 28px;
+    padding-bottom: 4px;
+}
+
+.wd-hero-summary {
+    font-family: var(--font_instrument);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    color: rgba(29, 29, 31, 0.65);
+    margin: 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(29, 29, 31, 0.12);
+}
+
+.wd-hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.wd-hero-tag {
+    font-family: var(--font_inter_tight);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--dark);
+    border: 1.5px solid rgba(29, 29, 31, 0.18);
+    padding: 6px 14px;
+    display: inline-block;
+    line-height: 18px;
+}
+
+/* ── Sticky in-page navigation ── */
+.wd-inpage-nav {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    background: var(--bg-default);
+    border-bottom: 1px solid rgba(29, 29, 31, 0.1);
+}
+
+.wd-inpage-nav-inner {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 52px;
+    gap: 0;
+}
+
+.wd-inpage-link {
+    font-family: var(--font_inter_tight);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(29, 29, 31, 0.38);
+    text-decoration: none;
+    padding: 0 18px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    transition: color .2s ease, border-color .2s ease;
+    position: relative;
+    top: 1px;
+}
+
+.wd-inpage-link:first-child {
+    padding-left: 0;
+}
+
+.wd-inpage-link:hover,
+.wd-inpage-link.is-active {
+    color: var(--dark);
+    border-bottom-color: var(--dark);
+}
+
+/* ── Role / Contribution callout ── */
+.wd-role-callout {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px 28px 28px 24px;
+    border: 1.5px solid rgba(29, 29, 31, 0.1);
+    border-left: 3px solid var(--primary);
+}
+
+.wd-role-callout-label {
+    font-family: var(--font_inter_tight);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(29, 29, 31, 0.38);
+    display: block;
+}
+
+.wd-role-callout-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.wd-role-callout-item {
+    font-family: var(--font_inter_tight);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    border: 1.5px solid rgba(29, 29, 31, 0.15);
+    padding: 6px 14px;
+    display: inline-block;
+    line-height: 18px;
+}
+
+/* ── Key Research Findings strip ── */
+.wd-insights-strip {
+    margin: 0 40px;
+    padding: 72px 0 64px;
+    border-bottom: 1px solid rgba(29, 29, 31, 0.1);
+}
+
+.wd-insights-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.wd-insights-eyebrow {
+    font-family: var(--font_inter_tight);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(29, 29, 31, 0.38);
+    display: block;
+}
+
+.wd-insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.wd-insight-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-right: 40px;
+    border-right: 1px solid rgba(29, 29, 31, 0.1);
+}
+
+.wd-insight-card+.wd-insight-card {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.wd-insight-card:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.wd-insight-num {
+    font-family: var(--font_bebas);
+    font-size: 52px;
+    line-height: 46px;
+    font-weight: 400;
+    color: rgba(29, 29, 31, 0.1);
+    display: block;
+}
+
+.wd-insight-heading {
+    font-family: var(--font_syne);
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--dark);
+    margin: 0 0 4px;
+    line-height: 24px;
+}
+
+.wd-insight-text {
+    font-family: var(--font_instrument);
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 500;
+    color: rgba(29, 29, 31, 0.6);
+    margin: 0;
+}
+
+/* ── Key Design Decisions: feature grid ── */
+.wd-features {
+    padding: 80px 40px;
+}
+
+.wd-features-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.wd-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid rgba(29, 29, 31, 0.1);
+}
+
+.wd-feature-item {
+    padding: 40px;
+    border-right: 1px solid rgba(29, 29, 31, 0.1);
+    border-bottom: 1px solid rgba(29, 29, 31, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.wd-feature-item:nth-child(even) {
+    border-right: none;
+}
+
+.wd-feature-item:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+.wd-feature-tag {
+    font-family: var(--font_inter_tight);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(29, 29, 31, 0.38);
+    display: block;
+}
+
+.wd-feature-title {
+    font-family: var(--font_syne);
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--dark);
+    margin: 0;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+}
+
+.wd-feature-item p {
+    font-family: var(--font_instrument);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: rgba(29, 29, 31, 0.62);
+    margin: 0;
+}
+
+/* ── Reflection section title adjustment ── */
+.wd-reflection-note {
+    font-family: var(--font_instrument);
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgba(29, 29, 31, 0.4);
+    font-style: italic;
+    border-top: 1px solid rgba(29, 29, 31, 0.08);
+    padding-top: 20px;
+    margin: 0;
+}
+
+/* ── Comparison slider: force both images to align top-left
+           so before/after show the same viewport region ── */
+.wd-img--slider img-comparison-slider img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top left !important;
+}
