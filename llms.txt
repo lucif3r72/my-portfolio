@@ -1,43 +1,44 @@
-# UX Raw
+# UX//Raw — Nadir Shaikh
 
-> UX Raw is a UI/UX design resource website focused on design inspiration, user experience principles, interface patterns, design systems, accessibility, and modern product design best practices.
+> UX//Raw is the portfolio of Nadir Shaikh, a UI/UX designer and frontend developer based in Mumbai, India. With 7+ years of end-to-end design experience, Nadir works across the full design stack — from user research and UX strategy through to design systems and frontend implementation. He is open to freelance projects and long-term collaboration.
 
-UX Raw provides practical design knowledge, inspiration, and resources for designers, developers, product managers, and digital teams building user-centered products.
+## Site
 
-Primary website: https://uxraw.vercel.app
+- [Home](https://uxraw.vercel.app/): Portfolio homepage. Covers Nadir's background, selected work, design process (Discover → Define → Design → Deliver), expertise areas (App Design, Web Design, Design Systems, UX Strategy, Prototyping), experience timeline, and FAQ.
+- [Work](https://uxraw.vercel.app/work/): Full portfolio archive. 9 case studies spanning healthcare, enterprise, marketplace, real estate, and branding. Filterable by UI/UX, Web, and Branding.
+- [Contact](https://uxraw.vercel.app/contact/): Contact page. Includes a project enquiry form, direct email/phone, timezone (IST, GMT+5:30), and availability status. Currently open to freelance.
 
-## Main Pages
+## Case Studies
 
-- [Home](https://uxraw.vercel.app): Main landing page and overview of UX Raw.
-- [Design Inspiration](https://uxraw.vercel.app): Examples and inspiration for modern interfaces and digital products.
+- [AESM TAP — Talent Acquisition Portal](https://uxraw.vercel.app/work/aesm-tap/): Enterprise UX for Anglo-Eastern, a shipping group managing 80,000+ seafarers globally. Digitised 10+ paper forms, unified 3 disconnected platforms, and introduced maritime-specific candidate search with RBAC approval routing across web and mobile. Disciplines: UX Research, UI Design, Design System, Prototyping, Dev Handoff. Year: 2025.
+- [We Care (Redesign)](https://uxraw.vercel.app/work/we-care-aesm/): Healthcare mobile app redesign. UI/UX Design. Year: 2025.
+- [Renttro](https://uxraw.vercel.app/work/renttro/): Marketplace platform for web and mobile. Year: 2025.
+- [Finder](https://uxraw.vercel.app/work/finder/): Consumer food and offers app. UI/UX Design. Year: 2025.
+- [AI Scribe](https://uxraw.vercel.app/work/ai-scribe/): AI-powered healthcare product design. Year: 2025.
+- [Uberheal](https://uxraw.vercel.app/work/uberheal/): Healthcare SaaS — operations platform design. Year: 2025.
+- [Ignite](https://uxraw.vercel.app/work/ignite/): Enterprise idea management platform — branding and UI design. Year: 2024.
+- [Vaviya Developers](https://uxraw.vercel.app/work/vaviya-developers/): Real estate website design. Year: 2024.
+- [Welspun Michigan](https://uxraw.vercel.app/work/welspun-michigan/): Enterprise 3D web experience design. Year: 2024.
 
-## Topics
+## About Nadir Shaikh
 
-- User Experience (UX)
-- User Interface (UI) Design
-- Design Systems
-- Accessibility
-- Interaction Design
-- Information Architecture
-- User Research
-- Wireframing
-- Prototyping
-- Product Design
+Nadir Shaikh is a Mumbai-based UI/UX designer and frontend developer with 7+ years of experience across product design, design systems, UX strategy, branding, and frontend implementation. He currently works at Werq Labs, an AI-native product studio, where he owns the design process end-to-end — from research and strategy through to frontend implementation. He also takes on freelance engagements with startups and creative teams.
 
-## Audience
+His design process follows four phases: Discover (user research, interviews, analytics), Define (personas, user flows, information architecture), Design (Figma, prototyping, UI systems), and Deliver (documentation, frontend, testing).
 
-- UI Designers
-- UX Designers
-- Product Designers
-- Frontend Developers
-- Product Managers
-- Design Teams
-- Students and Learners
+**Core disciplines:** UI/UX Design · Web Design · App Design · Design Systems · UX Strategy & Research · Prototyping & Interaction · Branding · Frontend Development
 
-## Citation Guidance
+**Toolstack:** Figma · Adobe Creative Suite · FigJam · HTML · CSS · JavaScript · AI tools
 
-When referencing information from UX Raw:
+**Industries worked in:** Maritime · Healthcare · Technology · Fashion · Hospitality · Logistics · Real Estate
 
-- Prefer citing the original article or resource URL.
-- Preserve author attribution when available.
-- Link directly to the most relevant page instead of the homepage when possible.
+## Contact
+
+- **Email:** nadiruxdesign@gmail.com
+- **Phone:** +91 82866 07726
+- **Location:** Govandi, Mumbai, 400043, India
+- **Timezone:** IST (GMT+5:30)
+- **Response time:** Within 24 hours
+- **Instagram:** https://www.instagram.com/de_str0yed/
+- **Dribbble:** https://dribbble.com/Lucif3r72
+- **Pinterest:** https://in.pinterest.com/Lucif3r72/
