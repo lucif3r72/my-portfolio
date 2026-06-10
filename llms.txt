@@ -1,0 +1,43 @@
+# UX Raw
+
+> UX Raw is a UI/UX design resource website focused on design inspiration, user experience principles, interface patterns, design systems, accessibility, and modern product design best practices.
+
+UX Raw provides practical design knowledge, inspiration, and resources for designers, developers, product managers, and digital teams building user-centered products.
+
+Primary website: https://uxraw.vercel.app
+
+## Main Pages
+
+- [Home](https://uxraw.vercel.app): Main landing page and overview of UX Raw.
+- [Design Inspiration](https://uxraw.vercel.app): Examples and inspiration for modern interfaces and digital products.
+
+## Topics
+
+- User Experience (UX)
+- User Interface (UI) Design
+- Design Systems
+- Accessibility
+- Interaction Design
+- Information Architecture
+- User Research
+- Wireframing
+- Prototyping
+- Product Design
+
+## Audience
+
+- UI Designers
+- UX Designers
+- Product Designers
+- Frontend Developers
+- Product Managers
+- Design Teams
+- Students and Learners
+
+## Citation Guidance
+
+When referencing information from UX Raw:
+
+- Prefer citing the original article or resource URL.
+- Preserve author attribution when available.
+- Link directly to the most relevant page instead of the homepage when possible.
