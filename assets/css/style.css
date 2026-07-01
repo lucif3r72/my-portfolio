@@ -1,5 +1,12 @@
+/* Instrument Serif — italic accents (Clico-inspired editorial touch) */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
 :root {
     --dark: #1d1d1f;
+    /* Graph-paper grid lines (Clico-inspired) */
+    --grid-line: rgba(120, 100, 80, 0.10);
+    --grid-size: 24px;
+    --font_instrument_serif: "Instrument Serif", Georgia, serif;
     --primary: #EF9DFC;
     --primary-2: #FFA2A0;
     --primary-3: #A1DEFC;
@@ -73,9 +80,30 @@ body {
     line-height: 1.4em;
     color: var(--paragraph);
     background-color: var(--bg-default);
+    /* ── Graph-paper grid backdrop (Clico-inspired) ── */
+    background-image:
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Text selection accent ── */
+::selection {
+    background: var(--primary);
+    color: var(--dark);
+}
+
+/* ── Serif-italic accents inside copy (Clico-style editorial contrast) ── */
+p i,
+h4 i,
+.wd-hero-summary i {
+    font-family: var(--font_instrument_serif);
+    font-style: italic;
+    font-size: 1.08em;
+    letter-spacing: 0.2px;
 }
 
 main.bronx-main {
@@ -126,6 +154,19 @@ html.is-loading body {
 
 .custom-row {
     display: flex;
+}
+
+/* ═══ Full-bleed section dividers (Clico-inspired) ═══
+   Every major homepage section closes with a hard rule,
+   framing content blocks against the grid backdrop. */
+.featured-work-sec,
+.process-sec,
+.experience-sec,
+.motivation-sec,
+.experience2-sec,
+.favourite-stack-sec,
+.faq-sec {
+    border-bottom: 1.5px solid var(--dark);
 }
 
 /* ===== # Theme Button ===== */
@@ -2152,7 +2193,7 @@ html.is-loading body {
 
 .favourite-stack-sec {
     padding: 100px 0 100px;
-    border-top: 2px solid rgba(29, 29, 31, 0.08);
+    /* border-top removed — full-bleed dividers now handle section separation */
 }
 
 /* Pin column — holds the heading, full section height */
