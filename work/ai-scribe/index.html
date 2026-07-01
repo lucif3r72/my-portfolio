@@ -2,270 +2,629 @@
 <html lang="en">
 
 <head>
-    <!-- ===== Meta ===== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===== Favicon ===== -->
     <link rel="icon" type="image/x-icon" href="../../assets/imgs/favicon.png">
+    <title>AI Scribe - Intelligent Clinical Documentation Case Study | UX//Raw</title>
 
-    <!-- ===== Title ===== -->
-    <title>AI Scribe | UX Case Study</title>
+    <!-- ===== SEO: Core Meta ===== -->
+    <meta name="description"
+        content="Case study: AI Scribe, a conceptual healthcare product that automatically documents consultations, prescriptions, and clinical notes in real time, designed end-to-end for clinics and hospitals. By Nadir Shaikh.">
+    <meta name="author" content="Nadir Shaikh">
+    <meta name="robots" content="index, follow">
 
-    <!-- ===== LineAwesome ===== -->
+    <!-- ===== SEO: Canonical ===== -->
+    <link rel="canonical" href="https://uxraw.vercel.app/work/ai-scribe/">
+
+    <!-- ===== SEO: Open Graph ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://uxraw.vercel.app/work/ai-scribe/">
+    <meta property="og:title" content="AI Scribe - Intelligent Clinical Documentation Case Study | UX//Raw">
+    <meta property="og:description"
+        content="How Nadir Shaikh designed AI Scribe - a concept AI assistant that documents clinical consultations in real time, letting doctors focus on patients instead of screens.">
+    <meta property="og:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/work-aiscribe.png">
+    <meta property="og:site_name" content="UX//Raw">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- ===== SEO: Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Scribe - Intelligent Clinical Documentation Case Study | UX//Raw">
+    <meta name="twitter:description"
+        content="A concept AI-powered clinical documentation assistant, designed end-to-end for clinics and hospitals by Nadir Shaikh.">
+    <meta name="twitter:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/work-aiscribe.png">
+
+    <!-- ===== SEO: JSON-LD Structured Data ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CreativeWork",
+          "@id": "https://uxraw.vercel.app/work/ai-scribe/#project",
+          "url": "https://uxraw.vercel.app/work/ai-scribe/",
+          "name": "AI Scribe - Intelligent Clinical Documentation Assistant",
+          "description": "Concept UX/UI design for AI Scribe, a healthcare product that automatically documents consultations, prescriptions, and clinical notes in real time for clinics and hospitals.",
+          "image": "https://uxraw.vercel.app/assets/imgs/dark-mode/work-aiscribe.png",
+          "dateCreated": "2025",
+          "genre": "UX/UI Design Case Study",
+          "keywords": "UX Design, UI Design, Healthcare, AI Product Design, Clinical Documentation, Concept Project",
+          "creator": {
+            "@type": "Person",
+            "@id": "https://uxraw.vercel.app/#nadir",
+            "name": "Nadir Shaikh",
+            "url": "https://uxraw.vercel.app/",
+            "jobTitle": "UI/UX Designer & Frontend Developer"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://uxraw.vercel.app/work/#collectionpage",
+            "url": "https://uxraw.vercel.app/work/",
+            "name": "Work - UI/UX Design Portfolio of Nadir Shaikh"
+          },
+          "about": [
+            "Healthcare UX Design",
+            "AI Product Design",
+            "Clinical Documentation",
+            "Concept Project"
+          ]
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="../../assets/css/line-awesome.min.css">
-
-    <!-- ===== Fonts ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap"
         rel="stylesheet">
 
-    <!-- ===== Stylesheet ===== -->
+    <!-- Lenis Smooth Scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+
+    <!-- Image Comparison Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
+
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../../assets/css/responsive.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
 </head>
 
 <body>
 
-    <!-- ===== Main Start ===== -->
+    <!-- ===== Magic Cursor ===== -->
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PRELOADER — canonical UX//RAW structure
+    ═══════════════════════════════════════════ -->
+    <div id="uxrPreloader" class="uxr-preloader">
+        <div id="uxrPanelL" class="uxr-panel uxr-panel--l"></div>
+        <div id="uxrPanelR" class="uxr-panel uxr-panel--r"></div>
+        <div class="uxr-progress-line" id="uxrProgress"></div>
+        <div class="uxr-corner uxr-corner--tl" id="ccTL"></div>
+        <div class="uxr-corner uxr-corner--tr" id="ccTR"></div>
+        <div class="uxr-corner uxr-corner--bl" id="ccBL"></div>
+        <div class="uxr-corner uxr-corner--br" id="ccBR"></div>
+        <div class="uxr-counter" id="uxrCounter">000</div>
+        <div class="uxr-divider" id="uxrDivider"></div>
+        <div class="uxr-logo">
+            <div class="uxr-word" id="uxrWord">
+                <div class="uxr-clip"><span class="uxr-letter" id="lU">U</span></div>
+                <div class="uxr-gap" id="gX">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lX">X</span></div>
+                </div>
+                <div class="uxr-clip"><span class="uxr-letter uxr-letter--sep" id="lSep">//</span></div>
+                <div class="uxr-gap" id="gR">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lR">R</span></div>
+                </div>
+                <div class="uxr-clip"><span class="uxr-letter" id="lA">A</span></div>
+                <div class="uxr-gap" id="gW">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lW">W</span></div>
+                </div>
+            </div>
+            <div class="uxr-sub" id="uxrSub">Visual & Experience Design</div>
+        </div>
+    </div>
+
     <main class="bronx-main work-detail-page">
 
-        <!-- ===== Smooth Scroll Start ===== -->
-        <div id="smooth-wrapper">
-            <div id="smooth-content">
-
-                <!-- ===== Hero Section Start ===== -->
-                <section class="hero-sec hero-sec3">
-                    <header class="header-wrap scroll-animation" data-animation="slide_up">
-                        <div class="custom-row">
-                            <div class="header-local-time-box">
-                                <a href="../../"><span>Local/</span></a>
-                                <span id="realtime">00:00</span>
-                            </div>
-
-                            <div class="header-middle">
-                                <div class="humberg-menu">
-                                    <a href="mailto:nadiruxdesign@gmail.com">
-                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
-                                            <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
-                                                stroke="#1d1d1f" stroke-width="1.5"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="header-right">
-                                <a href="javascript:void(0);" class="theme-btn">MENU</a>
-                            </div>
-                        </div>
-                    </header>
-                </section>
-                <!-- ===== Hero Section End ===== -->
-
-                <!-- ===== Work Detail Header Start ===== -->
-                <section class="work-detail-header-infos scroll-animation" data-animation="slide_down2">
-                    <div class="work-detail-header-left">
-                        <h1>AI Scribe — Intelligent Clinical Documentation Assistant</h1>
-                        <p>
-                            AI Scribe is a conceptual healthcare product designed to assist doctors by automatically
-                            documenting consultations, prescriptions, and clinical notes in real time. The platform
-                            eliminates the need for human scribes, allowing doctors to focus on patients rather than
-                            screens. Designed end-to-end, AI Scribe supports clinics of all sizes—from single practices
-                            to large hospital systems.
-                        </p>
-                    </div>
-                    <div class="work-detail-header-right">
-                        <ul>
-                            <li><span>CLIENT</span> Concept Project</li>
-                            <li><span>ROLE</span> UI/UX Designer</li>
-                            <li><span>PLATFORM</span> Web & Tablet (Clinic & Hospital Use)</li>
-                            <li><span>PROJECT STATUS</span> Conceptual (End-to-End Designed)</li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- ===== Work Detail Header End ===== -->
-
-                <!-- ===== Work Detail Full Image Start ===== -->
-                <div class="work-detail-full-img-wrap">
-                    <div class="work-detail-full-img">
-                        <div class="work-detail-full-img-inner">
-                            <img src="../../assets/imgs/dark-mode/work-aiscribe-hero.png" alt="AI Scribe Platform Overview">
-                        </div>
+        <!-- ===== Popup Menu ===== -->
+        <div class="popup-menu-wrap">
+            <div class="popup-menu-header">
+                <div class="local-temperature">
+                    <a href="../../"><span>Local/</span><span id="coordinates"></span></a>
+                </div>
+                <div class="popup-menu-close-btn">
+                    <div class="icon">
+                        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" color="rgba(214,214,215,0.7)">
+                            <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
                     </div>
                 </div>
-                <!-- ===== Work Detail Full Image End ===== -->
-
-                <!-- ===== Challenges / Goals / Highlights ===== -->
-                <div class="work-detail2-content-wrap">
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Challenges</h4>
-                        </div>
-                        <div class="right">
-                            <p>
-                                Doctors spend a significant portion of their time documenting consultations rather
-                                than interacting with patients. Manual note-taking and human scribes introduce delays,
-                                errors, and high operational costs. The challenge was to design an AI-powered system
-                                that doctors could trust—accurate, unobtrusive, compliant, and easy to use during live
-                                appointments.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Goals</h4>
-                        </div>
-                        <div class="right">
-                            <p>
-                                The primary goal was to reduce documentation burden while improving clinical accuracy.
-                                AI Scribe needed to seamlessly capture conversations, generate structured medical
-                                records, and assist with prescriptions and follow-ups. The experience had to feel
-                                reliable and respectful of medical workflows across small clinics and large hospitals.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Design Highlights</h4>
-                        </div>
-                        <div class="right">
-                            <p>
-                                AI Scribe uses a calm, minimal interface designed for high-pressure medical
-                                environments. Live transcription runs quietly in the background while structured notes
-                                are auto-generated in real time. Doctors can review, edit, and approve outputs with
-                                minimal interaction. The system supports appointment context, prescriptions, and
-                                follow-up summaries—without disrupting the patient conversation.
-                            </p>
-                        </div>
-                    </div>
-
+                <div class="right text-right">
+                    <a href="../../contact/" class="theme-btn">Schedule a call</a>
                 </div>
-                <!-- ===== End ===== -->
-
-                <!-- ===== Comparison Slider ===== -->
-                <div class="work-detail-full-img-wrap">
-                    <div class="work-detail-full-img comparison-slider">
-                        <img-comparison-slider>
-                            <img slot="first" src="../../assets/imgs/dark-mode/aiscribe-before.png" alt="Traditional Documentation">
-                            <img slot="second" src="../../assets/imgs/dark-mode/aiscribe-after.png" alt="AI Scribe Workflow">
-                        </img-comparison-slider>
-                    </div>
+            </div>
+            <div class="popup-menu">
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="../../"><span class="count">(1)</span><span>Home</span><span>Home</span></a></li>
+                        <li class="active"><a href="../"><span
+                                    class="count">(2)</span><span>Work</span><span>Work</span></a></li>
+                        <li><a href="../../contact/"><span
+                                    class="count">(3)</span><span>Contact</span><span>Contact</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="popup-menu-footer">
+                <div class="copyright">
+                    <ul class="social-links">
+                        <li><a href="https://www.instagram.com/de_str0yed/" target="_blank"
+                                rel="noopener noreferrer">Instagram <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://dribbble.com/Lucif3r72" target="_blank" rel="noopener noreferrer">Dribbble
+                                <svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://in.pinterest.com/Lucif3r72/" target="_blank"
+                                rel="noopener noreferrer">Pinterest <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                    </ul>
+                    <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                 </div>
-
-                <!-- ===== Before vs After Table ===== -->
-                <div class="work-detail2-content-wrap work-detail2-content-wrap2">
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Before vs After</h4>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>Feature</th>
-                                        <th>Traditional Approach</th>
-                                        <th>AI Scribe</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Documentation</td>
-                                        <td>Manual or human scribes</td>
-                                        <td>Automated & AI-powered</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Doctor Focus</td>
-                                        <td>Split attention</td>
-                                        <td>Patient-first interaction</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Accuracy</td>
-                                        <td>Prone to errors</td>
-                                        <td>Structured & consistent</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Time Spent</td>
-                                        <td>High admin overhead</td>
-                                        <td>Reduced documentation time</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Scalability</td>
-                                        <td>Costly to scale</td>
-                                        <td>Clinic to hospital ready</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Compliance</td>
-                                        <td>Manual checks</td>
-                                        <td>Built-in safeguards</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ===== Results & Reflection ===== -->
-                <div class="work-detail2-content-wrap work-detail2-content-wrap2">
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Results</h4>
-                        </div>
-                        <div class="right">
-                            <p>
-                                Concept validation sessions with healthcare professionals indicated strong interest
-                                in reducing documentation time and improving focus during patient visits. Simulated
-                                workflows showed potential time savings of up to 40% per consultation. AI Scribe
-                                establishes a scalable foundation for modern, AI-assisted clinical operations.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Reflection</h4>
-                        </div>
-                        <div class="right">
-                            <p>
-                                Designing AI Scribe emphasized the importance of trust in healthcare UX. The goal was
-                                not to replace doctors’ judgment, but to remove repetitive administrative work. This
-                                project strengthened my approach to designing AI systems that feel supportive,
-                                transparent, and human-centered in critical environments.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- ===== Footer ===== -->
-                <footer class="footer-area">
-                    <div class="footer-big-text">
-                        <span class="timeline-anim scroll-animation" data-animation="slide_down">UX//RAW</span>
-                    </div>
-                    <div class="copyright">
-                        <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
-                        <div class="right">
-                            <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP</a>
-                        </div>
-                    </div>
-                </footer>
-
             </div>
         </div>
-        <!-- ===== Smooth Scroll End ===== -->
+
+        <!-- ═══════════════════════════════════
+             HEADER
+        ═══════════════════════════════════ -->
+        <header class="header-wrap">
+            <div class="custom-row">
+                <div class="header-local-time-box">
+                    <a href="../../"><span>Local/</span></a>
+                    <span id="realtime">00:00</span>
+                </div>
+                <div class="header-middle">
+                    <div class="humberg-menu">
+                        <a href="mailto:nadiruxdesign@gmail.com">
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
+                                <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
+                                    stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <a href="javascript:void(0);" class="theme-btn menu-trigger">MENU</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ═══════════════════════════════════
+             PROJECT HERO
+        ═══════════════════════════════════ -->
+        <section class="wd-hero">
+
+            <div class="wd-hero-grid">
+
+                <div class="wd-hero-left">
+                    <div class="wd-breadcrumb hero-anim-item">
+                        <a href="../">WORK</a>
+                        <span>/</span>
+                        <span>AI SCRIBE</span>
+                    </div>
+                    <div class="wd-hero-title-wrap">
+                        <h1 class="wd-hero-title">
+                            <span class="hero-line"><span class="hero-line-inner">AI SCRIBE</span></span>
+                        </h1>
+                        <p class="wd-hero-subtitle hero-anim-item">Intelligent Clinical Documentation Assistant</p>
+                    </div>
+                </div>
+
+                <div class="wd-hero-right hero-anim-item">
+                    <p class="wd-hero-summary">A conceptual healthcare product that documents consultations,
+                        prescriptions, and clinical notes in real time, eliminating the need for human scribes so
+                        doctors can focus on patients instead of screens.</p>
+                    <div class="wd-hero-tags">
+                        <span class="wd-hero-tag">UX Design</span>
+                        <span class="wd-hero-tag">UI Design</span>
+                        <span class="wd-hero-tag">AI Product Design</span>
+                        <span class="wd-hero-tag">Workflow Design</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="wd-meta-strip hero-anim-item">
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">CLIENT</span>
+                    <span class="wd-meta-value">Concept Project</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">ROLE</span>
+                    <span class="wd-meta-value">UI/UX Designer</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">PLATFORM</span>
+                    <span class="wd-meta-value">Web & Tablet (Clinic & Hospital Use)</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">STATUS</span>
+                    <span class="wd-meta-value">Conceptual (End-to-End Designed)</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">YEAR</span>
+                    <span class="wd-meta-value">2025</span>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="wd-hero-rule"></div>
+
+        <!-- ═══════════════════════════════════
+             HERO IMAGE
+        ═══════════════════════════════════ -->
+        <div class="wd-cover-wrap">
+            <div class="wd-cover">
+                <img src="../../assets/imgs/dark-mode/work-aiscribe-hero.png" alt="AI Scribe Platform Overview">
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             IN-PAGE STICKY NAVIGATION
+        ═══════════════════════════════════ -->
+        <nav class="wd-inpage-nav" id="wdInpageNav" aria-label="Case study sections">
+            <div class="wd-inpage-nav-inner">
+                <a class="wd-inpage-link is-active" href="#wd-overview">Overview</a>
+                <a class="wd-inpage-link" href="#wd-research">Research</a>
+                <a class="wd-inpage-link" href="#wd-process">Process</a>
+                <a class="wd-inpage-link" href="#wd-design">Design</a>
+                <a class="wd-inpage-link" href="#wd-results">Results</a>
+                <a class="wd-inpage-link" href="#wd-reflection">Reflection</a>
+            </div>
+        </nav>
+
+        <!-- ═══════════════════════════════════
+             CASE STUDY BODY
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-overview">
+
+            <!-- ── 01 Overview ── -->
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">01 · OVERVIEW</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">The Problem</h2>
+                                <p>Doctors spend a significant portion of their time documenting consultations
+                                    rather than interacting with patients. Manual note-taking and human scribes
+                                    introduce delays, errors, and high operational costs.</p>
+                                <p>The challenge was to design an AI-powered system doctors could trust: accurate,
+                                    unobtrusive, compliant, and easy to use during live appointments across clinics
+                                    of all sizes.</p>
+
+                                <div class="wd-role-callout">
+                                    <span class="wd-role-callout-label">My Contribution</span>
+                                    <div class="wd-role-callout-items">
+                                        <span class="wd-role-callout-item">End-to-End UX</span>
+                                        <span class="wd-role-callout-item">UI Design</span>
+                                        <span class="wd-role-callout-item">Clinical Workflow Design</span>
+                                        <span class="wd-role-callout-item">Concept Validation</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 02 Approach ── -->
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">02 · APPROACH</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">How We Solved It</h2>
+                                <p>The goal was to reduce documentation burden while improving clinical accuracy. AI
+                                    Scribe needed to seamlessly capture conversations, generate structured medical
+                                    records, and assist with prescriptions and follow-ups, without disrupting the
+                                    patient conversation.</p>
+                                <p>A calm, minimal interface was designed for high-pressure medical environments.
+                                    Live transcription runs quietly in the background while structured notes are
+                                    auto-generated in real time, and doctors review, edit, and approve outputs with
+                                    minimal interaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ═══════════════════════════════════
+             KEY RESEARCH FINDINGS
+        ═══════════════════════════════════ -->
+        <div class="wd-insights-strip js-fade-up" id="wd-research">
+            <div class="wd-insights-header">
+                <span class="wd-insights-eyebrow">Key Research Findings</span>
+            </div>
+            <div class="wd-insights-grid">
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">01</span>
+                    <div>
+                        <h3 class="wd-insight-heading">Documentation Steals Patient Time</h3>
+                        <p class="wd-insight-text">A significant share of consultation time goes to documentation
+                            rather than the patient in front of the doctor, splitting attention at the worst moment.</p>
+                    </div>
+                </div>
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">02</span>
+                    <div>
+                        <h3 class="wd-insight-heading">Costly, Error-Prone Process</h3>
+                        <p class="wd-insight-text">Manual note-taking and human scribes introduce delays, errors,
+                            and high operational costs that scale poorly as clinics grow.</p>
+                    </div>
+                </div>
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">03</span>
+                    <div>
+                        <h3 class="wd-insight-heading">A High Trust Bar</h3>
+                        <p class="wd-insight-text">Any AI system entering the exam room had to be accurate,
+                            unobtrusive, and compliant before doctors would trust it during live appointments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             UX PROCESS STRIP
+        ═══════════════════════════════════ -->
+        <section class="wd-process-strip js-fade-up" id="wd-process">
+            <div class="wd-process-label">UX PROCESS</div>
+            <div class="wd-process-steps">
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">01</span>
+                    <span class="wd-ps-name">Discovery</span>
+                    <span class="wd-ps-detail">Clinical workflow research across small clinics & hospital systems</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">02</span>
+                    <span class="wd-ps-name">Definition</span>
+                    <span class="wd-ps-detail">Trust & compliance requirements, documentation structure</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">03</span>
+                    <span class="wd-ps-name">Design</span>
+                    <span class="wd-ps-detail">Minimal live-transcription UI, review & approve interactions</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">04</span>
+                    <span class="wd-ps-name">Delivery</span>
+                    <span class="wd-ps-detail">Concept validation sessions with healthcare professionals</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             COMPARISON SLIDER
+        ═══════════════════════════════════ -->
+        <div class="wd-img-wrap js-fade-up">
+            <span class="wd-img-label">BEFORE / AFTER: Consultation Documentation</span>
+            <div class="wd-img wd-img--slider">
+                <img-comparison-slider>
+                    <img slot="first" src="../../assets/imgs/dark-mode/aiscribe-before.png" alt="Traditional Documentation">
+                    <img slot="second" src="../../assets/imgs/dark-mode/aiscribe-after.png" alt="AI Scribe Workflow">
+                </img-comparison-slider>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             KEY DESIGN DECISIONS
+        ═══════════════════════════════════ -->
+        <div class="wd-features js-fade-up" id="wd-design">
+            <div class="wd-features-header">
+                <span class="wd-section-label">KEY DESIGN DECISIONS</span>
+            </div>
+            <div class="wd-features-grid">
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Capture</span>
+                    <h3 class="wd-feature-title">Quiet Live Transcription</h3>
+                    <p>Transcription runs quietly in the background during the appointment, replacing manual
+                        note-taking or a human scribe with a system that stays out of the conversation.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Output</span>
+                    <h3 class="wd-feature-title">Structured Notes, Auto-Generated</h3>
+                    <p>Structured medical records are generated in real time from the conversation, replacing
+                        error-prone manual documentation with a consistent, structured format.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Control</span>
+                    <h3 class="wd-feature-title">Review & Approve, Not Replace</h3>
+                    <p>Doctors review, edit, and approve every AI-generated output with minimal interaction — the
+                        system assists judgment, it doesn't replace it.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Scale</span>
+                    <h3 class="wd-feature-title">Clinic to Hospital Ready</h3>
+                    <p>The same workflow supports appointment context, prescriptions, and follow-up summaries across
+                        single practices and large hospital systems alike.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             RESULTS
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-results">
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">03 · RESULTS</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">Outcome</h2>
+                                <p>Concept validation sessions with healthcare professionals indicated strong
+                                    interest in reducing documentation time and improving focus during patient
+                                    visits. Simulated workflows showed potential time savings per consultation.</p>
+
+                                <div class="wd-outcomes">
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">~40%</span>
+                                        <span class="wd-outcome-label">Simulated time saved per consultation</span>
+                                    </div>
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">Strong</span>
+                                        <span class="wd-outcome-label">Clinician interest in validation sessions</span>
+                                    </div>
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">Scalable</span>
+                                        <span class="wd-outcome-label">Foundation for AI-assisted clinical ops</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             REFLECTION
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-reflection">
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">04 · REFLECTION</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">What I Learned</h2>
+                                <p>Designing AI Scribe emphasized the importance of trust in healthcare UX. The goal
+                                    was not to replace doctors' judgment, but to remove repetitive administrative
+                                    work.</p>
+                                <p>This project strengthened my approach to designing AI systems that feel
+                                    supportive, transparent, and human-centered in critical environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             MORE WORKS MARQUEE
+        ═══════════════════════════════════ -->
+        <div class="work-detail-text-anim-wrap">
+            <ul>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+            </ul>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             NEXT PROJECTS
+        ═══════════════════════════════════ -->
+        <div class="wd-next-projects">
+            <div class="wd-next-label">
+                <span class="wd-section-label">NEXT PROJECTS</span>
+            </div>
+            <div class="featured-work-lists wd-next-grid">
+                <div class="featured-card js-card-reveal">
+                    <a class="link-overlay" href="../finder/"></a>
+                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-finder.png" alt="Finder"></div>
+                    <div class="content">
+                        <div class="left">
+                            <p class="title">Finder</p>
+                            <p class="subtitle">Consumer App · Food & Offers</p>
+                        </div>
+                        <div class="right"><span class="date">2025</span></div>
+                    </div>
+                </div>
+                <div class="featured-card js-card-reveal">
+                    <a class="link-overlay" href="../ignite/"></a>
+                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-ignite.png" alt="Ignite"></div>
+                    <div class="content">
+                        <div class="left">
+                            <p class="title">Ignite</p>
+                            <p class="subtitle">Enterprise · Idea Management</p>
+                        </div>
+                        <div class="right"><span class="date">2024</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             FOOTER
+        ═══════════════════════════════════ -->
+        <footer class="footer-area">
+            <div class="footer-big-text">
+                <span class="js-footer-text">UX//RAW</span>
+            </div>
+            <div class="copyright">
+                <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
+                <div class="right">
+                    <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP ↑</a>
+                </div>
+            </div>
+        </footer>
 
     </main>
 
@@ -274,8 +633,39 @@
     <script src="../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/gsap.min.js"></script>
     <script src="../../assets/js/ScrollTrigger.min.js"></script>
-    <script src="../../assets/js/ScrollSmoother.min.js"></script>
+    <script src="../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../../assets/js/SplitText.min.js"></script>
+    <script src="../../assets/js/jarallax.js"></script>
+    <script src="../../assets/js/jarallax-element.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/themescroll.js"></script>
     <script type="module" src="https://unpkg.com/img-comparison-slider@8/dist/index.js"></script>
 
+    <!-- ── In-page nav: active link on scroll ── -->
+    <script>
+        (function () {
+            const nav = document.getElementById('wdInpageNav');
+            if (!nav) return;
+            const links = nav.querySelectorAll('.wd-inpage-link');
+            const sectionIds = ['wd-overview', 'wd-research', 'wd-process', 'wd-design', 'wd-results', 'wd-reflection'];
+            const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+            function onScroll() {
+                const scrollY = window.scrollY + 80;
+                let current = sections[0];
+                sections.forEach(sec => {
+                    if (sec && sec.offsetTop <= scrollY) current = sec;
+                });
+                links.forEach(link => {
+                    link.classList.toggle('is-active', link.getAttribute('href') === '#' + (current && current.id));
+                });
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
+
 </body>
+
 </html>

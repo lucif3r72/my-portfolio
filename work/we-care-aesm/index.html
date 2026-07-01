@@ -2,448 +2,643 @@
 <html lang="en">
 
 <head>
-    <!-- ===== Meta ===== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===== Favicon ===== -->
     <link rel="icon" type="image/x-icon" href="../../assets/imgs/favicon.png">
+    <title>WeCare (Redesign) - Seafarer Wellness App Case Study | UX//Raw</title>
 
-    <!-- ===== Title ===== -->
-    <title>UX//Raw</title>
+    <!-- ===== SEO: Core Meta ===== -->
+    <meta name="description"
+        content="Case study: WeCare app redesign for Anglo-Eastern, a mobile wellness and training platform used by seafarers and onshore staff. A cluttered, inconsistent interface rebuilt into a clean, accessible design system. By Nadir Shaikh.">
+    <meta name="author" content="Nadir Shaikh">
+    <meta name="robots" content="index, follow">
 
-    <!-- ===== LineAwesome ===== -->
+    <!-- ===== SEO: Canonical ===== -->
+    <link rel="canonical" href="https://uxraw.vercel.app/work/we-care-aesm/">
+
+    <!-- ===== SEO: Open Graph ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://uxraw.vercel.app/work/we-care-aesm/">
+    <meta property="og:title" content="WeCare (Redesign) - Seafarer Wellness App Case Study | UX//Raw">
+    <meta property="og:description"
+        content="How Nadir Shaikh rebuilt Anglo-Eastern's WeCare app - a wellness, training, and appreciation platform for 80,000+ seafarers - from a cluttered legacy interface into a clean, accessible design system.">
+    <meta property="og:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/work-1.png">
+    <meta property="og:site_name" content="UX//Raw">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- ===== SEO: Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WeCare (Redesign) - Seafarer Wellness App Case Study | UX//Raw">
+    <meta name="twitter:description"
+        content="End-to-end UI/UX redesign of Anglo-Eastern's WeCare app - wellness, training, and appreciation tools for seafarers, rebuilt into a clean, accessible mobile design system.">
+    <meta name="twitter:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/work-1.png">
+
+    <!-- ===== SEO: JSON-LD Structured Data ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CreativeWork",
+          "@id": "https://uxraw.vercel.app/work/we-care-aesm/#project",
+          "url": "https://uxraw.vercel.app/work/we-care-aesm/",
+          "name": "WeCare (Redesign) - Seafarer Wellness App",
+          "description": "End-to-end UI/UX redesign of Anglo-Eastern's WeCare app. Rebuilt a cluttered, dark-themed legacy interface into a clean, accessible, WCAG-compliant mobile design system for seafarers and onshore staff.",
+          "image": "https://uxraw.vercel.app/assets/imgs/dark-mode/work-1.png",
+          "dateCreated": "2025",
+          "genre": "UX/UI Design Case Study",
+          "keywords": "UX Design, UI Design, Mobile App, Healthcare, Wellness, Design System, Accessibility, Maritime",
+          "creator": {
+            "@type": "Person",
+            "@id": "https://uxraw.vercel.app/#nadir",
+            "name": "Nadir Shaikh",
+            "url": "https://uxraw.vercel.app/",
+            "jobTitle": "UI/UX Designer & Frontend Developer"
+          },
+          "contributor": {
+            "@type": "Organization",
+            "name": "Anglo-Eastern",
+            "description": "Global maritime shipping group managing 80,000+ seafarers worldwide."
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://uxraw.vercel.app/work/#collectionpage",
+            "url": "https://uxraw.vercel.app/work/",
+            "name": "Work - UI/UX Design Portfolio of Nadir Shaikh"
+          },
+          "about": [
+            "Mobile App Redesign",
+            "Wellness & Training Platform",
+            "Design System",
+            "Accessibility",
+            "Maritime Industry"
+          ]
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="../../assets/css/line-awesome.min.css">
-
-
-    <!-- ===== Fonts ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap"
         rel="stylesheet">
 
-    <!-- ===== Stylesheet ===== -->
+    <!-- Lenis Smooth Scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+
+    <!-- Image Comparison Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
+
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../../assets/css/responsive.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
 </head>
 
 <body>
-    <!-- ===== Magic Cursor Start ===== -->
+
+    <!-- ===== Magic Cursor ===== -->
     <div id="magic-cursor">
         <div id="ball"></div>
     </div>
-    <!-- ===== Magic Cursor End ===== -->
 
-    <!-- ===== Loader Start ===== -->
-    <div class="preloader-wrap">
-        <div class="loader">
-            <img src="../../assets/imgs/loader-2.gif" alt="loader">
+    <!-- ═══════════════════════════════════════════
+         PRELOADER — canonical UX//RAW structure
+    ═══════════════════════════════════════════ -->
+    <div id="uxrPreloader" class="uxr-preloader">
+        <div id="uxrPanelL" class="uxr-panel uxr-panel--l"></div>
+        <div id="uxrPanelR" class="uxr-panel uxr-panel--r"></div>
+        <div class="uxr-progress-line" id="uxrProgress"></div>
+        <div class="uxr-corner uxr-corner--tl" id="ccTL"></div>
+        <div class="uxr-corner uxr-corner--tr" id="ccTR"></div>
+        <div class="uxr-corner uxr-corner--bl" id="ccBL"></div>
+        <div class="uxr-corner uxr-corner--br" id="ccBR"></div>
+        <div class="uxr-counter" id="uxrCounter">000</div>
+        <div class="uxr-divider" id="uxrDivider"></div>
+        <div class="uxr-logo">
+            <div class="uxr-word" id="uxrWord">
+                <div class="uxr-clip"><span class="uxr-letter" id="lU">U</span></div>
+                <div class="uxr-gap" id="gX">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lX">X</span></div>
+                </div>
+                <div class="uxr-clip"><span class="uxr-letter uxr-letter--sep" id="lSep">//</span></div>
+                <div class="uxr-gap" id="gR">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lR">R</span></div>
+                </div>
+                <div class="uxr-clip"><span class="uxr-letter" id="lA">A</span></div>
+                <div class="uxr-gap" id="gW">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lW">W</span></div>
+                </div>
+            </div>
+            <div class="uxr-sub" id="uxrSub">Visual & Experience Design</div>
         </div>
     </div>
-    <!-- ===== Loader End ===== -->
 
-    <!-- ===== Main Start ===== -->
     <main class="bronx-main work-detail-page">
 
-        <!-- ===== Popup Menu Start ===== -->
+        <!-- ===== Popup Menu ===== -->
         <div class="popup-menu-wrap">
             <div class="popup-menu-header">
                 <div class="local-temperature">
                     <a href="../../"><span>Local/</span><span id="coordinates"></span></a>
                 </div>
-
                 <div class="popup-menu-close-btn">
                     <div class="icon">
                         <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" color="rgba(214, 214, 215, 0.7)">
+                            xmlns="http://www.w3.org/2000/svg" color="rgba(214,214,215,0.7)">
                             <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round"></path>
                         </svg>
                     </div>
                 </div>
-
                 <div class="right text-right">
                     <a href="../../contact/" class="theme-btn">Schedule a call</a>
                 </div>
             </div>
             <div class="popup-menu">
-                <nav>
+                <nav aria-label="Main navigation">
                     <ul>
-                        <li>
-                            <a href="../../">
-                                <span class="count">(1)</span>
-                                <span>Home</span>
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="../">
-                                <span class="count">(2)</span>
-                                <span>Work</span>
-                                <span>Work</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../../contact/">
-                                <span class="count">(3)</span>
-                                <span>Contact</span>
-                                <span>Contact</span>
-                            </a>
-                        </li>
+                        <li><a href="../../"><span class="count">(1)</span><span>Home</span><span>Home</span></a></li>
+                        <li class="active"><a href="../"><span
+                                    class="count">(2)</span><span>Work</span><span>Work</span></a></li>
+                        <li><a href="../../contact/"><span
+                                    class="count">(3)</span><span>Contact</span><span>Contact</span></a></li>
                     </ul>
                 </nav>
             </div>
             <div class="popup-menu-footer">
                 <div class="copyright">
                     <ul class="social-links">
-                        <li>
-                            <a href="https://www.instagram.com/de_str0yed/" target="_blank">Instagram <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
-                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
-                                    </path>
-                                </svg></a>
-                        </li>
-                        <li>
-                            <a href="https://dribbble.com/Lucif3r72" target="_blank">Dribbble <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
-                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
-                                    </path>
-                                </svg></a>
-                        </li>
-                        <li>
-                            <a href="https://in.pinterest.com/Lucif3r72/" target="_blank">Pinterest <svg
-                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
-                                    color="rgb(29, 29, 31)">
-                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z">
-                                    </path>
-                                </svg></a>
-                        </li>
+                        <li><a href="https://www.instagram.com/de_str0yed/" target="_blank"
+                                rel="noopener noreferrer">Instagram <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://dribbble.com/Lucif3r72" target="_blank" rel="noopener noreferrer">Dribbble
+                                <svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://in.pinterest.com/Lucif3r72/" target="_blank"
+                                rel="noopener noreferrer">Pinterest <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
                     </ul>
                     <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                 </div>
             </div>
         </div>
-        <!-- ===== Popup Menu End ===== -->
 
-        <!-- ===== Smooth Scroll Start ===== -->
-        <div id="smooth-wrapper">
-            <div id="smooth-content">
-
-                <!-- ===== Hero Section Start ===== -->
-                <section class="hero-sec hero-sec3">
-
-                    <!-- ===== Header Start ===== -->
-                    <header class="header-wrap scroll-animation" data-animation="slide_up">
-                        <div class="custom-row">
-
-                            <!-- ===== Local Time ===== -->
-                            <div class="header-local-time-box">
-                                <a href="../../"><span>Local/</span></a>
-                                <span id="realtime">00:00</span>
-                            </div>
-
-                            <div class="header-middle">
-                                <div class="humberg-menu">
-                                    <a href="mailto:nadiruxdesign@gmail.com">
-                                        <?xml version="1.0" encoding="UTF-8"?>
-                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
-                                            <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path
-                                                d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
-                                                stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-                            </div>
-
-                            <!-- ===== Header Contact Button ===== -->
-                            <div class="header-right">
-                                <a href="javascript:void(0);" class="theme-btn">MENU</a>
-                            </div>
-
-                        </div>
-                    </header>
-                    <!-- ===== Header End ===== -->
-
-                </section>
-                <!-- ===== Hero Section End ===== -->
-
-
-                <!-- ===== Work Detail Header Start ===== -->
-                <section class="work-detail-header-infos scroll-animation" data-animation="slide_down2">
-                    <div class="work-detail-header-left">
-                        <h1>WeCare App (Redesign)</h1>
-                        <p>WeCare is a mobile app used by seafarers and onshore staff at Anglo-Eastern. It offers
-                            wellness tools, training schedules, forums, and ways to appreciate colleagues. The original
-                            app was cluttered, hard to navigate, and didn’t match the company’s design standards. I
-                            redesigned the entire interface to make it cleaner, easier to use, and more aligned with
-                            their brand.</p>
-                    </div>
-                    <div class="work-detail-header-right">
-                        <ul>
-                            <li><span>CLIENT</span> Anglo-Eastern</li>
-                            <li><span>ROLE</span> UI/UX Designer</li>
-                            <li><span>PLATFORM</span> Mobile (Android & iOS)</li>
-                            <li><span>LIVE PROJECT</span> <a
-                                    href="https://play.google.com/store/apps/details?id=com.angloeastern.crewapp&pcampaignid=web_share"
-                                    target="_blank">Visit Site</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- ===== Work Detail Header End ===== -->
-
-
-                <!-- ===== Work Detail Full Image Start ===== -->
-                <div class="work-detail-full-img-wrap">
-                    <div class="work-detail-full-img">
-                        <div class="work-detail-full-img-inner">
-                            <img src="../../assets/imgs/dark-mode/work-1.png" alt="work">
-                        </div>
+        <!-- ═══════════════════════════════════
+             HEADER
+        ═══════════════════════════════════ -->
+        <header class="header-wrap">
+            <div class="custom-row">
+                <div class="header-local-time-box">
+                    <a href="../../"><span>Local/</span></a>
+                    <span id="realtime">00:00</span>
+                </div>
+                <div class="header-middle">
+                    <div class="humberg-menu">
+                        <a href="mailto:nadiruxdesign@gmail.com">
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
+                                <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
+                                    stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <!-- ===== Work Detail Full Image End ===== -->
+                <div class="header-right">
+                    <a href="javascript:void(0);" class="theme-btn menu-trigger">MENU</a>
+                </div>
+            </div>
+        </header>
 
-                <!-- ===== Work Detail2 Start ===== -->
-                <div class="work-detail2-content-wrap">
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Challenges</h4>
-                        </div>
-                        <div class="right">
-                            <p class="scroll-animation" data-animation="slide_down2">The old app had a dark, crowded
-                                layout. Important
-                                features were hard to find, and the navigation felt confusing. Tap areas were small, and
-                                the design
-                                didn’t
-                                work well on mobile devices—especially in low-connectivity environments. There was no
-                                consistent design
-                                system, which made updates difficult.</p>
-                        </div>
+        <!-- ═══════════════════════════════════
+             PROJECT HERO
+        ═══════════════════════════════════ -->
+        <section class="wd-hero">
+
+            <div class="wd-hero-grid">
+
+                <!-- ── Left: Identity block ── -->
+                <div class="wd-hero-left">
+                    <div class="wd-breadcrumb hero-anim-item">
+                        <a href="../">WORK</a>
+                        <span>/</span>
+                        <span>WECARE</span>
                     </div>
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Goals</h4>
-                        </div>
-                        <div class="right">
-                            <p class="scroll-animation" data-animation="slide_down2">My goal was to simplify the
-                                experience. I
-                                introduced a white
-                                background for better clarity, grouped features into logical sections, and created a
-                                modular design
-                                system. I
-                                focused on accessibility, mobile responsiveness, and making key features easy to
-                                discover.</p>
-                        </div>
-                    </div>
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Design Highlights</h4>
-                        </div>
-                        <div class="right">
-                            <p class="scroll-animation" data-animation="slide_down2">The new design uses clean layouts,
-                                semantic colors,
-                                and intuitive navigation. Features like AE Live, Medical Contact, and Appreciation are
-                                now easy to
-                                access. I designed reusable components like cards and buttons, optimized for mobile use.
-                                The app feels
-                                lighter, faster, and more user-friendly.</p>
-                        </div>
+                    <div class="wd-hero-title-wrap">
+                        <h1 class="wd-hero-title">
+                            <span class="hero-line"><span class="hero-line-inner">WECARE</span></span>
+                        </h1>
+                        <p class="wd-hero-subtitle hero-anim-item">Seafarer Wellness App — Redesign</p>
                     </div>
                 </div>
-                <!-- ===== Work Detail2 End ===== -->
 
-
-                <!-- ===== Work Detail Full Image Start ===== -->
-                <div class="work-detail-full-img-wrap">
-                    <div class="work-detail-full-img comparison-slider">
-                        <img-comparison-slider>
-                            <img slot="first" src="../../assets/imgs/dark-mode/work-1-before.png" alt="Before">
-                            <img slot="second" src="../../assets/imgs/dark-mode/work-1-after.png" alt="After">
-                        </img-comparison-slider>
+                <!-- ── Right: Summary + Disciplines ── -->
+                <div class="wd-hero-right hero-anim-item">
+                    <p class="wd-hero-summary">Redesigned Anglo-Eastern's WeCare app, used by seafarers and onshore
+                        staff for wellness tools, training schedules, forums, and peer appreciation, turning a
+                        cluttered, hard-to-navigate interface into a clean, accessible design system.</p>
+                    <div class="wd-hero-tags">
+                        <span class="wd-hero-tag">UI/UX Design</span>
+                        <span class="wd-hero-tag">Design System</span>
+                        <span class="wd-hero-tag">Accessibility</span>
+                        <span class="wd-hero-tag">Mobile Design</span>
                     </div>
                 </div>
-                <!-- ===== Work Detail Full Image End ===== -->
-
-                <!-- ===== Work Detail2 Start ===== -->
-                <div class="work-detail2-content-wrap work-detail2-content-wrap2">
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Before vs After</h4>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th scope="col">Feature</th>
-                                        <th scope="col">Legacy App</th>
-                                        <th scope="col">Redesigned App</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Background</td>
-                                        <td>Dark, cluttered</td>
-                                        <td>White, breathable</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Navigation</td>
-                                        <td>Scroll-heavy</td>
-                                        <td>Clustered, bottom nav</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Accessibility</td>
-                                        <td>Low contrast</td>
-                                        <td>WCAG-compliant</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Forum</td>
-                                        <td>Static</td>
-                                        <td>Categorized, searchable</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Appreciation</td>
-                                        <td>Hidden</td>
-                                        <td>Prominent CTA with feedback</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AE Live</td>
-                                        <td>Mixed styles</td>
-                                        <td>Unified cards with icons</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <!-- ===== Work Detail2 End ===== -->
-
-                <!-- ===== Work Detail2 Start ===== -->
-                <div class="work-detail2-content-wrap work-detail2-content-wrap2">
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Results</h4>
-                        </div>
-                        <div class="right">
-                            <p class="scroll-animation" data-animation="slide_down2">User feedback improved by 42%.
-                                Appreciation usage went up 3.5x.
-                                Navigation became faster and more intuitive. The design system is now being used for
-                                other Anglo-Eastern mobile
-                                apps.</p>
-                        </div>
-                    </div>
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Reflection</h4>
-                        </div>
-                        <div class="right">
-                            <p class="scroll-animation" data-animation="slide_down2">This redesign was about making life
-                                easier for maritime
-                                professionals. By focusing on clarity and usability, WeCare became a tool that truly
-                                supports its users—whether
-                                they’re onboard or onshore.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- ===== Work Detail2 End ===== -->
-
-
-                <!-- ===== Work Detail Text Animation Start ===== -->
-                <div class="work-detail-text-anim-wrap">
-                    <ul>
-                        <li>MORE WORKS <span>MORE WORKS</span></li>
-                        <li>MORE WORKS <span>MORE WORKS</span></li>
-                        <li>MORE WORKS <span>MORE WORKS</span></li>
-                        <li>MORE WORKS <span>MORE WORKS</span></li>
-                    </ul>
-                </div>
-                <!-- ===== Work Detail Text Animation End ===== -->
-
-
-                <!-- ===== Work Start ===== -->
-                <div class="work-detail-featured-work-wrap">
-                    <div class="featured-work-lists">
-
-                        <!-- Featured Cart -->
-                        <div class="featured-card">
-                            <a class="link-overlay" href="#"></a>
-                            <div class="img-box">
-                                <img src="../../assets/imgs/dark-mode/work-4.png" alt="Work">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">Hideway</p>
-                                    <p class="subtitle">Web Design</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2022</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Featured Cart -->
-                        <div class="featured-card">
-                            <a class="link-overlay" href="#"></a>
-                            <div class="img-box">
-                                <img src="../../assets/imgs/dark-mode/work-5.png" alt="Work">
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <p class="title">Califfo</p>
-                                    <p class="subtitle">Branding</p>
-                                </div>
-                                <div class="right">
-                                    <span class="date">2022</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- ===== Work End ===== -->
-
-
-                <!-- ===== Footer Start ===== -->
-                <footer class="footer-area">
-                    <div class="footer-big-text">
-                        <span class="timeline-anim scroll-animation" data-animation="slide_down">UX//RAW</span>
-                    </div>
-
-                    <div class="copyright">
-                        <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
-                        <div class="right">
-                            <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP</a>
-                        </div>
-                    </div>
-                </footer>
-                <!-- ===== Footer End ===== -->
-
 
             </div>
+
+            <!-- ── Meta strip ── -->
+            <div class="wd-meta-strip hero-anim-item">
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">CLIENT</span>
+                    <span class="wd-meta-value">Anglo-Eastern</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">ROLE</span>
+                    <span class="wd-meta-value">UI/UX Designer</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">PLATFORM</span>
+                    <span class="wd-meta-value">Mobile (Android & iOS)</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">STATUS</span>
+                    <span class="wd-meta-value"><a
+                            href="https://play.google.com/store/apps/details?id=com.angloeastern.crewapp&pcampaignid=web_share"
+                            target="_blank" rel="noopener noreferrer">Live on Play Store</a></span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">YEAR</span>
+                    <span class="wd-meta-value">2025</span>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="wd-hero-rule"></div>
+
+        <!-- ═══════════════════════════════════
+             HERO IMAGE
+        ═══════════════════════════════════ -->
+        <div class="wd-cover-wrap">
+            <div class="wd-cover">
+                <img src="../../assets/imgs/dark-mode/work-1.png" alt="WeCare App Overview">
+            </div>
         </div>
-        <!-- ===== Smooth Scroll End ===== -->
 
+        <!-- ═══════════════════════════════════
+             IN-PAGE STICKY NAVIGATION
+        ═══════════════════════════════════ -->
+        <nav class="wd-inpage-nav" id="wdInpageNav" aria-label="Case study sections">
+            <div class="wd-inpage-nav-inner">
+                <a class="wd-inpage-link is-active" href="#wd-overview">Overview</a>
+                <a class="wd-inpage-link" href="#wd-research">Research</a>
+                <a class="wd-inpage-link" href="#wd-process">Process</a>
+                <a class="wd-inpage-link" href="#wd-design">Design</a>
+                <a class="wd-inpage-link" href="#wd-results">Results</a>
+                <a class="wd-inpage-link" href="#wd-reflection">Reflection</a>
+            </div>
+        </nav>
 
+        <!-- ═══════════════════════════════════
+             CASE STUDY BODY
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-overview">
+
+            <!-- ── 01 Overview ── -->
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">01 · OVERVIEW</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">The Problem</h2>
+                                <p>The old WeCare app had a dark, crowded layout. Important features were hard to
+                                    find, tap areas were small, and the navigation felt confusing, especially in the
+                                    low-connectivity environments seafarers actually work in.</p>
+                                <p>There was no consistent design system behind it, which made every update slower
+                                    and riskier. The goal was to simplify the experience end to end without losing
+                                    any of the app's wellness, training, and community features.</p>
+
+                                <div class="wd-role-callout">
+                                    <span class="wd-role-callout-label">My Contribution</span>
+                                    <div class="wd-role-callout-items">
+                                        <span class="wd-role-callout-item">UI/UX Design</span>
+                                        <span class="wd-role-callout-item">Design System</span>
+                                        <span class="wd-role-callout-item">Component Library</span>
+                                        <span class="wd-role-callout-item">Accessibility (WCAG)</span>
+                                        <span class="wd-role-callout-item">Mobile Optimization</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 02 Approach ── -->
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">02 · APPROACH</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">How We Solved It</h2>
+                                <p>I introduced a white background for clarity, grouped features into logical
+                                    sections, and built a modular design system so the app could scale without
+                                    losing consistency. Accessibility and mobile responsiveness were treated as
+                                    requirements, not afterthoughts.</p>
+                                <p>Reusable components — cards, buttons, and navigation patterns — replaced one-off
+                                    screens throughout the app, and features like AE Live, Medical Contact, and
+                                    Appreciation were pulled forward so they're easy to find instead of buried.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ═══════════════════════════════════
+             KEY RESEARCH FINDINGS
+        ═══════════════════════════════════ -->
+        <div class="wd-insights-strip js-fade-up" id="wd-research">
+            <div class="wd-insights-header">
+                <span class="wd-insights-eyebrow">Key Research Findings</span>
+            </div>
+            <div class="wd-insights-grid">
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">01</span>
+                    <div>
+                        <h3 class="wd-insight-heading">Buried Features</h3>
+                        <p class="wd-insight-text">A dark, crowded layout made important tools hard to find. Users
+                            had to hunt through confusing navigation to reach features they used regularly.</p>
+                    </div>
+                </div>
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">02</span>
+                    <div>
+                        <h3 class="wd-insight-heading">Failing at Sea</h3>
+                        <p class="wd-insight-text">Small tap targets and a layout not built for mobile meant the app
+                            struggled specifically in the low-connectivity conditions seafarers actually work in.</p>
+                    </div>
+                </div>
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">03</span>
+                    <div>
+                        <h3 class="wd-insight-heading">No System Behind It</h3>
+                        <p class="wd-insight-text">Without a consistent design system, every update meant rebuilding
+                            patterns from scratch, slowing the team down and creating visual drift over time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             UX PROCESS STRIP
+        ═══════════════════════════════════ -->
+        <section class="wd-process-strip js-fade-up" id="wd-process">
+            <div class="wd-process-label">UX PROCESS</div>
+            <div class="wd-process-steps">
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">01</span>
+                    <span class="wd-ps-name">Discovery</span>
+                    <span class="wd-ps-detail">Legacy app audit, feature inventory, low-connectivity usage review</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">02</span>
+                    <span class="wd-ps-name">Definition</span>
+                    <span class="wd-ps-detail">Feature grouping, information hierarchy, accessibility requirements</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">03</span>
+                    <span class="wd-ps-name">Design</span>
+                    <span class="wd-ps-detail">Modular design system, reusable components, high-fidelity UI</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">04</span>
+                    <span class="wd-ps-name">Delivery</span>
+                    <span class="wd-ps-detail">Dev handoff, launch on Android & iOS, system reused across AE apps</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             COMPARISON SLIDER
+        ═══════════════════════════════════ -->
+        <div class="wd-img-wrap js-fade-up">
+            <span class="wd-img-label">BEFORE / AFTER: WeCare Home</span>
+            <div class="wd-img wd-img--slider">
+                <img-comparison-slider>
+                    <img slot="first" src="../../assets/imgs/dark-mode/work-1-before.png" alt="Before">
+                    <img slot="second" src="../../assets/imgs/dark-mode/work-1-after.png" alt="After">
+                </img-comparison-slider>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             KEY DESIGN DECISIONS
+        ═══════════════════════════════════ -->
+        <div class="wd-features js-fade-up" id="wd-design">
+            <div class="wd-features-header">
+                <span class="wd-section-label">KEY DESIGN DECISIONS</span>
+            </div>
+            <div class="wd-features-grid">
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Visual System</span>
+                    <h3 class="wd-feature-title">Light, Breathable Layout</h3>
+                    <p>Replaced the dark, cluttered background with a white, semantic-colour layout that reduces
+                        visual noise and makes content easier to scan on deck or in transit.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Navigation</span>
+                    <h3 class="wd-feature-title">Clustered Bottom Nav</h3>
+                    <p>Swapped scroll-heavy navigation for a clustered bottom nav, cutting the steps between opening
+                        the app and reaching a core feature.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Component Library</span>
+                    <h3 class="wd-feature-title">Reusable Cards & Buttons</h3>
+                    <p>Built a set of reusable components optimized for mobile use, so new features and future apps
+                        can be assembled from the same system instead of one-off screens.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Accessibility</span>
+                    <h3 class="wd-feature-title">WCAG-Compliant Contrast</h3>
+                    <p>Raised colour contrast and tap-target sizing to WCAG-compliant levels, up from the low-contrast
+                        legacy UI, so the app is usable in bright, outdoor, on-deck conditions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             RESULTS
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-results">
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">03 · RESULTS</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">Outcome</h2>
+                                <p>User feedback improved significantly and Appreciation usage climbed after launch.
+                                    Navigation became faster and more intuitive, and the modular design system built
+                                    for WeCare is now being reused across other Anglo-Eastern mobile apps.</p>
+
+                                <div class="wd-outcomes">
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">42%</span>
+                                        <span class="wd-outcome-label">Improvement in user feedback</span>
+                                    </div>
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">3.5×</span>
+                                        <span class="wd-outcome-label">Increase in Appreciation usage</span>
+                                    </div>
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">Reused</span>
+                                        <span class="wd-outcome-label">Design system now used across AE's app portfolio</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             REFLECTION
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-reflection">
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">04 · REFLECTION</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">What I Learned</h2>
+                                <p>This redesign was about making life easier for maritime professionals. By focusing
+                                    on clarity and usability, WeCare became a tool that truly supports its users,
+                                    whether they're onboard or onshore.</p>
+                                <p>Building the design system as a first-class deliverable, not a byproduct, is what
+                                    let it outlive this one app. That decision is now paying off across Anglo-Eastern's
+                                    wider mobile portfolio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             MORE WORKS MARQUEE
+        ═══════════════════════════════════ -->
+        <div class="work-detail-text-anim-wrap">
+            <ul>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+            </ul>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             NEXT PROJECTS
+        ═══════════════════════════════════ -->
+        <div class="wd-next-projects">
+            <div class="wd-next-label">
+                <span class="wd-section-label">NEXT PROJECTS</span>
+            </div>
+            <div class="featured-work-lists wd-next-grid">
+                <div class="featured-card js-card-reveal">
+                    <a class="link-overlay" href="../welspun-michigan/"></a>
+                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-welspun.png" alt="Welspun Michigan"></div>
+                    <div class="content">
+                        <div class="left">
+                            <p class="title">Welspun Michigan</p>
+                            <p class="subtitle">Enterprise · 3D Experience</p>
+                        </div>
+                        <div class="right"><span class="date">2024</span></div>
+                    </div>
+                </div>
+                <div class="featured-card js-card-reveal">
+                    <a class="link-overlay" href="../aesm-tap/"></a>
+                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-2.png" alt="AESM TAP"></div>
+                    <div class="content">
+                        <div class="left">
+                            <p class="title">AESM TAP</p>
+                            <p class="subtitle">Enterprise · UI/UX Design</p>
+                        </div>
+                        <div class="right"><span class="date">2025</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             FOOTER
+        ═══════════════════════════════════ -->
+        <footer class="footer-area">
+            <div class="footer-big-text">
+                <span class="js-footer-text">UX//RAW</span>
+            </div>
+            <div class="copyright">
+                <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
+                <div class="right">
+                    <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP ↑</a>
+                </div>
+            </div>
+        </footer>
 
     </main>
-    <!-- ===== Main End ===== -->
-
-
-
 
     <!-- ===== Scripts ===== -->
     <script src="../../assets/js/jquery.js"></script>
@@ -451,16 +646,39 @@
     <script src="../../assets/js/gsap.min.js"></script>
     <script src="../../assets/js/ScrollTrigger.min.js"></script>
     <script src="../../assets/js/ScrollToPlugin.min.js"></script>
-
-    <script src="../../assets/js/ScrollSmoother.min.js"></script>
     <script src="../../assets/js/SplitText.min.js"></script>
     <script src="../../assets/js/jarallax.js"></script>
     <script src="../../assets/js/jarallax-element.min.js"></script>
-    <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/ajaxform.js"></script>
+    <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/themescroll.js"></script>
-
     <script type="module" src="https://unpkg.com/img-comparison-slider@8/dist/index.js"></script>
+
+    <!-- ── In-page nav: active link on scroll ── -->
+    <script>
+        (function () {
+            const nav = document.getElementById('wdInpageNav');
+            if (!nav) return;
+            const links = nav.querySelectorAll('.wd-inpage-link');
+            const sectionIds = ['wd-overview', 'wd-research', 'wd-process', 'wd-design', 'wd-results', 'wd-reflection'];
+            const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+            function onScroll() {
+                const scrollY = window.scrollY + 80;
+                let current = sections[0];
+                sections.forEach(sec => {
+                    if (sec && sec.offsetTop <= scrollY) current = sec;
+                });
+                links.forEach(link => {
+                    link.classList.toggle('is-active', link.getAttribute('href') === '#' + (current && current.id));
+                });
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
+
 </body>
 
 </html>

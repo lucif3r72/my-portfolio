@@ -2,272 +2,631 @@
 <html lang="en">
 
 <head>
-    <!-- ===== Meta ===== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===== Favicon ===== -->
     <link rel="icon" type="image/x-icon" href="../../assets/imgs/favicon.png">
+    <title>Finder - Smart Restaurant Discovery & Offers Case Study | UX//Raw</title>
 
-    <!-- ===== Title ===== -->
-    <title>Finder | UX Case Study</title>
+    <!-- ===== SEO: Core Meta ===== -->
+    <meta name="description"
+        content="Case study: Finder, a conceptual restaurant discovery app for the UAE market combining discovery, savings, and loyalty. QR-based offer redemption and a rewards system designed end-to-end. By Nadir Shaikh.">
+    <meta name="author" content="Nadir Shaikh">
+    <meta name="robots" content="index, follow">
 
-    <!-- ===== LineAwesome ===== -->
+    <!-- ===== SEO: Canonical ===== -->
+    <link rel="canonical" href="https://uxraw.vercel.app/work/finder/">
+
+    <!-- ===== SEO: Open Graph ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://uxraw.vercel.app/work/finder/">
+    <meta property="og:title" content="Finder - Smart Restaurant Discovery & Offers Case Study | UX//Raw">
+    <meta property="og:description"
+        content="How Nadir Shaikh designed Finder - a concept restaurant discovery app that combines discovery, QR-based offer redemption, and a rewards loyalty loop into one experience.">
+    <meta property="og:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/work-finder.png">
+    <meta property="og:site_name" content="UX//Raw">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- ===== SEO: Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Finder - Smart Restaurant Discovery & Offers Case Study | UX//Raw">
+    <meta name="twitter:description"
+        content="A concept restaurant discovery app combining discovery, savings, and loyalty - QR-based offer redemption designed end-to-end by Nadir Shaikh.">
+    <meta name="twitter:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/work-finder.png">
+
+    <!-- ===== SEO: JSON-LD Structured Data ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CreativeWork",
+          "@id": "https://uxraw.vercel.app/work/finder/#project",
+          "url": "https://uxraw.vercel.app/work/finder/",
+          "name": "Finder - Smart Restaurant Discovery & Offers Platform",
+          "description": "Concept UX/UI design for Finder, a restaurant discovery app for the UAE market combining discovery, real-time offers, QR-based redemption, and a rewards loyalty system.",
+          "image": "https://uxraw.vercel.app/assets/imgs/dark-mode/work-finder.png",
+          "dateCreated": "2025",
+          "genre": "UX/UI Design Case Study",
+          "keywords": "UX Design, UI Design, Consumer App, Restaurant Discovery, Rewards, QR Redemption, Concept Project",
+          "creator": {
+            "@type": "Person",
+            "@id": "https://uxraw.vercel.app/#nadir",
+            "name": "Nadir Shaikh",
+            "url": "https://uxraw.vercel.app/",
+            "jobTitle": "UI/UX Designer & Frontend Developer"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://uxraw.vercel.app/work/#collectionpage",
+            "url": "https://uxraw.vercel.app/work/",
+            "name": "Work - UI/UX Design Portfolio of Nadir Shaikh"
+          },
+          "about": [
+            "Consumer App Design",
+            "Restaurant Discovery",
+            "Rewards & Loyalty",
+            "QR Redemption",
+            "Concept Project"
+          ]
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="../../assets/css/line-awesome.min.css">
-
-    <!-- ===== Fonts ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap"
         rel="stylesheet">
 
-    <!-- ===== Stylesheet ===== -->
+    <!-- Lenis Smooth Scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+
+    <!-- Image Comparison Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
+
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../../assets/css/responsive.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
 </head>
 
 <body>
 
-    <!-- ===== Main Start ===== -->
+    <!-- ===== Magic Cursor ===== -->
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PRELOADER — canonical UX//RAW structure
+    ═══════════════════════════════════════════ -->
+    <div id="uxrPreloader" class="uxr-preloader">
+        <div id="uxrPanelL" class="uxr-panel uxr-panel--l"></div>
+        <div id="uxrPanelR" class="uxr-panel uxr-panel--r"></div>
+        <div class="uxr-progress-line" id="uxrProgress"></div>
+        <div class="uxr-corner uxr-corner--tl" id="ccTL"></div>
+        <div class="uxr-corner uxr-corner--tr" id="ccTR"></div>
+        <div class="uxr-corner uxr-corner--bl" id="ccBL"></div>
+        <div class="uxr-corner uxr-corner--br" id="ccBR"></div>
+        <div class="uxr-counter" id="uxrCounter">000</div>
+        <div class="uxr-divider" id="uxrDivider"></div>
+        <div class="uxr-logo">
+            <div class="uxr-word" id="uxrWord">
+                <div class="uxr-clip"><span class="uxr-letter" id="lU">U</span></div>
+                <div class="uxr-gap" id="gX">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lX">X</span></div>
+                </div>
+                <div class="uxr-clip"><span class="uxr-letter uxr-letter--sep" id="lSep">//</span></div>
+                <div class="uxr-gap" id="gR">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lR">R</span></div>
+                </div>
+                <div class="uxr-clip"><span class="uxr-letter" id="lA">A</span></div>
+                <div class="uxr-gap" id="gW">
+                    <div class="uxr-clip"><span class="uxr-letter" id="lW">W</span></div>
+                </div>
+            </div>
+            <div class="uxr-sub" id="uxrSub">Visual & Experience Design</div>
+        </div>
+    </div>
+
     <main class="bronx-main work-detail-page">
 
-        <!-- ===== Smooth Scroll Start ===== -->
-        <div id="smooth-wrapper">
-            <div id="smooth-content">
-
-                <!-- ===== Hero Section Start ===== -->
-                <section class="hero-sec hero-sec3">
-                    <header class="header-wrap scroll-animation" data-animation="slide_up">
-                        <div class="custom-row">
-                            <div class="header-local-time-box">
-                                <a href="../../"><span>Local/</span></a>
-                                <span id="realtime">00:00</span>
-                            </div>
-
-                            <div class="header-middle">
-                                <div class="humberg-menu">
-                                    <a href="mailto:nadiruxdesign@gmail.com">
-                                        <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
-                                            <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
-                                                stroke="#1d1d1f" stroke-width="1.5"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="header-right">
-                                <a href="javascript:void(0);" class="theme-btn">MENU</a>
-                            </div>
-                        </div>
-                    </header>
-                </section>
-                <!-- ===== Hero Section End ===== -->
-
-                <!-- ===== Work Detail Header Start ===== -->
-                <section class="work-detail-header-infos scroll-animation" data-animation="slide_down2">
-                    <div class="work-detail-header-left">
-                        <h1>Finder — Smart Restaurant Discovery & Offers Platform</h1>
-                        <p>
-                            Finder is a conceptual restaurant discovery platform designed for the UAE market. It helps
-                            users find restaurants, lounges, cafés, and fine-dining experiences along with real-time
-                            offers and rewards. The product combines discovery, savings, and loyalty into a single
-                            seamless experience—allowing users to explore, apply discounts via QR codes, and earn
-                            reward coins for future redemptions.
-                        </p>
-                    </div>
-                    <div class="work-detail-header-right">
-                        <ul>
-                            <li><span>CLIENT</span> Concept Project</li>
-                            <li><span>ROLE</span> UI/UX Designer</li>
-                            <li><span>PLATFORM</span> Mobile App (iOS & Android)</li>
-                            <li><span>PROJECT STATUS</span> Conceptual (End-to-End Designed)</li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- ===== Work Detail Header End ===== -->
-
-                <!-- ===== Work Detail Full Image Start ===== -->
-                <div class="work-detail-full-img-wrap">
-                    <div class="work-detail-full-img">
-                        <div class="work-detail-full-img-inner">
-                            <img src="../../assets/imgs/dark-mode/work-finder-hero.png" alt="Finder App Overview">
-                        </div>
+        <!-- ===== Popup Menu ===== -->
+        <div class="popup-menu-wrap">
+            <div class="popup-menu-header">
+                <div class="local-temperature">
+                    <a href="../../"><span>Local/</span><span id="coordinates"></span></a>
+                </div>
+                <div class="popup-menu-close-btn">
+                    <div class="icon">
+                        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" color="rgba(214,214,215,0.7)">
+                            <path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
                     </div>
                 </div>
-                <!-- ===== Work Detail Full Image End ===== -->
-
-                <!-- ===== Challenges / Goals / Highlights ===== -->
-                <div class="work-detail2-content-wrap">
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Challenges</h4>
-                        </div>
-                        <div class="right">
-                            <p>
-                                The food discovery space is crowded with platforms that either focus on listings or
-                                discounts—but rarely both in a meaningful way. Users often struggle to compare prices,
-                                understand offers, and trust whether discounts will actually be honored at checkout.
-                                Designing a system that balances discovery, transparency, rewards, and in-person
-                                redemption without friction was the core challenge.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Goals</h4>
-                        </div>
-                        <div class="right">
-                            <p>
-                                The goal was to design a platform that makes finding restaurants and saving money feel
-                                effortless. Finder needed to clearly surface offers, pricing for two people, ratings,
-                                and cuisine types while introducing a reliable QR-based discount redemption system. A
-                                long-term objective was to build a loyalty loop through coins that users can redeem for
-                                rewards, coupons, or brand offers.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Design Highlights</h4>
-                        </div>
-                        <div class="right">
-                            <p>
-                                Finder uses a clean, card-based UI to highlight restaurants, categories, and trending
-                                offers. Restaurant detail pages focus on decision-making essentials—price range,
-                                ratings, offers, and cuisines. Discounts are applied through a QR code generated within
-                                the app, ensuring trust for both users and restaurants. A built-in rewards system
-                                converts savings and spend into coins, encouraging repeat usage.
-                            </p>
-                        </div>
-                    </div>
-
+                <div class="right text-right">
+                    <a href="../../contact/" class="theme-btn">Schedule a call</a>
                 </div>
-                <!-- ===== End ===== -->
-
-                <!-- ===== Comparison Slider ===== -->
-                <div class="work-detail-full-img-wrap">
-                    <div class="work-detail-full-img comparison-slider">
-                        <img-comparison-slider>
-                            <img slot="first" src="../../assets/imgs/dark-mode/finder-before.png" alt="Traditional Food Discovery">
-                            <img slot="second" src="../../assets/imgs/dark-mode/finder-after.png" alt="Finder Experience">
-                        </img-comparison-slider>
-                    </div>
+            </div>
+            <div class="popup-menu">
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="../../"><span class="count">(1)</span><span>Home</span><span>Home</span></a></li>
+                        <li class="active"><a href="../"><span
+                                    class="count">(2)</span><span>Work</span><span>Work</span></a></li>
+                        <li><a href="../../contact/"><span
+                                    class="count">(3)</span><span>Contact</span><span>Contact</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="popup-menu-footer">
+                <div class="copyright">
+                    <ul class="social-links">
+                        <li><a href="https://www.instagram.com/de_str0yed/" target="_blank"
+                                rel="noopener noreferrer">Instagram <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://dribbble.com/Lucif3r72" target="_blank" rel="noopener noreferrer">Dribbble
+                                <svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://in.pinterest.com/Lucif3r72/" target="_blank"
+                                rel="noopener noreferrer">Pinterest <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                    </ul>
+                    <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                 </div>
-
-                <!-- ===== Before vs After Table ===== -->
-                <div class="work-detail2-content-wrap work-detail2-content-wrap2">
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Before vs After</h4>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>Feature</th>
-                                        <th>Existing Platforms</th>
-                                        <th>Finder</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Discovery</td>
-                                        <td>List-heavy, generic</td>
-                                        <td>Category & offer-driven</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Offers</td>
-                                        <td>Unclear terms</td>
-                                        <td>Transparent & contextual</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Redemption</td>
-                                        <td>Manual confirmation</td>
-                                        <td>QR-based checkout</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pricing Info</td>
-                                        <td>Often missing</td>
-                                        <td>Price range for two</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Loyalty</td>
-                                        <td>Limited or none</td>
-                                        <td>Coins & rewards system</td>
-                                    </tr>
-                                    <tr>
-                                        <td>User Trust</td>
-                                        <td>Low confidence</td>
-                                        <td>Verified offers</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ===== Results & Reflection ===== -->
-                <div class="work-detail2-content-wrap work-detail2-content-wrap2">
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Results</h4>
-                        </div>
-                        <div class="right">
-                            <p>
-                                User testing and validation sessions showed high confidence in the QR-based redemption
-                                flow and strong engagement with the rewards system. Test users reported clearer
-                                decision-making and increased willingness to try new restaurants. Finder establishes a
-                                scalable foundation for partnerships, brand collaborations, and future geographic
-                                expansion.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="work-detail2-content-box">
-                        <div class="left">
-                            <h4 class="text-uppercase">Reflection</h4>
-                        </div>
-                        <div class="right">
-                            <p>
-                                Finder explores how discovery, savings, and loyalty can coexist in a single experience.
-                                This project allowed me to design not just screens, but a complete value loop between
-                                users and restaurants. It reinforced the importance of trust, transparency, and
-                                simplicity—especially in everyday consumer products.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- ===== Footer ===== -->
-                <footer class="footer-area">
-                    <div class="footer-big-text">
-                        <span class="timeline-anim scroll-animation" data-animation="slide_down">UX//RAW</span>
-                    </div>
-                    <div class="copyright">
-                        <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
-                        <div class="right">
-                            <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP</a>
-                        </div>
-                    </div>
-                </footer>
-
             </div>
         </div>
-        <!-- ===== Smooth Scroll End ===== -->
+
+        <!-- ═══════════════════════════════════
+             HEADER
+        ═══════════════════════════════════ -->
+        <header class="header-wrap">
+            <div class="custom-row">
+                <div class="header-local-time-box">
+                    <a href="../../"><span>Local/</span></a>
+                    <span id="realtime">00:00</span>
+                </div>
+                <div class="header-middle">
+                    <div class="humberg-menu">
+                        <a href="mailto:nadiruxdesign@gmail.com">
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
+                                <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M3 13.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M1 10.5H5" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
+                                    stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <a href="javascript:void(0);" class="theme-btn menu-trigger">MENU</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ═══════════════════════════════════
+             PROJECT HERO
+        ═══════════════════════════════════ -->
+        <section class="wd-hero">
+
+            <div class="wd-hero-grid">
+
+                <div class="wd-hero-left">
+                    <div class="wd-breadcrumb hero-anim-item">
+                        <a href="../">WORK</a>
+                        <span>/</span>
+                        <span>FINDER</span>
+                    </div>
+                    <div class="wd-hero-title-wrap">
+                        <h1 class="wd-hero-title">
+                            <span class="hero-line"><span class="hero-line-inner">FINDER</span></span>
+                        </h1>
+                        <p class="wd-hero-subtitle hero-anim-item">Smart Restaurant Discovery & Offers</p>
+                    </div>
+                </div>
+
+                <div class="wd-hero-right hero-anim-item">
+                    <p class="wd-hero-summary">A conceptual restaurant discovery platform for the UAE market,
+                        combining discovery, real-time offers, and loyalty rewards into one experience — with
+                        QR-based discount redemption users and restaurants can both trust.</p>
+                    <div class="wd-hero-tags">
+                        <span class="wd-hero-tag">UX Design</span>
+                        <span class="wd-hero-tag">UI Design</span>
+                        <span class="wd-hero-tag">Interaction Design</span>
+                        <span class="wd-hero-tag">Rewards System</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="wd-meta-strip hero-anim-item">
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">CLIENT</span>
+                    <span class="wd-meta-value">Concept Project</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">ROLE</span>
+                    <span class="wd-meta-value">UI/UX Designer</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">PLATFORM</span>
+                    <span class="wd-meta-value">Mobile App (iOS & Android)</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">STATUS</span>
+                    <span class="wd-meta-value">Conceptual (End-to-End Designed)</span>
+                </div>
+                <div class="wd-meta-divider"></div>
+                <div class="wd-meta-item">
+                    <span class="wd-meta-label">YEAR</span>
+                    <span class="wd-meta-value">2025</span>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="wd-hero-rule"></div>
+
+        <!-- ═══════════════════════════════════
+             HERO IMAGE
+        ═══════════════════════════════════ -->
+        <div class="wd-cover-wrap">
+            <div class="wd-cover">
+                <img src="../../assets/imgs/dark-mode/work-finder-hero.png" alt="Finder App Overview">
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             IN-PAGE STICKY NAVIGATION
+        ═══════════════════════════════════ -->
+        <nav class="wd-inpage-nav" id="wdInpageNav" aria-label="Case study sections">
+            <div class="wd-inpage-nav-inner">
+                <a class="wd-inpage-link is-active" href="#wd-overview">Overview</a>
+                <a class="wd-inpage-link" href="#wd-research">Research</a>
+                <a class="wd-inpage-link" href="#wd-process">Process</a>
+                <a class="wd-inpage-link" href="#wd-design">Design</a>
+                <a class="wd-inpage-link" href="#wd-results">Results</a>
+                <a class="wd-inpage-link" href="#wd-reflection">Reflection</a>
+            </div>
+        </nav>
+
+        <!-- ═══════════════════════════════════
+             CASE STUDY BODY
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-overview">
+
+            <!-- ── 01 Overview ── -->
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">01 · OVERVIEW</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">The Problem</h2>
+                                <p>The food discovery space is crowded with platforms that either focus on listings
+                                    or discounts, but rarely both in a meaningful way. Users often struggle to
+                                    compare prices, understand offers, and trust whether discounts will actually be
+                                    honored at checkout.</p>
+                                <p>Designing a system that balances discovery, transparency, rewards, and in-person
+                                    redemption without friction was the core challenge.</p>
+
+                                <div class="wd-role-callout">
+                                    <span class="wd-role-callout-label">My Contribution</span>
+                                    <div class="wd-role-callout-items">
+                                        <span class="wd-role-callout-item">End-to-End UX</span>
+                                        <span class="wd-role-callout-item">UI Design</span>
+                                        <span class="wd-role-callout-item">QR Redemption Flow</span>
+                                        <span class="wd-role-callout-item">Rewards System Design</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 02 Approach ── -->
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">02 · APPROACH</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">How We Solved It</h2>
+                                <p>Finder needed to clearly surface offers, pricing for two people, ratings, and
+                                    cuisine types while introducing a reliable QR-based discount redemption system —
+                                    with a long-term loyalty loop built on coins users can redeem for rewards.</p>
+                                <p>A clean, card-based UI highlights restaurants, categories, and trending offers.
+                                    Restaurant detail pages focus on decision-making essentials, and discounts are
+                                    applied through an in-app QR code so both users and restaurants can trust the
+                                    transaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ═══════════════════════════════════
+             KEY RESEARCH FINDINGS
+        ═══════════════════════════════════ -->
+        <div class="wd-insights-strip js-fade-up" id="wd-research">
+            <div class="wd-insights-header">
+                <span class="wd-insights-eyebrow">Key Research Findings</span>
+            </div>
+            <div class="wd-insights-grid">
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">01</span>
+                    <div>
+                        <h3 class="wd-insight-heading">Discovery or Discounts, Never Both</h3>
+                        <p class="wd-insight-text">Existing platforms typically optimize for listings or for
+                            discounts, rarely both, leaving users to juggle multiple apps for one dining decision.</p>
+                    </div>
+                </div>
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">02</span>
+                    <div>
+                        <h3 class="wd-insight-heading">Trust Breaks at Checkout</h3>
+                        <p class="wd-insight-text">Users often couldn't tell whether an advertised discount would
+                            actually be honored in person, undermining confidence right at the moment of redemption.</p>
+                    </div>
+                </div>
+                <div class="wd-insight-card">
+                    <span class="wd-insight-num">03</span>
+                    <div>
+                        <h3 class="wd-insight-heading">Missing Decision-Making Info</h3>
+                        <p class="wd-insight-text">Price range for two, ratings, and cuisine type were frequently
+                            missing or buried, making it hard to compare options at a glance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             UX PROCESS STRIP
+        ═══════════════════════════════════ -->
+        <section class="wd-process-strip js-fade-up" id="wd-process">
+            <div class="wd-process-label">UX PROCESS</div>
+            <div class="wd-process-steps">
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">01</span>
+                    <span class="wd-ps-name">Discovery</span>
+                    <span class="wd-ps-detail">Competitive review of discovery & discount apps in the UAE market</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">02</span>
+                    <span class="wd-ps-name">Definition</span>
+                    <span class="wd-ps-detail">Decision-making info hierarchy, QR redemption flow, rewards logic</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">03</span>
+                    <span class="wd-ps-name">Design</span>
+                    <span class="wd-ps-detail">Card-based UI, restaurant detail pages, coin rewards system</span>
+                </div>
+                <div class="wd-ps-arrow">→</div>
+                <div class="wd-process-step">
+                    <span class="wd-ps-num">04</span>
+                    <span class="wd-ps-name">Delivery</span>
+                    <span class="wd-ps-detail">User testing & validation sessions, end-to-end prototype</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             COMPARISON SLIDER
+        ═══════════════════════════════════ -->
+        <div class="wd-img-wrap js-fade-up">
+            <span class="wd-img-label">BEFORE / AFTER: Restaurant Discovery</span>
+            <div class="wd-img wd-img--slider">
+                <img-comparison-slider>
+                    <img slot="first" src="../../assets/imgs/dark-mode/finder-before.png" alt="Traditional Food Discovery">
+                    <img slot="second" src="../../assets/imgs/dark-mode/finder-after.png" alt="Finder Experience">
+                </img-comparison-slider>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             KEY DESIGN DECISIONS
+        ═══════════════════════════════════ -->
+        <div class="wd-features js-fade-up" id="wd-design">
+            <div class="wd-features-header">
+                <span class="wd-section-label">KEY DESIGN DECISIONS</span>
+            </div>
+            <div class="wd-features-grid">
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Discovery</span>
+                    <h3 class="wd-feature-title">Card-Based, Offer-Driven</h3>
+                    <p>A clean, card-based UI surfaces restaurants, categories, and trending offers together,
+                        replacing the list-heavy, generic browsing of existing platforms.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Redemption</span>
+                    <h3 class="wd-feature-title">QR-Based Checkout</h3>
+                    <p>Discounts are applied through a QR code generated within the app, giving both users and
+                        restaurants a verifiable, trustworthy redemption moment.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Decision Info</span>
+                    <h3 class="wd-feature-title">Essentials First</h3>
+                    <p>Restaurant detail pages foreground price range for two, ratings, offers, and cuisine type —
+                        the exact information users need to decide, and nothing else.</p>
+                </div>
+                <div class="wd-feature-item">
+                    <span class="wd-feature-tag">Loyalty</span>
+                    <h3 class="wd-feature-title">Coins & Rewards Loop</h3>
+                    <p>A built-in rewards system converts savings and spend into coins, redeemable for future
+                        offers, encouraging repeat visits instead of one-off use.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             RESULTS
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-results">
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">03 · RESULTS</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">Outcome</h2>
+                                <p>User testing and validation sessions showed high confidence in the QR-based
+                                    redemption flow and strong engagement with the rewards system. Test users
+                                    reported clearer decision-making and increased willingness to try new
+                                    restaurants.</p>
+
+                                <div class="wd-outcomes">
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">High</span>
+                                        <span class="wd-outcome-label">Confidence in QR redemption flow</span>
+                                    </div>
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">Strong</span>
+                                        <span class="wd-outcome-label">Engagement with rewards system</span>
+                                    </div>
+                                    <div class="wd-outcome-item">
+                                        <span class="wd-outcome-num">Scalable</span>
+                                        <span class="wd-outcome-label">Foundation for partnerships & expansion</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             REFLECTION
+        ═══════════════════════════════════ -->
+        <section class="wd-body" id="wd-reflection">
+            <div class="wd-section js-fade-up">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-4">
+                            <div class="wd-label-col">
+                                <span class="wd-section-label">04 · REFLECTION</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="wd-content-col">
+                                <h2 class="wd-section-title">What I Learned</h2>
+                                <p>Finder explores how discovery, savings, and loyalty can coexist in a single
+                                    experience. This project let me design not just screens, but a complete value
+                                    loop between users and restaurants.</p>
+                                <p>It reinforced the importance of trust, transparency, and simplicity, especially
+                                    in everyday consumer products where a single confusing moment can lose the
+                                    user.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             MORE WORKS MARQUEE
+        ═══════════════════════════════════ -->
+        <div class="work-detail-text-anim-wrap">
+            <ul>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+                <li>MORE WORKS <span>·</span></li>
+            </ul>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             NEXT PROJECTS
+        ═══════════════════════════════════ -->
+        <div class="wd-next-projects">
+            <div class="wd-next-label">
+                <span class="wd-section-label">NEXT PROJECTS</span>
+            </div>
+            <div class="featured-work-lists wd-next-grid">
+                <div class="featured-card js-card-reveal">
+                    <a class="link-overlay" href="../ignite/"></a>
+                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-ignite.png" alt="Ignite"></div>
+                    <div class="content">
+                        <div class="left">
+                            <p class="title">Ignite</p>
+                            <p class="subtitle">Enterprise · Idea Management</p>
+                        </div>
+                        <div class="right"><span class="date">2024</span></div>
+                    </div>
+                </div>
+                <div class="featured-card js-card-reveal">
+                    <a class="link-overlay" href="../renttro/"></a>
+                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-renttro.png" alt="Renttro"></div>
+                    <div class="content">
+                        <div class="left">
+                            <p class="title">Renttro</p>
+                            <p class="subtitle">Marketplace · Web & Mobile</p>
+                        </div>
+                        <div class="right"><span class="date">2025</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════
+             FOOTER
+        ═══════════════════════════════════ -->
+        <footer class="footer-area">
+            <div class="footer-big-text">
+                <span class="js-footer-text">UX//RAW</span>
+            </div>
+            <div class="copyright">
+                <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
+                <div class="right">
+                    <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP ↑</a>
+                </div>
+            </div>
+        </footer>
 
     </main>
 
@@ -276,8 +635,39 @@
     <script src="../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/gsap.min.js"></script>
     <script src="../../assets/js/ScrollTrigger.min.js"></script>
-    <script src="../../assets/js/ScrollSmoother.min.js"></script>
+    <script src="../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../../assets/js/SplitText.min.js"></script>
+    <script src="../../assets/js/jarallax.js"></script>
+    <script src="../../assets/js/jarallax-element.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/themescroll.js"></script>
     <script type="module" src="https://unpkg.com/img-comparison-slider@8/dist/index.js"></script>
 
+    <!-- ── In-page nav: active link on scroll ── -->
+    <script>
+        (function () {
+            const nav = document.getElementById('wdInpageNav');
+            if (!nav) return;
+            const links = nav.querySelectorAll('.wd-inpage-link');
+            const sectionIds = ['wd-overview', 'wd-research', 'wd-process', 'wd-design', 'wd-results', 'wd-reflection'];
+            const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+            function onScroll() {
+                const scrollY = window.scrollY + 80;
+                let current = sections[0];
+                sections.forEach(sec => {
+                    if (sec && sec.offsetTop <= scrollY) current = sec;
+                });
+                links.forEach(link => {
+                    link.classList.toggle('is-active', link.getAttribute('href') === '#' + (current && current.id));
+                });
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
+
 </body>
+
 </html>
