@@ -1233,39 +1233,14 @@ html.is-loading body {
     position: relative;
     overflow: hidden;
     border: 2px solid var(--dark);
+    border-radius: 6px;
     box-shadow: 12px 12px 0px var(--dark);
     will-change: transform;
     transition: box-shadow .25s ease, transform .25s ease;
 }
 
-/* ── Scattered tilt (Clico-inspired) — alternating rotation per card,
-   straightens on hover for a satisfying "pick it up" feel. ── */
-.featured-work-lists .featured-card:nth-child(6n+1) {
-    transform: rotate(-1.1deg);
-}
-
-.featured-work-lists .featured-card:nth-child(6n+2) {
-    transform: rotate(0.8deg);
-}
-
-.featured-work-lists .featured-card:nth-child(6n+3) {
-    transform: rotate(-0.6deg);
-}
-
-.featured-work-lists .featured-card:nth-child(6n+4) {
-    transform: rotate(1deg);
-}
-
-.featured-work-lists .featured-card:nth-child(6n+5) {
-    transform: rotate(-0.9deg);
-}
-
-.featured-work-lists .featured-card:nth-child(6n) {
-    transform: rotate(0.6deg);
-}
-
 .featured-card:hover {
-    transform: rotate(0deg) translate(-3px, -3px);
+    transform: translate(-3px, -3px);
     box-shadow: 15px 15px 0px var(--dark);
     z-index: 2;
 }
