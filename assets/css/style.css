@@ -80,11 +80,6 @@ body {
     line-height: 1.4em;
     color: var(--paragraph);
     background-color: var(--bg-default);
-    /* ── Graph-paper grid backdrop (Clico-inspired) ── */
-    background-image:
-        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-    background-size: var(--grid-size) var(--grid-size);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -167,6 +162,57 @@ html.is-loading body {
 .favourite-stack-sec,
 .faq-sec {
     border-bottom: 1.5px solid var(--dark);
+}
+
+/* ═══ Graph-paper section panels (Clico-inspired) ═══
+   Instead of one page-wide grid, selected sections become
+   solid pastel panels with grid lines tinted to match their
+   hue — exactly how Clico treats its inner-page sections. */
+
+/* Hero + closing CTA: cream canvas, warm graphite grid */
+.hero-sec,
+.cta-sec,
+.wd-hero {
+    background-size: var(--grid-size) var(--grid-size);
+    background-image:
+        linear-gradient(to right, rgba(120, 100, 80, 0.10) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(120, 100, 80, 0.10) 1px, transparent 1px);
+}
+
+/* Process: pastel yellow panel, ochre grid */
+.process-sec {
+    background-color: #FDFD96;
+    background-size: var(--grid-size) var(--grid-size);
+    background-image:
+        linear-gradient(to right, rgba(160, 140, 20, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(160, 140, 20, 0.15) 1px, transparent 1px);
+}
+
+/* Motivation: mint panel, teal grid */
+.motivation-sec {
+    background-color: #DAF5F0;
+    background-size: var(--grid-size) var(--grid-size);
+    background-image:
+        linear-gradient(to right, rgba(20, 140, 120, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(20, 140, 120, 0.15) 1px, transparent 1px);
+}
+
+/* Favourite stack: lavender panel, violet grid */
+.favourite-stack-sec {
+    background-color: #C8BFF5;
+    background-size: var(--grid-size) var(--grid-size);
+    background-image:
+        linear-gradient(to right, rgba(100, 60, 180, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(100, 60, 180, 0.15) 1px, transparent 1px);
+}
+
+/* FAQ: peach panel, rust grid */
+.faq-sec {
+    background-color: #F8D6B3;
+    background-size: var(--grid-size) var(--grid-size);
+    background-image:
+        linear-gradient(to right, rgba(160, 100, 40, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(160, 100, 40, 0.15) 1px, transparent 1px);
 }
 
 /* ===== # Theme Button ===== */
