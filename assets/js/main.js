@@ -600,7 +600,7 @@ $(function () {
     }
 
     /* ── Work page filter ── */
-    if (document.body.classList.contains("work-page")) {
+    if (document.querySelector(".work-page")) {
       const filters = document.querySelectorAll(".work-filter");
       const workCards = document.querySelectorAll(
         ".featured-card[data-category]",
