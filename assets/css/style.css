@@ -153,7 +153,7 @@ html.is-loading body {
 
 /* ═══ Full-bleed section dividers (Clico-inspired) ═══
    Every major homepage section closes with a hard rule,
-   framing content blocks against the grid backdrop. */
+   framing content blocks against the cream backdrop. */
 .featured-work-sec,
 .process-sec,
 .experience-sec,
@@ -162,57 +162,6 @@ html.is-loading body {
 .favourite-stack-sec,
 .faq-sec {
     border-bottom: 1.5px solid var(--dark);
-}
-
-/* ═══ Graph-paper section panels (Clico-inspired) ═══
-   Instead of one page-wide grid, selected sections become
-   solid pastel panels with grid lines tinted to match their
-   hue — exactly how Clico treats its inner-page sections. */
-
-/* Hero + closing CTA: cream canvas, warm graphite grid */
-.hero-sec,
-.cta-sec,
-.wd-hero {
-    background-size: var(--grid-size) var(--grid-size);
-    background-image:
-        linear-gradient(to right, rgba(120, 100, 80, 0.10) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(120, 100, 80, 0.10) 1px, transparent 1px);
-}
-
-/* Process: pastel yellow panel, ochre grid */
-.process-sec {
-    background-color: #FDFD96;
-    background-size: var(--grid-size) var(--grid-size);
-    background-image:
-        linear-gradient(to right, rgba(160, 140, 20, 0.15) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(160, 140, 20, 0.15) 1px, transparent 1px);
-}
-
-/* Motivation: mint panel, teal grid */
-.motivation-sec {
-    background-color: #DAF5F0;
-    background-size: var(--grid-size) var(--grid-size);
-    background-image:
-        linear-gradient(to right, rgba(20, 140, 120, 0.15) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(20, 140, 120, 0.15) 1px, transparent 1px);
-}
-
-/* Favourite stack: lavender panel, violet grid */
-.favourite-stack-sec {
-    background-color: #C8BFF5;
-    background-size: var(--grid-size) var(--grid-size);
-    background-image:
-        linear-gradient(to right, rgba(100, 60, 180, 0.15) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(100, 60, 180, 0.15) 1px, transparent 1px);
-}
-
-/* FAQ: peach panel, rust grid */
-.faq-sec {
-    background-color: #F8D6B3;
-    background-size: var(--grid-size) var(--grid-size);
-    background-image:
-        linear-gradient(to right, rgba(160, 100, 40, 0.15) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(160, 100, 40, 0.15) 1px, transparent 1px);
 }
 
 /* ===== # Theme Button ===== */
@@ -233,7 +182,8 @@ html.is-loading body {
     overflow: hidden;
     z-index: 1;
     border: 2px solid var(--dark);
-    box-shadow: 6px 6px 0px var(--dark);
+    border-radius: 6px;
+    box-shadow: 4px 4px 0px var(--dark);
     transition: box-shadow .2s ease, transform .2s ease;
     white-space: nowrap;
 }
@@ -254,7 +204,7 @@ html.is-loading body {
 
 .theme-btn:hover {
     color: var(--dark);
-    box-shadow: 3px 3px 0px var(--dark);
+    box-shadow: 2px 2px 0px var(--dark);
 }
 
 .theme-btn:hover::before {
@@ -291,6 +241,7 @@ html.is-loading body {
 
 .theme-btn3 {
     border: 2px solid rgba(29, 29, 31, 0.5);
+    border-radius: 6px;
     color: var(--dark);
     text-transform: uppercase;
     padding: 10px 18px;
@@ -1287,9 +1238,36 @@ html.is-loading body {
     transition: box-shadow .25s ease, transform .25s ease;
 }
 
+/* ── Scattered tilt (Clico-inspired) — alternating rotation per card,
+   straightens on hover for a satisfying "pick it up" feel. ── */
+.featured-work-lists .featured-card:nth-child(6n+1) {
+    transform: rotate(-1.1deg);
+}
+
+.featured-work-lists .featured-card:nth-child(6n+2) {
+    transform: rotate(0.8deg);
+}
+
+.featured-work-lists .featured-card:nth-child(6n+3) {
+    transform: rotate(-0.6deg);
+}
+
+.featured-work-lists .featured-card:nth-child(6n+4) {
+    transform: rotate(1deg);
+}
+
+.featured-work-lists .featured-card:nth-child(6n+5) {
+    transform: rotate(-0.9deg);
+}
+
+.featured-work-lists .featured-card:nth-child(6n) {
+    transform: rotate(0.6deg);
+}
+
 .featured-card:hover {
-    transform: translate(-3px, -3px);
+    transform: rotate(0deg) translate(-3px, -3px);
     box-shadow: 15px 15px 0px var(--dark);
+    z-index: 2;
 }
 
 .featured-card .link-overlay {
@@ -3869,7 +3847,8 @@ html.is-loading body {
     color: var(--dark);
     background: var(--primary);
     border: 2px solid var(--dark);
-    box-shadow: 6px 6px 0px var(--dark);
+    border-radius: 6px;
+    box-shadow: 4px 4px 0px var(--dark);
     padding: 16px 28px;
     cursor: pointer;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
