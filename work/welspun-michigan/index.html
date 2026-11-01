@@ -23,7 +23,7 @@
     <meta property="og:title" content="Welspun Michigan - Immersive Infrastructure Experience Case Study | UX//Raw">
     <meta property="og:description"
         content="How Nadir Shaikh designed Welspun Michigan's interactive 3D city experience, translating complex infrastructure operations into an intuitive, visually compelling story.">
-    <meta property="og:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/work-welspun.png">
+    <meta property="og:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/about.png">
     <meta property="og:site_name" content="UX//Raw">
     <meta property="og:locale" content="en_IN">
 
@@ -32,7 +32,7 @@
     <meta name="twitter:title" content="Welspun Michigan - Immersive Infrastructure Experience Case Study | UX//Raw">
     <meta name="twitter:description"
         content="An interactive 3D web experience for Welspun Michigan, translating city-scale infrastructure into an intuitive visual story, designed by Nadir Shaikh.">
-    <meta name="twitter:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/work-welspun.png">
+    <meta name="twitter:image" content="https://uxraw.vercel.app/assets/imgs/dark-mode/about.png">
 
     <!-- ===== SEO: JSON-LD Structured Data ===== -->
     <script type="application/ld+json">
@@ -45,7 +45,7 @@
           "url": "https://uxraw.vercel.app/work/welspun-michigan/",
           "name": "Welspun Michigan - Immersive Infrastructure Experience",
           "description": "UI/UX design for Welspun Michigan, a vertical of Welspun World. An interactive 3D city environment that visualizes how infrastructure solutions operate at city scale.",
-          "image": "https://uxraw.vercel.app/assets/imgs/dark-mode/work-welspun.png",
+          "image": "https://uxraw.vercel.app/assets/imgs/dark-mode/about.png",
           "dateCreated": "2024",
           "genre": "UX/UI Design Case Study",
           "keywords": "UI Design, Web Design, 3D Experience, Infrastructure, Enterprise Storytelling",
@@ -86,10 +86,6 @@
 
     <!-- Lenis Smooth Scroll -->
     <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
-
-    <!-- Image Comparison Slider -->
-    <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
 
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -175,6 +171,11 @@
                                     focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
                                 </svg></a></li>
+                        <li><a href="https://www.linkedin.com/in/lucif3r72/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
                         <li><a href="https://dribbble.com/Lucif3r72" target="_blank" rel="noopener noreferrer">Dribbble
                                 <svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
@@ -201,7 +202,7 @@
                 </div>
                 <div class="header-middle">
                     <div class="humberg-menu">
-                        <a href="mailto:nadiruxdesign@gmail.com">
+                        <a href="mailto:nadiruxdesign@gmail.com" aria-label="Email Nadir">
                             <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
                                 <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
@@ -218,7 +219,7 @@
                     </div>
                 </div>
                 <div class="header-right">
-                    <a href="javascript:void(0);" class="theme-btn menu-trigger">MENU</a>
+                    <button type="button" class="theme-btn menu-trigger">MENU</button>
                 </div>
             </div>
         </header>
@@ -254,6 +255,7 @@
                         <span class="wd-hero-tag">Web Design</span>
                         <span class="wd-hero-tag">Enterprise Storytelling</span>
                     </div>
+                    <a class="theme-btn wd-hero-cta" href="https://www.welspunmichigan.com/" target="_blank" rel="noopener noreferrer">Visit live site ↗</a>
                 </div>
 
             </div>
@@ -293,9 +295,7 @@
              HERO IMAGE
         ═══════════════════════════════════ -->
         <div class="wd-cover-wrap">
-            <div class="wd-cover">
-                <img src="../../assets/imgs/dark-mode/work-welspun-michigan-hero.png" alt="Welspun Michigan 3D Experience">
-            </div>
+            <div class="wd-cover"><div class="logo-cover" style="--cover-bg: var(--primary-3);" role="img" aria-label="Welspun Michigan"><span class="logo-cover-mark">Welspun Michigan</span></div></div>
         </div>
 
         <!-- ═══════════════════════════════════
@@ -446,20 +446,7 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════
-             COMPARISON SLIDER
-        ═══════════════════════════════════ -->
-        <div class="wd-img-wrap js-fade-up">
-            <span class="wd-img-label">BEFORE / AFTER: Corporate Website Experience</span>
-            <div class="wd-img wd-img--slider">
-                <img-comparison-slider>
-                    <img slot="first" src="../../assets/imgs/dark-mode/welspun-before.png" alt="Traditional Corporate Website">
-                    <img slot="second" src="../../assets/imgs/dark-mode/welspun-after.png" alt="3D Interactive Experience">
-                </img-comparison-slider>
-            </div>
-        </div>
-
-        <!-- ═══════════════════════════════════
+                <!-- ═══════════════════════════════════
              KEY DESIGN DECISIONS
         ═══════════════════════════════════ -->
         <div class="wd-features js-fade-up" id="wd-design">
@@ -591,8 +578,8 @@
             </div>
             <div class="featured-work-lists wd-next-grid">
                 <div class="featured-card js-card-reveal">
-                    <a class="link-overlay" href="../werqlabs-v3/"></a>
-                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-werqlabs-v3.png" alt="Werq Labs v3"></div>
+                    <a class="link-overlay" href="../werqlabs-v3/" aria-label="View Werq Labs v3 project"></a>
+                    <div class="img-box"><div class="logo-cover" style="--cover-bg: var(--primary-dark-2);" role="img" aria-label="Werq Labs"><span class="logo-cover-mark">Werq Labs</span></div></div>
                     <div class="content">
                         <div class="left">
                             <p class="title">Werq Labs v3</p>
@@ -602,8 +589,8 @@
                     </div>
                 </div>
                 <div class="featured-card js-card-reveal">
-                    <a class="link-overlay" href="../woodland-river/"></a>
-                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-woodland-river.png" alt="Woodland River"></div>
+                    <a class="link-overlay" href="../woodland-river/" aria-label="View Woodland River project"></a>
+                    <div class="img-box"><div class="logo-cover" style="--cover-bg: var(--primary-4);" role="img" aria-label="Woodland River"><span class="logo-cover-mark">Woodland River</span></div></div>
                     <div class="content">
                         <div class="left">
                             <p class="title">Woodland River</p>
@@ -625,7 +612,7 @@
             <div class="copyright">
                 <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                 <div class="right">
-                    <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP ↑</a>
+                    <button type="button" id="back-to-top">GO BACK TO TOP ↑</button>
                 </div>
             </div>
         </footer>
@@ -633,6 +620,7 @@
     </main>
 
     <!-- ===== Scripts ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
     <script src="../../assets/js/jquery.js"></script>
     <script src="../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/gsap.min.js"></script>
@@ -643,7 +631,6 @@
     <script src="../../assets/js/jarallax-element.min.js"></script>
     <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/themescroll.js"></script>
-    <script type="module" src="https://unpkg.com/img-comparison-slider@8/dist/index.js"></script>
 
     <!-- ── In-page nav: active link on scroll ── -->
     <script>

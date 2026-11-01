@@ -4,7 +4,7 @@
  *
  *  CHANGES IN THIS VERSION:
  *   • Lenis smooth scroll replaces ScrollSmoother
- *     - Lenis loaded via CDN in HTML <head>
+ *     - Lenis loaded via CDN at the end of <body>, before jquery.js
  *     - ScrollTrigger ticker synced to Lenis RAF loop
  *     - ScrollToPlugin still used for back-to-top
  *   • Sticky pin disabled on mobile (< 809px) — experience

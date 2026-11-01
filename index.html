@@ -55,6 +55,7 @@
           },
           "sameAs": [
             "https://www.instagram.com/de_str0yed/",
+            "https://www.linkedin.com/in/lucif3r72/",
             "https://dribbble.com/Lucif3r72",
             "https://in.pinterest.com/Lucif3r72/"
           ],
@@ -76,6 +77,60 @@
           "description": "Portfolio of Nadir Shaikh - UI/UX Designer & Frontend Developer based in Mumbai.",
           "author": { "@id": "https://uxraw.vercel.app/#nadir" },
           "inLanguage": "en"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://uxraw.vercel.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What industries do you specialize in?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "I have worked across technology, healthcare, fashion, hospitality, and logistics. The domain changes; the discipline stays the same. Understand the user, define the problem clearly, and keep both at the centre of every design decision."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What services do you offer as a designer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "End-to-end UX/UI design, information architecture, design systems, prototyping, branding, and frontend development. I work best when I can own the full picture from research to delivery, and I bring every available tool and method to that process."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you provide examples of your previous work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The work above spans UX strategy, product design, and visual identity - each case study walks through the problem, the process, and the outcome. Scroll up, or head to the full archive."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you approach branding projects?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Brand projects begin with audience: who they are, how they think, and what they expect. From there, I build visual systems - identity, type, colour, and motion - that communicate consistently whether the touchpoint is a screen, a card, or a campaign."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you walk me through your design process?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Discover, Define, Design, Deliver. I research the landscape, define the user problem clearly, design across fidelities with iteration built in, and hand off with thorough documentation. Every stage informs the next and no stage gets skipped."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What software and tools do you use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Figma for design and systems. Adobe Creative Suite for brand and illustration. FigJam for discovery and collaboration. HTML, CSS, and JavaScript for frontend implementation. I also work with AI tools across my workflow to research, iterate, and execute with greater depth and speed."
+              }
+            }
+          ]
         }
       ]
     }
@@ -92,7 +147,6 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <!-- ===== Lenis Smooth Scroll ===== -->
     <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
 </head>
 
 <body>
@@ -194,6 +248,10 @@
                                     xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
                                 </svg></a></li>
+                        <li><a href="https://www.linkedin.com/in/lucif3r72/" target="_blank" rel="noopener noreferrer">LinkedIn <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
                         <li><a href="https://dribbble.com/Lucif3r72" target="_blank" rel="noopener noreferrer">Dribbble <svg
                                     xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
@@ -222,7 +280,7 @@
                     </div>
                     <div class="header-middle">
                         <div class="humberg-menu">
-                            <a href="mailto:nadiruxdesign@gmail.com">
+                            <a href="mailto:nadiruxdesign@gmail.com" aria-label="Email Nadir">
                                 <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
                                     <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5"
@@ -239,7 +297,7 @@
                         </div>
                     </div>
                     <div class="header-right">
-                        <a href="javascript:void(0);" class="theme-btn menu-trigger">MENU</a>
+                        <button type="button" class="theme-btn menu-trigger">MENU</button>
                     </div>
                 </div>
             </header>
@@ -251,18 +309,18 @@
                     <span class="hero-line"><span class="hero-line-inner">I'M NADIR</span></span>
                 </h1>
                 <div class="hero-descriptor hero-anim-item">
-                    <span class="hero-tag">UI/UX</span>
+                    <span class="hero-tag">THINK</span>
                     <span class="hero-sep">—</span>
-                    <span class="hero-tag">SYSTEMS</span>
+                    <span class="hero-tag">DESIGN</span>
                     <span class="hero-sep">—</span>
-                    <span class="hero-tag">CRAFT</span>
+                    <span class="hero-tag">BUILD</span>
                 </div>
             </div>
 
             <div class="hero-footer-wrap hero-anim-item">
                 <p>BASED IN MUMBAI, IN</p>
                 <div class="hero-footer-right">
-                    <a href="javascript:void(0);" class="link-with-line">VISUAL & EXPERIENCE DESIGNER</a>
+                    <span class="link-with-line">VISUAL & EXPERIENCE DESIGNER</span>
                     <p>+ FRONTEND DEVELOPER</p>
                 </div>
             </div>
@@ -328,12 +386,12 @@
         <section class="featured-work-sec">
             <div class="section-header">
                 <div class="left">
-                    <h3>
+                    <h2>
                         <span><span class="timeline-anim scroll-animation"
                                 data-animation="slide_down">FEATURED</span></span>
                         <span><span class="timeline-anim scroll-animation"
                                 data-animation="slide_down">WORK</span></span>
-                    </h3>
+                    </h2>
                 </div>
                 <div class="right">
                     <p>Good design does not start at a screen. It starts with understanding people, the problems they
@@ -343,8 +401,8 @@
             </div>
             <div class="featured-work-lists">
                 <div class="featured-card js-card-reveal">
-                    <a class="link-overlay" href="./work/we-care-aesm/"></a>
-                    <div class="img-box"><img src="./assets/imgs/dark-mode/work-1.png" alt="We Care Redesign"></div>
+                    <a class="link-overlay" href="./work/we-care-aesm/" aria-label="View We Care (Redesign) project"></a>
+                    <div class="img-box"><div class="logo-cover" style="--cover-bg: var(--primary-3);" role="img" aria-label="We Care"><span class="logo-cover-mark">We Care</span></div></div>
                     <div class="content">
                         <div class="left">
                             <p class="title">We Care (Redesign)</p>
@@ -354,19 +412,8 @@
                     </div>
                 </div>
                 <div class="featured-card js-card-reveal">
-                    <a class="link-overlay" href="./work/aesm-tap/"></a>
-                    <div class="img-box"><img src="./assets/imgs/dark-mode/work-2.png" alt="AESM TAP"></div>
-                    <div class="content">
-                        <div class="left">
-                            <p class="title">AESM TAP</p>
-                            <p class="subtitle">UI/UX Design</p>
-                        </div>
-                        <div class="right"><span class="date">2025</span></div>
-                    </div>
-                </div>
-                <div class="featured-card js-card-reveal">
-                    <a class="link-overlay" href="./work/uberheal/"></a>
-                    <div class="img-box"><img src="./assets/imgs/dark-mode/work-uberheal.png" alt="Uberheal"></div>
+                    <a class="link-overlay" href="./work/uberheal/" aria-label="View Uberheal project"></a>
+                    <div class="img-box"><div class="logo-cover" style="--cover-bg: var(--primary-dark);" role="img" aria-label="Uberheal"><span class="logo-cover-mark">Uberheal</span></div></div>
                     <div class="content">
                         <div class="left">
                             <p class="title">Uberheal</p>
@@ -376,36 +423,47 @@
                     </div>
                 </div>
                 <div class="featured-card js-card-reveal">
-                    <a class="link-overlay" href="./work/renttro/"></a>
-                    <div class="img-box"><img src="./assets/imgs/dark-mode/work-renttro.png" alt="Renttro"></div>
+                    <a class="link-overlay" href="./work/manningflo/" aria-label="View ManningFlo project"></a>
+                    <div class="img-box"><div class="logo-cover" style="--cover-bg: var(--primary-4);" role="img" aria-label="ManningFlo"><span class="logo-cover-mark">ManningFlo</span></div></div>
                     <div class="content">
                         <div class="left">
-                            <p class="title">Renttro</p>
-                            <p class="subtitle">Marketplace</p>
+                            <p class="title">ManningFlo</p>
+                            <p class="subtitle">Applicant Tracking</p>
+                        </div>
+                        <div class="right"><span class="date">2026</span></div>
+                    </div>
+                </div>
+                <div class="featured-card js-card-reveal">
+                    <a class="link-overlay" href="./work/aesm-tap/" aria-label="View AESM TAP project"></a>
+                    <div class="img-box"><div class="logo-cover" style="--cover-bg: var(--primary-6);" role="img" aria-label="AESM TAP"><span class="logo-cover-mark">AESM TAP</span></div></div>
+                    <div class="content">
+                        <div class="left">
+                            <p class="title">AESM TAP</p>
+                            <p class="subtitle">UI/UX Design</p>
                         </div>
                         <div class="right"><span class="date">2025</span></div>
                     </div>
                 </div>
                 <div class="featured-card js-card-reveal">
-                    <a class="link-overlay" href="./work/ignite/"></a>
-                    <div class="img-box"><img src="./assets/imgs/dark-mode/work-ignite.png" alt="Ignite"></div>
-                    <div class="content">
-                        <div class="left">
-                            <p class="title">Ignite</p>
-                            <p class="subtitle">Enterprise Platform</p>
-                        </div>
-                        <div class="right"><span class="date">2024</span></div>
-                    </div>
-                </div>
-                <div class="featured-card js-card-reveal">
-                    <a class="link-overlay" href="./work/welspun-michigan/"></a>
-                    <div class="img-box"><img src="./assets/imgs/dark-mode/work-welspun.png" alt="Welspun Michigan"></div>
+                    <a class="link-overlay" href="./work/welspun-michigan/" aria-label="View Welspun Michigan project"></a>
+                    <div class="img-box"><div class="logo-cover" style="--cover-bg: var(--primary-3);" role="img" aria-label="Welspun Michigan"><span class="logo-cover-mark">Welspun Michigan</span></div></div>
                     <div class="content">
                         <div class="left">
                             <p class="title">Welspun Michigan</p>
                             <p class="subtitle">3D Experience</p>
                         </div>
                         <div class="right"><span class="date">2024</span></div>
+                    </div>
+                </div>
+                <div class="featured-card js-card-reveal">
+                    <a class="link-overlay" href="./work/renttro/" aria-label="View Renttro project"></a>
+                    <div class="img-box"><div class="logo-cover" style="--cover-bg: var(--primary-dark);" role="img" aria-label="Renttro"><span class="logo-cover-mark">Renttro</span></div></div>
+                    <div class="content">
+                        <div class="left">
+                            <p class="title">Renttro</p>
+                            <p class="subtitle">Marketplace</p>
+                        </div>
+                        <div class="right"><span class="date">2025</span></div>
                     </div>
                 </div>
             </div>
@@ -416,12 +474,12 @@
                 ========================================= -->
         <section class="about-sec">
             <div class="section-header2">
-                <h3 class="title sticky-statement2">
+                <h2 class="title sticky-statement2">
                     <span class="transform-anim"><span class="timeline-anim scroll-animation"
                             data-animation="slide_down">MORE ABOUT</span></span>
                     <span class="transform-anim"><span class="timeline-anim scroll-animation"
                             data-animation="slide_down">NADIR©</span></span>
-                </h3>
+                </h2>
             </div>
             <div class="about-bottom-content-wrap">
                 <div class="img-box js-parallax-img">
@@ -431,8 +489,8 @@
                 </div>
                 <div class="about-bottom-content">
                     <div class="js-split-reveal">
-                        <h4>KNOW THE RULES DEEPLY ENOUGH TO BREAK THEM WELL.<br>DESIGN THAT SOLVES THE RIGHT
-                            PROBLEM,<br>LOOKS INEVITABLE, AND ACTUALLY SHIPS.</h4>
+                        <h3>KNOW THE RULES DEEPLY ENOUGH TO BREAK THEM WELL.<br>DESIGN THAT SOLVES THE RIGHT
+                            PROBLEM,<br>LOOKS INEVITABLE, AND ACTUALLY SHIPS.</h3>
                     </div>
                     <p class="js-fade-up">Seven years of end-to-end design across products, systems, and brands. I
                         research before I sketch, define before I design, and question assumptions before I prototype. I
@@ -529,29 +587,29 @@
         <section class="experience-sec">
             <div class="section-header">
                 <div class="left">
-                    <h3>
+                    <h2>
                         <span><span class="timeline-anim scroll-animation" data-animation="slide_down">MY</span></span>
                         <span><span class="timeline-anim scroll-animation"
                                 data-animation="slide_down">EXPERTISE</span></span>
-                    </h3>
+                    </h2>
                 </div>
             </div>
             <div class="experience-list-wrap">
                 <div class="experience-lists">
                     <div class="experience-box js-card-reveal">
-                        <h4><span>(1)</span><span>APP DESIGN</span></h4>
+                        <h3><span>(1)</span><span>APP DESIGN</span></h3>
                         <p>Apps built for how people actually behave, not how we imagine they will. Clear navigation,
                             purposeful layouts, and interaction patterns that serve the user's real goal without getting
                             in the way.</p>
                     </div>
                     <div class="experience-box js-card-reveal">
-                        <h4><span>(2)</span><span>WEB DESIGN</span></h4>
+                        <h3><span>(2)</span><span>WEB DESIGN</span></h3>
                         <p>Web experiences that earn attention and reward it. Microinteractions that feel considered,
                             motion that guides rather than distracts, and pages built to perform as well as they look.
                         </p>
                     </div>
                     <div class="experience-box js-card-reveal">
-                        <h4><span>(3)</span><span>DESIGN SYSTEMS</span></h4>
+                        <h3><span>(3)</span><span>DESIGN SYSTEMS</span></h3>
                         <p>Systems built to outlast the brief. Reusable components, defined tokens, and documented
                             patterns that let products grow across surfaces without losing coherence or making teams
                             reinvent decisions already made.</p>
@@ -559,13 +617,13 @@
                 </div>
                 <div class="experience-lists2">
                     <div class="experience-box js-card-reveal">
-                        <h4><span>(4)</span><span>UX STRATEGY & RESEARCH</span></h4>
+                        <h3><span>(4)</span><span>UX STRATEGY & RESEARCH</span></h3>
                         <p>Strategy without research is just opinion. I work to understand users deeply before proposing
                             anything, and I keep that understanding at the centre of every design decision throughout
                             the project.</p>
                     </div>
                     <div class="experience-box js-card-reveal">
-                        <h4><span>(5)</span><span>PROTOTYPING & INTERACTION</span></h4>
+                        <h3><span>(5)</span><span>PROTOTYPING & INTERACTION</span></h3>
                         <p>Prototypes that ask the hard questions early. I build to test, not to impress, and I keep
                             refining interaction models until the experience responds exactly the way a user would
                             expect without thinking about it.</p>
@@ -580,8 +638,8 @@
         <section class="motivation-sec">
             <div class="custom-row">
                 <div class="left">
-                    <h3 class="js-split-reveal">DESIGN</h3>
-                    <h3 class="js-split-reveal">AS DIALOGUE</h3>
+                    <h2 class="js-split-reveal">DESIGN</h2>
+                    <h2 class="js-split-reveal">AS DIALOGUE</h2>
                 </div>
                 <div class="right">
                     <div class="motivation-content">
@@ -611,7 +669,7 @@
                     <!-- LEFT: pinned by ScrollTrigger — col-lg-5 -->
                     <div class="col-lg-5">
                         <div class="exp-pin-col" id="expPinCol">
-                            <h3 class="sec-sticky-heading" id="expHeading">EXPERIENCE</h3>
+                            <h2 class="sec-sticky-heading" id="expHeading">EXPERIENCE</h2>
                         </div>
                     </div>
                     <!-- RIGHT: scrollable content — col-lg-7 -->
@@ -620,7 +678,7 @@
                             <div class="experience2-box js-exp-reveal">
                                 <div class="experience2-box-header">WERQ LABS</div>
                                 <div class="experience2-box-body">
-                                    <h4>UI UX DESIGNER / DEVELOPER <span>2023 – PRESENT</span></h4>
+                                    <h3>UI UX DESIGNER / DEVELOPER <span>2023 – PRESENT</span></h3>
                                     <p>Working as a UI/UX designer and developer at an AI-native product studio. I own
                                         the design process end to end, from research and strategy through to frontend
                                         implementation. I build systems that scale, collaborate closely with
@@ -631,7 +689,7 @@
                             <div class="experience2-box js-exp-reveal">
                                 <div class="experience2-box-header">FREELANCE</div>
                                 <div class="experience2-box-body">
-                                    <h4>UI/UX DESIGNER <span>2017 – PRESENT</span></h4>
+                                    <h3>UI/UX DESIGNER <span>2017 – PRESENT</span></h3>
                                     <p>Partnered with startups and creative teams to build UX strategies and visual
                                         identities from the ground up. Delivered wireframes, prototypes, design systems,
                                         and production-ready interfaces. Always grounded in the user's perspective and
@@ -654,7 +712,7 @@
                     <!-- LEFT: pinned by ScrollTrigger — col-lg-5 -->
                     <div class="col-lg-5">
                         <div class="exp-pin-col" id="stackPinCol">
-                            <h3 class="sec-sticky-heading" id="stackHeading">FAVOURITE<br>STACK</h3>
+                            <h2 class="sec-sticky-heading" id="stackHeading">FAVOURITE<br>STACK</h2>
                         </div>
                     </div>
                     <!-- RIGHT: scrollable content — col-lg-7 -->
@@ -665,7 +723,7 @@
                                     <div class="icon"><img src="./assets/imgs/pen-tool.svg" alt="Figma"></div>
                                 </div>
                                 <div class="content">
-                                    <h4>FIGMA</h4>
+                                    <h3>FIGMA</h3>
                                     <div class="content-body">
                                         <h4>DESIGN TOOL</h4>
                                         <p>My primary workspace for everything from early exploration to full system
@@ -680,7 +738,7 @@
                                     <div class="icon"><img src="./assets/imgs/file-vector.svg" alt="Adobe XD"></div>
                                 </div>
                                 <div class="content">
-                                    <h4>ADOBE XD</h4>
+                                    <h3>ADOBE XD</h3>
                                     <div class="content-body">
                                         <h4>DESIGN TOOL</h4>
                                         <p>Used for interactive prototyping and UX validation. Creating clickable flows
@@ -694,7 +752,7 @@
                                     <div class="icon"><img src="./assets/imgs/globe.svg" alt="JavaScript"></div>
                                 </div>
                                 <div class="content">
-                                    <h4>JAVASCRIPT</h4>
+                                    <h3>JAVASCRIPT</h3>
                                     <div class="content-body">
                                         <h4>FRONTEND DEVELOPMENT</h4>
                                         <p>I write JS to make design intent real in the browser. Handling interactivity,
@@ -709,7 +767,7 @@
                                     <div class="icon"><img src="./assets/imgs/file-figma.svg" alt="FigJam"></div>
                                 </div>
                                 <div class="content">
-                                    <h4>FIGJAM</h4>
+                                    <h3>FIGJAM</h3>
                                     <div class="content-body">
                                         <h4>COLLABORATION TOOL</h4>
                                         <p>My whiteboard for discovery. I use FigJam to map user journeys, run
@@ -729,12 +787,12 @@
                 ========================================= -->
         <section class="faq-sec">
             <div class="section-header3">
-                <h3 class="title">
+                <h2 class="title">
                     <span><span class="timeline-anim scroll-animation"
                             data-animation="slide_down">FREQUENTLY</span></span>
                     <span><span class="timeline-anim scroll-animation" data-animation="slide_down">ASKED
                             QUESTIONS</span></span>
-                </h3>
+                </h2>
             </div>
             <div class="accordion faq-wrap" id="accordionExample">
                 <div class="accordion-item faq-item">
@@ -830,10 +888,10 @@
                 ========================================= -->
         <section class="cta-sec">
             <div class="section-header2">
-                <h3 class="title js-split-reveal">
+                <h2 class="title js-split-reveal">
                     <span>LET'S WORK</span>
                     <span>TOGETHER</span>
-                </h3>
+                </h2>
                 <a href="./contact/" class="theme-btn">CONTACT NOW</a>
             </div>
             <div class="cta-content about-bottom-content-wrap">
@@ -845,6 +903,10 @@
                     </div>
                     <ul class="social-links">
                         <li><a href="https://www.instagram.com/de_str0yed/" target="_blank" rel="noopener noreferrer">Instagram <svg
+                                    xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
+                        <li><a href="https://www.linkedin.com/in/lucif3r72/" target="_blank" rel="noopener noreferrer">LinkedIn <svg
                                     xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
                                 </svg></a></li>
@@ -871,7 +933,7 @@
             <div class="copyright">
                 <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                 <div class="right">
-                    <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP ↑</a>
+                    <button type="button" id="back-to-top">GO BACK TO TOP ↑</button>
                 </div>
             </div>
         </footer>
@@ -881,6 +943,7 @@
     </main>
 
     <!-- ===== Scripts ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/gsap.min.js"></script>

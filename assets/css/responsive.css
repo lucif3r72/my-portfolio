@@ -30,12 +30,14 @@
     }
 
     /* Section headers */
-    .section-header h3 {
+    .section-header h3,
+.section-header h2 {
         font-size: 80px;
         line-height: 72px;
     }
 
-    .section-header h3 span {
+    .section-header h3 span,
+.section-header h2 span {
         line-height: 72px;
     }
 
@@ -84,11 +86,13 @@
         max-width: 100%;
     }
 
-    .about-bottom-content-wrap .about-bottom-content h4 br {
+    .about-bottom-content-wrap .about-bottom-content h4 br,
+.about-bottom-content-wrap .about-bottom-content h3 br {
         display: none;
     }
 
-    .about-bottom-content-wrap .about-bottom-content h4 {
+    .about-bottom-content-wrap .about-bottom-content h4,
+.about-bottom-content-wrap .about-bottom-content h3 {
         font-size: 28px;
         line-height: 40px;
     }
@@ -152,7 +156,8 @@
         gap: 60px;
     }
 
-    .motivation-sec .left h3 {
+    .motivation-sec .left h3,
+.motivation-sec .left h2 {
         font-size: 60px;
         letter-spacing: -0.5px;
         line-height: 56px;
@@ -449,12 +454,14 @@
         padding: 60px 20px 0;
     }
 
-    .section-header h3 {
+    .section-header h3,
+.section-header h2 {
         font-size: 48px;
         line-height: 44px;
     }
 
-    .section-header h3 span {
+    .section-header h3 span,
+.section-header h2 span {
         line-height: 44px;
     }
 
@@ -490,7 +497,8 @@
         padding: 60px 20px 50px;
     }
 
-    .about-bottom-content-wrap .about-bottom-content h4 {
+    .about-bottom-content-wrap .about-bottom-content h4,
+.about-bottom-content-wrap .about-bottom-content h3 {
         font-size: 22px;
         line-height: 32px;
     }
@@ -505,7 +513,8 @@
         line-height: 28px;
     }
 
-    .about-bottom-content-wrap .about-bottom-content h4 br {
+    .about-bottom-content-wrap .about-bottom-content h4 br,
+.about-bottom-content-wrap .about-bottom-content h3 br {
         display: block;
     }
 
@@ -576,7 +585,8 @@
         gap: 48px;
     }
 
-    .motivation-sec .left h3 {
+    .motivation-sec .left h3,
+.motivation-sec .left h2 {
         font-size: 48px;
         line-height: 44px;
     }
@@ -1108,12 +1118,14 @@
     }
 
     /* Section header h3 */
-    .section-header h3 {
+    .section-header h3,
+.section-header h2 {
         font-size: 42px;
         line-height: 38px;
     }
 
-    .section-header h3 span {
+    .section-header h3 span,
+.section-header h2 span {
         line-height: 38px;
     }
 
@@ -1131,7 +1143,8 @@
     }
 
     /* Experience */
-    .experience-box h4>span:last-child {
+    .experience-box h4>span:last-child,
+.experience-box h3>span:last-child {
         font-size: 30px;
     }
 

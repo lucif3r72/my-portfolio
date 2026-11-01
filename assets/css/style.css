@@ -154,7 +154,6 @@ html.is-loading body {
 /* ═══ Full-bleed section dividers (Clico-inspired) ═══
    Every major homepage section closes with a hard rule,
    framing content blocks against the cream backdrop. */
-.featured-work-sec,
 .process-sec,
 .experience-sec,
 .motivation-sec,
@@ -263,7 +262,8 @@ html.is-loading body {
     flex: 1;
 }
 
-.section-header h3 {
+.section-header h3,
+.section-header h2 {
     font-family: var(--font_bebas);
     font-size: 90px;
     line-height: 80px;
@@ -275,7 +275,8 @@ html.is-loading body {
     gap: 10px;
 }
 
-.section-header h3 span {
+.section-header h3 span,
+.section-header h2 span {
     line-height: 80px;
     display: block;
     overflow: hidden;
@@ -744,6 +745,7 @@ html.is-loading body {
 }
 
 .hero-sec .hero-footer-wrap .hero-footer-right a,
+.hero-sec .hero-footer-wrap .hero-footer-right .link-with-line,
 .hero-sec .hero-footer-wrap p {
     font-family: var(--font_inter_tight);
     font-size: 12px;
@@ -756,7 +758,7 @@ html.is-loading body {
 }
 
 .hero-sec .hero-footer-wrap .hero-footer-right p {
-    color: rgba(29, 29, 31, 0.5);
+    color: rgba(29, 29, 31, 0.65);
 }
 
 .link-with-line {
@@ -819,7 +821,7 @@ html.is-loading body {
 
 .header-wrap .header-local-time-box {
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.6);
+    color: rgba(29, 29, 31, 0.65);
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 1.5px;
@@ -829,6 +831,10 @@ html.is-loading body {
     width: 180px;
     flex: none;
     font-family: var(--font_inter_tight);
+}
+
+.header-wrap .header-local-time-box a {
+    color: inherit;
 }
 
 .header-wrap .header-local-time-box span {
@@ -1197,7 +1203,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.45);
+    color: rgba(29, 29, 31, 0.65);
     display: block;
     margin-top: 4px;
 }
@@ -1271,6 +1277,56 @@ html.is-loading body {
 
 .featured-card:hover .img-box img {
     transform: scale(1.06);
+}
+
+/* ===== # Logo cover (project cards + case-study hero) =====
+   Plain colour panel with the project logo/wordmark centred. Swap the
+   .logo-cover-mark span for <img class="logo-cover-logo" src="..." alt="..."> once a real logo exists. */
+.logo-cover {
+    container-type: inline-size;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    background: var(--cover-bg, var(--primary-3));
+}
+
+.logo-cover-mark {
+    font-family: var(--font_bebas);
+    font-weight: 400;
+    font-size: clamp(44px, 11cqw, 150px);
+    line-height: 0.92;
+    letter-spacing: 0.04em;
+    color: var(--dark);
+    text-align: center;
+    text-transform: uppercase;
+    text-wrap: balance;
+    transition: transform .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.logo-cover-logo {
+    display: block;
+    max-width: min(60%, 420px);
+    max-height: 50%;
+    object-fit: contain;
+    transition: transform .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.featured-card:hover .logo-cover-mark,
+.featured-card:hover .logo-cover-logo {
+    transform: scale(1.06);
+}
+
+.wd-cover:hover .logo-cover-mark,
+.wd-cover:hover .logo-cover-logo {
+    transform: scale(1.03);
+}
+
+.wd-hero-cta {
+    align-self: flex-start;
 }
 
 .featured-card .content {
@@ -1533,7 +1589,8 @@ html.is-loading body {
     justify-content: center;
 }
 
-.about-sec .section-header2 h3 span {
+.about-sec .section-header2 h3 span,
+.about-sec .section-header2 h2 span {
     overflow: hidden;
 }
 
@@ -1578,7 +1635,8 @@ html.is-loading body {
     width: 100%;
 }
 
-.about-bottom-content-wrap .about-bottom-content h4 {
+.about-bottom-content-wrap .about-bottom-content h4,
+.about-bottom-content-wrap .about-bottom-content h3 {
     font-family: var(--font_syne);
     font-weight: 800;
     margin: 0;
@@ -1919,13 +1977,15 @@ html.is-loading body {
 }
 
 /* Expertise h4 — number label + title */
-.experience-box h4 {
+.experience-box h4,
+.experience-box h3 {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.experience-box h4>span:first-child {
+.experience-box h4>span:first-child,
+.experience-box h3>span:first-child {
     font-family: var(--font_inter_tight);
     font-size: 11px;
     font-weight: 700;
@@ -1934,7 +1994,8 @@ html.is-loading body {
     color: rgba(29, 29, 31, 0.4);
 }
 
-.experience-box h4>span:last-child {
+.experience-box h4>span:last-child,
+.experience-box h3>span:last-child {
     font-family: var(--font_bebas);
     font-size: 36px;
     letter-spacing: 1px;
@@ -2131,7 +2192,8 @@ html.is-loading body {
 }
 
 /* Motivation left h3 — sticky-heading handles exp2 + stack now */
-.motivation-sec .left h3 {
+.motivation-sec .left h3,
+.motivation-sec .left h2 {
     font-family: var(--font_bebas);
     font-size: 90px;
     font-weight: 400;
@@ -2273,7 +2335,8 @@ html.is-loading body {
     gap: 20px;
 }
 
-.experience2-box .experience2-box-body h4 {
+.experience2-box .experience2-box-body h4,
+.experience2-box .experience2-box-body h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2285,7 +2348,8 @@ html.is-loading body {
     font-weight: 700;
 }
 
-.experience2-box .experience2-box-body h4 span {
+.experience2-box .experience2-box-body h4 span,
+.experience2-box .experience2-box-body h3 span {
     font-family: var(--font_inter_tight);
     font-size: 12px;
     letter-spacing: 2px;
@@ -2388,7 +2452,8 @@ html.is-loading body {
 }
 
 /* Tool name — bebas for title consistency */
-.favourite-stack-box .content>h4 {
+.favourite-stack-box .content>h4,
+.favourite-stack-box .content>h3 {
     font-family: var(--font_bebas);
     font-size: 30px;
     font-weight: 400;
@@ -4113,6 +4178,13 @@ html.is-loading body {
 .copyright #back-to-top {
     display: block;
     position: relative;
+    /* button reset — element was an <a>, now a <button> */
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .copyright #back-to-top:hover::before {

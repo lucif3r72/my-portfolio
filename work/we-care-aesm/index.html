@@ -88,7 +88,6 @@
 
     <!-- Lenis Smooth Scroll -->
     <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
 
     <!-- Image Comparison Slider -->
     <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@8/dist/styles.css">
@@ -177,6 +176,11 @@
                                     focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
                                 </svg></a></li>
+                        <li><a href="https://www.linkedin.com/in/lucif3r72/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn <svg xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false" viewBox="0 0 24 24">
+                                    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
+                                </svg></a></li>
                         <li><a href="https://dribbble.com/Lucif3r72" target="_blank" rel="noopener noreferrer">Dribbble
                                 <svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24">
                                     <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
@@ -203,7 +207,7 @@
                 </div>
                 <div class="header-middle">
                     <div class="humberg-menu">
-                        <a href="mailto:nadiruxdesign@gmail.com">
+                        <a href="mailto:nadiruxdesign@gmail.com" aria-label="Email Nadir">
                             <svg width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" color="#1d1d1f">
                                 <path d="M9 9L13.5 12L18 9" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"
@@ -220,7 +224,7 @@
                     </div>
                 </div>
                 <div class="header-right">
-                    <a href="javascript:void(0);" class="theme-btn menu-trigger">MENU</a>
+                    <button type="button" class="theme-btn menu-trigger">MENU</button>
                 </div>
             </div>
         </header>
@@ -258,6 +262,7 @@
                         <span class="wd-hero-tag">Accessibility</span>
                         <span class="wd-hero-tag">Mobile Design</span>
                     </div>
+                    <a class="theme-btn wd-hero-cta" href="https://www.figma.com/design/amT2Fl2fm5ZMc6jZB85S9x/We-Care-V2?node-id=0-1&amp;t=Hkzv1HJkDHiqcRTs-1" target="_blank" rel="noopener noreferrer">View design in Figma ↗</a>
                 </div>
 
             </div>
@@ -300,9 +305,7 @@
              HERO IMAGE
         ═══════════════════════════════════ -->
         <div class="wd-cover-wrap">
-            <div class="wd-cover">
-                <img src="../../assets/imgs/dark-mode/work-1.png" alt="WeCare App Overview">
-            </div>
+            <div class="wd-cover"><div class="logo-cover" style="--cover-bg: var(--primary-3);" role="img" aria-label="We Care"><span class="logo-cover-mark">We Care</span></div></div>
         </div>
 
         <!-- ═══════════════════════════════════
@@ -599,8 +602,8 @@
             </div>
             <div class="featured-work-lists wd-next-grid">
                 <div class="featured-card js-card-reveal">
-                    <a class="link-overlay" href="../welspun-michigan/"></a>
-                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-welspun.png" alt="Welspun Michigan"></div>
+                    <a class="link-overlay" href="../welspun-michigan/" aria-label="View Welspun Michigan project"></a>
+                    <div class="img-box"><div class="logo-cover" style="--cover-bg: var(--primary-3);" role="img" aria-label="Welspun Michigan"><span class="logo-cover-mark">Welspun Michigan</span></div></div>
                     <div class="content">
                         <div class="left">
                             <p class="title">Welspun Michigan</p>
@@ -610,8 +613,8 @@
                     </div>
                 </div>
                 <div class="featured-card js-card-reveal">
-                    <a class="link-overlay" href="../werqlabs-v3/"></a>
-                    <div class="img-box"><img src="../../assets/imgs/dark-mode/work-werqlabs-v3.png" alt="Werq Labs v3"></div>
+                    <a class="link-overlay" href="../werqlabs-v3/" aria-label="View Werq Labs v3 project"></a>
+                    <div class="img-box"><div class="logo-cover" style="--cover-bg: var(--primary-dark-2);" role="img" aria-label="Werq Labs"><span class="logo-cover-mark">Werq Labs</span></div></div>
                     <div class="content">
                         <div class="left">
                             <p class="title">Werq Labs v3</p>
@@ -633,7 +636,7 @@
             <div class="copyright">
                 <p>&copy;2025 NADIR SHAIKH. ALL RIGHTS RESERVED.</p>
                 <div class="right">
-                    <a href="javascript:void(0);" id="back-to-top">GO BACK TO TOP ↑</a>
+                    <button type="button" id="back-to-top">GO BACK TO TOP ↑</button>
                 </div>
             </div>
         </footer>
@@ -641,6 +644,7 @@
     </main>
 
     <!-- ===== Scripts ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
     <script src="../../assets/js/jquery.js"></script>
     <script src="../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/gsap.min.js"></script>
