@@ -1291,7 +1291,7 @@ html.is-loading body {
     align-items: center;
     justify-content: center;
     padding: 32px;
-    background: var(--cover-bg, var(--primary-3));
+    background: var(--cover-bg, var(--dark));
 }
 
 .logo-cover-mark {
@@ -1300,19 +1300,30 @@ html.is-loading body {
     font-size: clamp(44px, 11cqw, 150px);
     line-height: 0.92;
     letter-spacing: 0.04em;
-    color: var(--dark);
+    color: var(--bg-default);
     text-align: center;
     text-transform: uppercase;
     text-wrap: balance;
     transition: transform .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.logo-cover-logo {
+/* Selectors are deliberately specific: .featured-card .img-box img and .wd-cover img stretch images to
+   fill the box (object-fit: cover), which would crop a logo. */
+.logo-cover .logo-cover-logo,
+.featured-card .img-box .logo-cover .logo-cover-logo {
     display: block;
-    max-width: min(60%, 420px);
+    /* --logo-max / --logo-max-hero can be lowered inline for small raster logos so they don't blur */
+    width: min(70%, var(--logo-max, 480px));
+    height: auto;
     max-height: 50%;
     object-fit: contain;
+    object-position: center;
     transition: transform .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.wd-cover .logo-cover .logo-cover-logo {
+    width: min(50%, var(--logo-max-hero, 640px));
+    max-height: 45%;
 }
 
 .featured-card:hover .logo-cover-mark,
