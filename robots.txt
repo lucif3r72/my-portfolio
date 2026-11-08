@@ -1,5 +1,5 @@
 # robots.txt — uxraw.vercel.app
-# Nadir Shaikh · UI/UX Designer & Frontend Developer
+# Nadir Shaikh · UI/UX & Product Designer
 
 # ═══════════════════════════════
 # STANDARD CRAWLERS
