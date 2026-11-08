@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found | UX//Raw</title>
+    <meta name="description" content="This page doesn't exist. Head back to the UX//Raw portfolio of Nadir Shaikh.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/assets/imgs/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <style>
+        /* Root-relative asset paths so this page works from any missing URL. */
+        .nf-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 48px 16px;
+            gap: 20px;
+        }
+
+        .nf-code {
+            font-family: var(--font_bebas);
+            font-weight: 400;
+            font-size: clamp(120px, 28vw, 340px);
+            line-height: 0.85;
+            letter-spacing: 0.02em;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        .nf-code span {
+            color: var(--primary-dark-4);
+        }
+
+        .nf-title {
+            font-family: var(--font_inter_tight);
+            font-weight: 700;
+            font-size: clamp(14px, 2.4vw, 18px);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        .nf-text {
+            font-family: var(--font_instrument);
+            font-size: 18px;
+            line-height: 1.5;
+            color: var(--paragraph);
+            max-width: 440px;
+            margin: 0;
+        }
+
+        .nf-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 32px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="nf-page">
+        <h1 class="nf-code" aria-label="404">4<span>0</span>4</h1>
+        <p class="nf-title">Page not found</p>
+        <p class="nf-text">The page you were looking for does not exist, or it has moved. The work is still here.</p>
+        <div class="nf-links">
+            <a href="/" class="common-text-link">BACK TO HOME →</a>
+            <a href="/work/" class="common-text-link">VIEW WORK →</a>
+            <a href="/contact/" class="common-text-link">GET IN TOUCH →</a>
+        </div>
+    </main>
+</body>
+
+</html>
