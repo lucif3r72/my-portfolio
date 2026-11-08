@@ -2807,6 +2807,12 @@ html.is-loading body {
 }
 
 .faq-item .accordion-button i {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background:
+        linear-gradient(var(--dark), var(--dark)) center / 16px 1.5px no-repeat,
+        linear-gradient(var(--dark), var(--dark)) center / 1.5px 16px no-repeat;
     font-size: 22px;
     flex: none;
     transition: transform .3s ease;
