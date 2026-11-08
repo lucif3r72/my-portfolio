@@ -18,7 +18,7 @@ Ways of Working: Design Thinking, Stakeholder Workshops, Agile Collaboration, De
 EXPERIENCE
 ----------
 
-UI/UX & Product Designer | Werq Labs | 2023 - Present
+UI/UX Developer | Werq Labs | 2023 - Present
 - Associate Team Lead: run and lead a team of 3 UX designers.
 - Own the product design process end to end for digital products, from user research and UX strategy through UI design and design systems to delivery and hand-off.
 - Build scalable design systems and component libraries, and work closely with engineering to hand off production-ready interfaces.
