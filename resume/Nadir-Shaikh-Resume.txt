@@ -5,7 +5,7 @@ Portfolio: https://uxraw.vercel.app | LinkedIn: https://www.linkedin.com/in/luci
 
 SUMMARY
 -------
-UI/UX designer and frontend developer with 7+ years of end-to-end product design experience across healthcare, maritime, logistics, real estate, finance and enterprise software. Owns the process from user research and UX strategy through design systems, prototyping and frontend implementation in HTML, CSS and JavaScript. Has delivered 40+ projects for 15+ clients, including an accessible mobile design system now reused across Anglo-Eastern's app portfolio and an AI-assisted hiring platform handling 10K+ candidate records.
+UI/UX designer and frontend developer with 5+ years of end-to-end product design experience across healthcare, maritime, logistics, real estate, finance and enterprise software. Owns the process from user research and UX strategy through design systems, prototyping and frontend implementation in HTML, CSS and JavaScript. Has delivered 40+ projects for 15+ clients, including an accessible mobile design system now reused across Anglo-Eastern's app portfolio and an AI-assisted hiring platform handling 10K+ candidate records.
 
 SKILLS
 ------
@@ -22,7 +22,7 @@ UI/UX Designer & Developer | Werq Labs (AI-native product studio) | 2023 - Prese
 - Build scalable design systems and component libraries, and work closely with engineering to hand off production-ready interfaces.
 - Design and build web and mobile products in Figma, FigJam and JavaScript, using AI tools to speed up research, iteration and delivery.
 
-UI/UX Designer (Freelance) | Self-employed | 2017 - Present
+UI/UX Designer (Freelance) | Self-employed | 2019 - Present
 - Partnered with startups and creative teams to build UX strategies and visual identities from the ground up.
 - Delivered wireframes, prototypes, design systems and production-ready interfaces, grounded in the user's perspective and the product's actual requirements.
 

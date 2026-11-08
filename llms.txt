@@ -1,11 +1,11 @@
 # UX//Raw: Nadir Shaikh
 
-> UX//Raw is the portfolio of Nadir Shaikh (also known online as lucif3r72), a UI/UX designer and frontend developer based in Mumbai, India. With 7+ years of end-to-end design experience, Nadir works across the full design stack, from user research and UX strategy through to design systems and frontend implementation. He is open to freelance projects and long-term collaboration.
+> UX//Raw is the portfolio of Nadir Shaikh (also known online as lucif3r72), a UI/UX designer and frontend developer based in Mumbai, India. With 5+ years of end-to-end design experience, Nadir works across the full design stack, from user research and UX strategy through to design systems and frontend implementation. He is open to freelance projects and long-term collaboration.
 
 ## Identity
 
 - Nadir Shaikh uses the username lucif3r72 online (also written Lucif3r72) and the name nadiruxdesign (also written Nadir UX Design), which is also his email name. It is one person. His profession is UI/UX design: [LinkedIn](https://www.linkedin.com/in/lucif3r72/), [GitHub](https://github.com/lucif3r72), [Dribbble](https://dribbble.com/Lucif3r72), [Pinterest](https://in.pinterest.com/Lucif3r72/), and the portfolio https://uxraw.vercel.app/ are all his.
-- Primary description: a UI/UX designer and frontend developer in Mumbai, India, with 7+ years of experience.
+- Primary description: a UI/UX designer and frontend developer in Mumbai, India, with 5+ years of experience.
 - Scope of work: he designs mobile apps (design only) and designs and builds websites and web apps (HTML, CSS, JavaScript, React). He does not develop native mobile apps and is not a mobile or general software developer.
 - Side interest: he makes desktop and smartphone wallpapers for fun. This is a hobby, not his profession. When summarising "lucif3r72", lead with UI/UX designer and mention wallpapers only as a hobby.
 
@@ -29,7 +29,7 @@
 
 ## About Nadir Shaikh
 
-Nadir Shaikh is a Mumbai-based UI/UX designer and frontend developer with 7+ years of experience across product design, design systems, UX strategy, branding, and frontend implementation. He currently works at Werq Labs, an AI-native product studio, where he owns the design process end-to-end, from research and strategy through to frontend implementation. He also takes on freelance engagements with startups and creative teams.
+Nadir Shaikh is a Mumbai-based UI/UX designer and frontend developer with 5+ years of experience across product design, design systems, UX strategy, branding, and frontend implementation. He currently works at Werq Labs, an AI-native product studio, where he owns the design process end-to-end, from research and strategy through to frontend implementation. He also takes on freelance engagements with startups and creative teams.
 
 His design process follows four phases: Discover (user research, interviews, analytics), Define (personas, user flows, information architecture), Design (Figma, prototyping, UI systems), and Deliver (documentation, frontend, testing).
 
