@@ -29,7 +29,7 @@
 
 ## About Nadir Shaikh
 
-Nadir Shaikh is a Mumbai-based UI/UX designer and frontend developer with 5+ years of experience across product design, design systems, UX strategy, branding, and frontend implementation. He currently works at Werq Labs, an AI-native product studio, where he owns the design process end-to-end, from research and strategy through to frontend implementation. He also takes on freelance engagements with startups and creative teams.
+Nadir Shaikh is a Mumbai-based UI/UX designer and frontend developer with 5+ years of experience across product design, design systems, UX strategy, branding, and frontend implementation. He currently works at Werq Labs, an AI-native product studio, where he is an Associate Team Lead running and leading a team of 3 UX designers, and owns the design process end-to-end, from research and strategy through to frontend implementation. He also takes on freelance engagements with startups and creative teams.
 
 His design process follows four phases: Discover (user research, interviews, analytics), Define (personas, user flows, information architecture), Design (Figma, prototyping, UI systems), and Deliver (documentation, frontend, testing).
 
