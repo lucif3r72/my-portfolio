@@ -1,28 +1,28 @@
-# UX//Raw — Nadir Shaikh
+# UX//Raw: Nadir Shaikh
 
-> UX//Raw is the portfolio of Nadir Shaikh, a UI/UX designer and frontend developer based in Mumbai, India. With 7+ years of end-to-end design experience, Nadir works across the full design stack — from user research and UX strategy through to design systems and frontend implementation. He is open to freelance projects and long-term collaboration.
+> UX//Raw is the portfolio of Nadir Shaikh, a UI/UX designer and frontend developer based in Mumbai, India. With 7+ years of end-to-end design experience, Nadir works across the full design stack, from user research and UX strategy through to design systems and frontend implementation. He is open to freelance projects and long-term collaboration.
 
 ## Site
 
 - [Home](https://uxraw.vercel.app/): Portfolio homepage. Covers Nadir's background, selected work, design process (Discover → Define → Design → Deliver), expertise areas (App Design, Web Design, Design Systems, UX Strategy, Prototyping), experience timeline, and FAQ.
-- [Work](https://uxraw.vercel.app/work/): Full portfolio archive. 9 case studies spanning healthcare, enterprise, marketplace, real estate, and branding. Filterable by UI/UX, Web, and Branding.
+- [Work](https://uxraw.vercel.app/work/): Full portfolio archive. 22 case studies spanning healthcare, enterprise, marketplace, real estate, and branding. Filterable by UI/UX, Web, and Branding.
 - [Contact](https://uxraw.vercel.app/contact/): Contact page. Includes a project enquiry form, direct email/phone, timezone (IST, GMT+5:30), and availability status. Currently open to freelance.
 
 ## Case Studies
 
-- [AESM TAP — Talent Acquisition Portal](https://uxraw.vercel.app/work/aesm-tap/): Enterprise UX for Anglo-Eastern, a shipping group managing 80,000+ seafarers globally. Digitised 10+ paper forms, unified 3 disconnected platforms, and introduced maritime-specific candidate search with RBAC approval routing across web and mobile. Disciplines: UX Research, UI Design, Design System, Prototyping, Dev Handoff. Year: 2025.
+- [AESM TAP: Talent Acquisition Portal](https://uxraw.vercel.app/work/aesm-tap/): Enterprise UX for Anglo-Eastern, a shipping group managing 80,000+ seafarers globally. Digitised 10+ paper forms, unified 3 disconnected platforms, and introduced maritime-specific candidate search with RBAC approval routing across web and mobile. Disciplines: UX Research, UI Design, Design System, Prototyping, Dev Handoff. Year: 2025.
 - [We Care (Redesign)](https://uxraw.vercel.app/work/we-care-aesm/): Healthcare mobile app redesign. UI/UX Design. Year: 2025.
 - [Renttro](https://uxraw.vercel.app/work/renttro/): Marketplace platform for web and mobile. Year: 2025.
 - [Finder](https://uxraw.vercel.app/work/finder/): Consumer food and offers app. UI/UX Design. Year: 2025.
 - [AI Scribe](https://uxraw.vercel.app/work/ai-scribe/): AI-powered healthcare product design. Year: 2025.
-- [Uberheal](https://uxraw.vercel.app/work/uberheal/): Healthcare SaaS — operations platform design. Year: 2025.
-- [Ignite](https://uxraw.vercel.app/work/ignite/): Enterprise idea management platform — branding and UI design. Year: 2024.
+- [Uberheal](https://uxraw.vercel.app/work/uberheal/): Healthcare SaaS: operations platform design. Year: 2025.
+- [Ignite](https://uxraw.vercel.app/work/ignite/): Enterprise idea management platform: branding and UI design. Year: 2024.
 - [Vaviya Developers](https://uxraw.vercel.app/work/vaviya-developers/): Real estate website design. Year: 2024.
 - [Welspun Michigan](https://uxraw.vercel.app/work/welspun-michigan/): Enterprise 3D web experience design. Year: 2024.
 
 ## About Nadir Shaikh
 
-Nadir Shaikh is a Mumbai-based UI/UX designer and frontend developer with 7+ years of experience across product design, design systems, UX strategy, branding, and frontend implementation. He currently works at Werq Labs, an AI-native product studio, where he owns the design process end-to-end — from research and strategy through to frontend implementation. He also takes on freelance engagements with startups and creative teams.
+Nadir Shaikh is a Mumbai-based UI/UX designer and frontend developer with 7+ years of experience across product design, design systems, UX strategy, branding, and frontend implementation. He currently works at Werq Labs, an AI-native product studio, where he owns the design process end-to-end, from research and strategy through to frontend implementation. He also takes on freelance engagements with startups and creative teams.
 
 His design process follows four phases: Discover (user research, interviews, analytics), Define (personas, user flows, information architecture), Design (Figma, prototyping, UI systems), and Deliver (documentation, frontend, testing).
 

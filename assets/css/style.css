@@ -1326,6 +1326,40 @@ html.is-loading body {
     max-height: 45%;
 }
 
+/* Wave + wordmark lockup (AI Scribe). The wave is an <img>; the text reuses .logo-cover-mark. */
+.logo-cover-lockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    font-size: clamp(36px, 9cqw, 120px);
+    transition: transform .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.logo-cover-lockup .logo-cover-wave,
+.featured-card .img-box .logo-cover-lockup .logo-cover-wave,
+.wd-cover .logo-cover-lockup .logo-cover-wave {
+    display: block;
+    height: 0.72em;
+    width: auto;
+    max-height: none;
+    object-fit: contain;
+    flex: none;
+}
+
+.logo-cover-lockup .logo-cover-mark {
+    font-size: 1em;
+    white-space: nowrap;
+}
+
+.featured-card:hover .logo-cover-lockup {
+    transform: scale(1.06);
+}
+
+.wd-cover:hover .logo-cover-lockup {
+    transform: scale(1.03);
+}
+
 .featured-card:hover .logo-cover-mark,
 .featured-card:hover .logo-cover-logo {
     transform: scale(1.06);

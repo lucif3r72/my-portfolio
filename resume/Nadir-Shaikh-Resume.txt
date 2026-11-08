@@ -1,0 +1,73 @@
+NADIR SHAIKH
+UI/UX Designer & Frontend Developer
+Mumbai, India | +91 82866 07726 | nadiruxdesign@gmail.com
+Portfolio: https://uxraw.vercel.app | LinkedIn: https://www.linkedin.com/in/lucif3r72/
+
+SUMMARY
+-------
+UI/UX designer and frontend developer with 7+ years of end-to-end product design experience across healthcare, maritime, logistics, real estate, finance and enterprise software. Owns the process from user research and UX strategy through design systems, prototyping and frontend implementation in HTML, CSS and JavaScript. Has delivered 40+ projects for 15+ clients, including an accessible mobile design system now reused across Anglo-Eastern's app portfolio and an AI-assisted hiring platform handling 10K+ candidate records.
+
+SKILLS
+------
+Design: UI Design, UX Design, UX Research, UX Strategy, Information Architecture, User Flows, Wireframing, Prototyping, Interaction Design, Design Systems, Component Libraries, Usability Testing, Accessibility (WCAG), Responsive Design, Mobile App Design, Web Design, Branding
+Design Tools: Figma, FigJam, Adobe XD, Sketch, InVision, Adobe Illustrator, Adobe Creative Suite
+Frontend & Development: HTML, CSS, JavaScript, React, Node.js, PHP, MySQL, Design-to-Code Handoff
+Ways of Working: Design Thinking, Stakeholder Workshops, Agile Collaboration, Developer Handoff, AI-Assisted Research and Design Workflows
+
+EXPERIENCE
+----------
+
+UI/UX Designer & Developer | Werq Labs (AI-native product studio) | 2023 - Present
+- Own the design process end to end for digital products, from user research and UX strategy through UI design, design systems and frontend implementation.
+- Build scalable design systems and component libraries, and work closely with engineering to hand off production-ready interfaces.
+- Design and build web and mobile products in Figma, FigJam and JavaScript, using AI tools to speed up research, iteration and delivery.
+
+UI/UX Designer (Freelance) | Self-employed | 2017 - Present
+- Partnered with startups and creative teams to build UX strategies and visual identities from the ground up.
+- Delivered wireframes, prototypes, design systems and production-ready interfaces, grounded in the user's perspective and the product's actual requirements.
+
+SELECTED PROJECTS
+-----------------
+22 case studies with process and outcomes at https://uxraw.vercel.app/work/. A selection:
+
+WeCare (Redesign) | Anglo-Eastern | Mobile app, Android & iOS | 2025
+- Redesigned a wellness, training and community app for 80,000+ seafarers and onshore staff, replacing a cluttered dark interface with an accessible, WCAG-compliant design system.
+- Results: user feedback improved 42%, Appreciation feature usage rose 3.5x, and the design system is now reused across Anglo-Eastern's app portfolio.
+- Case study: https://uxraw.vercel.app/work/we-care-aesm/
+
+AESM TAP (Talent Acquisition Portal) | Anglo-Eastern | Web & mobile | 2025
+- Digitised 10+ paper forms and unified 3 disconnected platforms into one hiring portal for a shipping group managing 80,000+ seafarers, adding maritime-specific candidate search and role-based approval routing (RBAC).
+- Case study: https://uxraw.vercel.app/work/aesm-tap/
+
+En-Blocs (Collective-Sale Intelligence Platform) | Web portals & mobile, Singapore | 2026
+- Designed a three-portal platform for Singapore's collective-sale market: an agent portal with licence verification, an opportunity dashboard and owner-intent reports; an admin portal for verification, subscriptions, government data sync and audit logs; and an owner portal with a moderated forum and mobile screens.
+- Designed to the client's request, built on an understanding of the whole en-bloc process and how each part of it functions.
+- Case study: https://uxraw.vercel.app/work/en-blocs/
+
+SIAA (AI-powered Applicant Tracking System) | Web | 2026
+- Designed the AI-assisted screening and hiring workflow for a live applicant tracking system and candidate portal.
+- Platform results: ~30% reduction in hiring time, ~90% AI screening accuracy and 10K+ candidate records handled.
+- Case study: https://uxraw.vercel.app/work/siaa/
+
+Uberheal (Healthcare Operations Platform) | Web SaaS | 2025
+- Designed a unified, role-based platform for clinic front desks, referral teams and campaign managers, combining a contact center (WhatsApp, SMS, AI and manual calls) with scheduling, referral and campaign tools, replacing multiple disconnected systems. Live in US clinics.
+- Case study: https://uxraw.vercel.app/work/uberheal/
+
+AGEES (Consulting Website) | Design & frontend development | 2026
+- Designed and built the company's first website: market research, a four-page conversion funnel and an integrated booking calendar.
+- Results: consultation bookings up 40%, with ~1K monthly visitors.
+- Case study: https://uxraw.vercel.app/work/agees/
+
+DayStar Montessori Childcare (Website & Admin Portal) | Full-stack, PHP & MySQL | 2026
+- Converted pre-designed pages into a secure, database-driven website and designed the admin portal for events, photo galleries and parent enquiries, with CSRF protection, rate limiting and WebP image processing.
+- Case study: https://uxraw.vercel.app/work/daystar-childcare/
+
+Also in the portfolio: ManningFlo, Werq Labs website, Renttro, Welspun Michigan, BotXpert, Stellar AMC, Global Shipping DXB and more.
+
+EDUCATION
+---------
+Bachelor of Engineering (B.E.), Computer Engineering | Mumbai University (AIKTC, Panvel)
+
+LANGUAGES
+---------
+English (Professional), Hindi (Native)
