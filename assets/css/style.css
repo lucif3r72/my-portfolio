@@ -721,7 +721,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.5);
+    color: rgba(29, 29, 31, 0.62);
 }
 
 .hero-sep {
@@ -913,7 +913,7 @@ html.is-loading body {
     text-transform: uppercase;
     margin: 0;
     font-family: var(--font_inter_tight);
-    color: rgba(29, 29, 31, 0.6);
+    color: rgba(29, 29, 31, 0.62);
     display: flex;
     align-items: center;
     gap: 2px;
@@ -1014,7 +1014,7 @@ html.is-loading body {
     line-height: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.5);
+    color: rgba(29, 29, 31, 0.62);
 }
 
 .popup-menu ul li.active a .count {
@@ -1038,7 +1038,7 @@ html.is-loading body {
     letter-spacing: 2px;
     font-weight: 700;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.55);
+    color: rgba(29, 29, 31, 0.62);
 }
 
 .popup-menu-wrap.active .popup-menu-footer,
@@ -1400,7 +1400,7 @@ html.is-loading body {
     font-family: var(--font_inter_tight);
     font-size: 11px;
     letter-spacing: 2px;
-    color: rgba(29, 29, 31, 0.5);
+    color: rgba(29, 29, 31, 0.62);
     line-height: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -1736,7 +1736,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -1754,7 +1754,7 @@ html.is-loading body {
     font-family: var(--font_instrument);
     font-size: 20px;
     line-height: 30px;
-    color: rgba(29, 29, 31, 0.5);
+    color: rgba(29, 29, 31, 0.62);
     font-weight: 500;
     text-align: right;
     margin: 0;
@@ -1818,7 +1818,7 @@ html.is-loading body {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 3px;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     text-transform: uppercase;
 }
 
@@ -1878,7 +1878,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.45);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -2036,7 +2036,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
 }
 
 .experience-box h4>span:last-child,
@@ -2165,7 +2165,7 @@ html.is-loading body {
     letter-spacing: 2px;
     margin: 0 0 24px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.5);
+    color: rgba(29, 29, 31, 0.62);
 }
 
 .experience-popup .experience-popup-content-wrap .experience-popup-features .experience-popup-feature-lists {
@@ -2399,7 +2399,7 @@ html.is-loading body {
     font-size: 12px;
     letter-spacing: 2px;
     font-weight: 700;
-    color: rgba(29, 29, 31, 0.45);
+    color: rgba(29, 29, 31, 0.62);
     flex: none;
 }
 
@@ -2522,7 +2522,7 @@ html.is-loading body {
     line-height: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.45);
+    color: rgba(29, 29, 31, 0.62);
     display: flex;
     justify-content: space-between;
 }
@@ -3011,7 +3011,7 @@ html.is-loading body {
     text-transform: uppercase;
     font-weight: 700;
     margin: 0 0 24px;
-    color: rgba(29, 29, 31, 0.45);
+    color: rgba(29, 29, 31, 0.62);
 }
 
 .contact-form #ajax-form {
@@ -3070,13 +3070,13 @@ html.is-loading body {
     border-bottom: 1px solid rgba(38, 38, 38, 0.16);
 }
 
-.contact-info-box h4 {
+.contact-info-box h2 {
     font-family: var(--font_inter_tight);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 3px;
     margin: 0 0 26px;
-    color: rgba(29, 29, 31, 0.45);
+    color: rgba(29, 29, 31, 0.62);
     text-transform: uppercase;
 }
 
@@ -3155,7 +3155,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     margin-bottom: 16px;
     opacity: 0;
     /* animated in by initHeroAnims as hero-anim-item */
@@ -3210,7 +3210,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -3249,7 +3249,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     flex: none;
     margin-right: 8px;
 }
@@ -3266,7 +3266,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.5);
+    color: rgba(29, 29, 31, 0.62);
     background: transparent;
     border: 1.5px solid transparent;
     padding: 8px 16px;
@@ -3279,7 +3279,7 @@ html.is-loading body {
 
 .work-filter span {
     font-size: 10px;
-    color: rgba(29, 29, 31, 0.3);
+    color: rgba(29, 29, 31, 0.62);
     transition: color 0.2s ease;
 }
 
@@ -3296,7 +3296,7 @@ html.is-loading body {
 }
 
 .work-filter.active span {
-    color: rgba(29, 29, 31, 0.6);
+    color: rgba(29, 29, 31, 0.8);
 }
 
 /* ─────────────────────────────────────────────────────
@@ -3341,7 +3341,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -3383,12 +3383,12 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     opacity: 0;
 }
 
 .wd-breadcrumb a {
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     text-decoration: none;
     transition: color .2s;
 }
@@ -3398,7 +3398,7 @@ html.is-loading body {
 }
 
 .wd-breadcrumb span {
-    color: rgba(29, 29, 31, 0.25);
+    color: rgba(29, 29, 31, 0.62);
 }
 
 .wd-hero-title-wrap {
@@ -3423,7 +3423,7 @@ html.is-loading body {
     font-family: var(--font_syne);
     font-size: 22px;
     font-weight: 700;
-    color: rgba(29, 29, 31, 0.5);
+    color: rgba(29, 29, 31, 0.62);
     margin: 0;
     opacity: 0;
 }
@@ -3452,7 +3452,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -3462,6 +3462,19 @@ html.is-loading body {
     font-weight: 600;
     color: var(--dark);
     display: block;
+}
+
+/* Live-site links: dark text for contrast, pink kept as the underline accent */
+.wd-meta-value a {
+    color: var(--dark);
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.wd-meta-value a:hover {
+    text-decoration-color: var(--dark);
 }
 
 .wd-meta-divider {
@@ -3525,7 +3538,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3.5px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -3585,7 +3598,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.45);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -3674,7 +3687,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -3749,7 +3762,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     margin-bottom: 16px;
 }
 
@@ -3792,7 +3805,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.55);
+    color: rgba(29, 29, 31, 0.62);
 }
 
 .avail-dot {
@@ -3848,7 +3861,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
 }
 
 /* Two-column row inside form */
@@ -3874,7 +3887,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.45);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -3903,7 +3916,7 @@ html.is-loading body {
 
 .contact-form-panel .contact-form #ajax-form input::placeholder,
 .contact-form-panel .contact-form #ajax-form textarea::placeholder {
-    color: rgba(29, 29, 31, 0.25);
+    color: rgba(29, 29, 31, 0.5);
     font-weight: 400;
 }
 
@@ -4024,7 +4037,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -4087,7 +4100,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgba(255, 253, 233, 0.35);
+    color: rgba(255, 253, 233, 0.5);
     margin-bottom: 28px;
 }
 
@@ -4127,7 +4140,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(255, 253, 233, 0.35);
+    color: rgba(255, 253, 233, 0.5);
     display: block;
 }
 
@@ -4610,7 +4623,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.38);
+    color: rgba(29, 29, 31, 0.62);
     text-decoration: none;
     padding: 0 18px;
     height: 100%;
@@ -4648,7 +4661,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.38);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -4691,7 +4704,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.38);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -4741,7 +4754,7 @@ html.is-loading body {
     font-size: 16px;
     line-height: 27px;
     font-weight: 500;
-    color: rgba(29, 29, 31, 0.6);
+    color: rgba(29, 29, 31, 0.62);
     margin: 0;
 }
 
@@ -4786,7 +4799,7 @@ html.is-loading body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(29, 29, 31, 0.38);
+    color: rgba(29, 29, 31, 0.62);
     display: block;
 }
 
@@ -4815,7 +4828,7 @@ html.is-loading body {
     font-size: 15px;
     line-height: 24px;
     font-weight: 500;
-    color: rgba(29, 29, 31, 0.4);
+    color: rgba(29, 29, 31, 0.62);
     font-style: italic;
     border-top: 1px solid rgba(29, 29, 31, 0.08);
     padding-top: 20px;

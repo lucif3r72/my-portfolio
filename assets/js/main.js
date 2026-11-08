@@ -673,26 +673,8 @@ $(function () {
   }
 
   /* ═══════════════════════════════════════════════════
-       9. Coordinates
+       9. Coordinates (static text in the markup, no network call)
     ═══════════════════════════════════════════════════ */
-  const coordEl = document.getElementById("coordinates");
-  if (coordEl) {
-    fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=1906ccd7aa6d7c3683f1b293ee212f01&units=metric",
-    )
-      .then((r) => r.json())
-      .then((data) => {
-        const lat = data.coord.lat;
-        const latD = Math.floor(lat);
-        const latM = Math.floor((lat - latD) * 60);
-        const latS = ((lat - latD) * 60 - latM) * 60;
-        coordEl.textContent = `${latD}° ${latM}' ${latS.toFixed(1)}" N`;
-      })
-      .catch(() => {
-        coordEl.textContent = "19° 4' N";
-      });
-  }
-
   /* ═══════════════════════════════════════════════════
        10. Experience Popup
     ═══════════════════════════════════════════════════ */
