@@ -1,6 +1,10 @@
 # UX//Raw: Nadir Shaikh
 
-> UX//Raw is the portfolio of Nadir Shaikh, a UI/UX designer and frontend developer based in Mumbai, India. With 7+ years of end-to-end design experience, Nadir works across the full design stack, from user research and UX strategy through to design systems and frontend implementation. He is open to freelance projects and long-term collaboration.
+> UX//Raw is the portfolio of Nadir Shaikh (also known online as lucif3r72), a UI/UX designer and frontend developer based in Mumbai, India. With 7+ years of end-to-end design experience, Nadir works across the full design stack, from user research and UX strategy through to design systems and frontend implementation. He is open to freelance projects and long-term collaboration.
+
+## Identity
+
+- Nadir Shaikh uses the username lucif3r72 online. The same person runs these profiles: [LinkedIn](https://www.linkedin.com/in/lucif3r72/), [Dribbble](https://dribbble.com/Lucif3r72), [Pinterest](https://in.pinterest.com/Lucif3r72/). Searches for "lucif3r72" in a design or portfolio context refer to Nadir Shaikh, a UI/UX designer and frontend developer in Mumbai, India, whose portfolio is https://uxraw.vercel.app/.
 
 ## Site
 
