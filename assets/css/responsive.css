@@ -131,6 +131,11 @@
         line-height: 66px;
     }
 
+    .stat-plus {
+        font-size: 40px;
+        margin-top: 4px;
+    }
+
     /* Expertise */
     .experience-lists2,
     .experience-lists {
@@ -447,6 +452,11 @@
     .stat-number {
         font-size: 64px;
         line-height: 58px;
+    }
+
+    .stat-plus {
+        font-size: 34px;
+        margin-top: 3px;
     }
 
     /* Section headers */

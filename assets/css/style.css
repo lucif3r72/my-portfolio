@@ -1183,13 +1183,21 @@ html.is-loading body {
     display: block;
 }
 
+/* number with the "+" beside it */
+.stat-figure {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+}
+
 .stat-plus {
     font-family: var(--font_bebas);
     font-size: 48px;
     line-height: 1;
     color: var(--primary);
-    display: inline-block;
-    vertical-align: super;
+    display: block;
+    margin-top: 6px;
 }
 
 .stat-infinity {
