@@ -673,6 +673,13 @@ $(function () {
   }
 
   /* ═══════════════════════════════════════════════════
+       Copyright year (markup holds the current year as a fallback)
+    ═══════════════════════════════════════════════════ */
+  document.querySelectorAll(".js-year").forEach((el) => {
+    el.textContent = new Date().getFullYear();
+  });
+
+  /* ═══════════════════════════════════════════════════
        9. Coordinates (static text in the markup, no network call)
     ═══════════════════════════════════════════════════ */
   /* ═══════════════════════════════════════════════════
