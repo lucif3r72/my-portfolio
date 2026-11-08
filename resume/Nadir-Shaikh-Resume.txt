@@ -5,13 +5,14 @@ Portfolio: https://uxraw.vercel.app | LinkedIn: https://www.linkedin.com/in/luci
 
 SUMMARY
 -------
-UI/UX and product designer with 5+ years of end-to-end product design experience across healthcare, maritime, logistics, real estate, finance and enterprise software. Stays with a product across its whole lifecycle, from user research and UX strategy through design systems, prototyping and delivery, with working knowledge of HTML, CSS and JavaScript for hands-on hand-off. Has delivered 40+ projects for 15+ clients, including an accessible mobile design system now reused across Anglo-Eastern's app portfolio and an AI-assisted hiring platform handling 10K+ candidate records.
+UI/UX and product designer with 5+ years of end-to-end product design experience across healthcare, maritime, logistics, real estate, finance and enterprise software. Stays with a product across its whole lifecycle, from user research and UX strategy through design systems, prototyping and delivery, and works hands-on in HTML, CSS, JavaScript and jQuery. Has delivered 40+ projects for 15+ clients, including an accessible mobile design system now reused across Anglo-Eastern's app portfolio and an AI-assisted hiring platform handling 10K+ candidate records.
 
 SKILLS
 ------
 Design: Product Design, End-to-End Product Lifecycle, UI Design, UX Design, UX Research, UX Strategy, Information Architecture, User Flows, Wireframing, Prototyping, Interaction Design, Design Systems, Component Libraries, Usability Testing, Accessibility (WCAG), Responsive Design, Mobile App Design, Web Design, Branding
 Design Tools: Figma, FigJam, Adobe XD, Sketch, InVision, Adobe Illustrator, Adobe Creative Suite
-Development (working knowledge): HTML, CSS, JavaScript, React, Node.js, Design-to-Code Handoff
+Development (fully working): HTML, CSS, JavaScript, jQuery, Design-to-Code Handoff
+Familiar with: PHP, MySQL, React, Node.js
 Ways of Working: Design Thinking, Stakeholder Workshops, Agile Collaboration, Developer Handoff, AI-Assisted Research and Design Workflows
 
 EXPERIENCE
@@ -21,7 +22,7 @@ UI/UX & Product Designer | Werq Labs (AI-native product studio) | 2023 - Present
 - Associate Team Lead: run and lead a team of 3 UX designers.
 - Own the product design process end to end for digital products, from user research and UX strategy through UI design and design systems to delivery and hand-off.
 - Build scalable design systems and component libraries, and work closely with engineering to hand off production-ready interfaces.
-- Design web and mobile products in Figma and FigJam, building in HTML, CSS and JavaScript where needed, and use AI tools to speed up research, iteration and delivery.
+- Design web and mobile products in Figma and FigJam, building in HTML, CSS, JavaScript and jQuery where needed, and use AI tools to speed up research, iteration and delivery.
 
 UI/UX Designer (Freelance) | Self-employed | 2019 - Present
 - Partnered with startups and creative teams to build UX strategies and visual identities from the ground up.
@@ -59,7 +60,11 @@ AGEES (Consulting Website) | Design & frontend development | 2026
 - Results: consultation bookings up 40%, with ~1K monthly visitors.
 - Case study: https://uxraw.vercel.app/work/agees/
 
-Also in the portfolio: ManningFlo, Werq Labs website, DayStar Childcare, Renttro, Welspun Michigan, BotXpert, Stellar AMC, Global Shipping DXB and more.
+DayStar Montessori Childcare (Website & Admin Portal) | Full-stack, PHP & MySQL | 2026
+- Converted pre-designed pages into a secure, database-driven website and designed the admin portal for events, photo galleries and parent enquiries, with CSRF protection, rate limiting and WebP image processing.
+- Case study: https://uxraw.vercel.app/work/daystar-childcare/
+
+Also in the portfolio: ManningFlo, Werq Labs website, Renttro, Welspun Michigan, BotXpert, Stellar AMC, Global Shipping DXB and more.
 
 EDUCATION
 ---------
