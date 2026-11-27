@@ -4851,3 +4851,7 @@ html.is-loading body {
     object-fit: cover !important;
     object-position: top left !important;
 }
+/* the stack cards slide in from the right: do not let that widen the page (clip keeps sticky working) */
+.favourite-stack-sec {
+    overflow-x: clip;
+}

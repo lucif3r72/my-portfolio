@@ -147,6 +147,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/hero-lens.css">
+    <link rel="stylesheet" href="./assets/css/expertise.css">
     <!-- ===== Lenis Smooth Scroll ===== -->
     <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet"></noscript>
 </head>
@@ -588,52 +589,93 @@
         <!-- =========================================
                      EXPERTISE
                 ========================================= -->
-        <section class="experience-sec">
-            <div class="section-header">
-                <div class="left">
-                    <h2>
-                        <span><span class="timeline-anim scroll-animation" data-animation="slide_down">MY</span></span>
-                        <span><span class="timeline-anim scroll-animation"
-                                data-animation="slide_down">EXPERTISE</span></span>
-                    </h2>
-                </div>
+        <section class="xp" id="xp" aria-labelledby="xp-title">
+          <div class="xp-head">
+            <h2 id="xp-title">MY<br>EXPERTISE</h2>
+            <p>Five layers. Pick one and try it.</p>
+          </div>
+
+          <div class="xp-file">
+            <div class="xp-layers">
+              <div class="xp-layers-title"><span>Layers</span><span>05</span></div>
+              <div class="xp-layer xp-is-on" style="--tone:var(--blue)">
+                <h3><button type="button" aria-expanded="true"><span>01</span>APP DESIGN</button></h3>
+                <p>Apps built for how people actually behave, not how we imagine they will. Clear navigation, purposeful layouts, and interaction patterns that serve the user's real goal without getting in the way.</p>
+              </div>
+              <div class="xp-layer" style="--tone:var(--peach)">
+                <h3><button type="button" aria-expanded="false"><span>02</span>WEB DESIGN</button></h3>
+                <p>Web experiences that earn attention and reward it. Microinteractions that feel considered, motion that guides rather than distracts, and pages built to perform as well as they look.</p>
+              </div>
+              <div class="xp-layer" style="--tone:var(--pink)">
+                <h3><button type="button" aria-expanded="false"><span>03</span>DESIGN SYSTEMS</button></h3>
+                <p>Systems built to outlast the brief. Reusable components, defined tokens, and documented patterns that let products grow across surfaces without losing coherence or making teams reinvent decisions already made.</p>
+              </div>
+              <div class="xp-layer" style="--tone:var(--lemon)">
+                <h3><button type="button" aria-expanded="false"><span>04</span>UX STRATEGY &amp; RESEARCH</button></h3>
+                <p>Strategy without research is just opinion. I work to understand users deeply before proposing anything, and I keep that understanding at the centre of every design decision throughout the project.</p>
+              </div>
+              <div class="xp-layer" style="--tone:#C69FFF">
+                <h3><button type="button" aria-expanded="false"><span>05</span>PROTOTYPING &amp; INTERACTION</button></h3>
+                <p>Prototypes that ask the hard questions early. I build to test, not to impress, and I keep refining interaction models until the experience responds exactly the way a user would expect without thinking about it.</p>
+              </div>
             </div>
-            <div class="experience-list-wrap">
-                <div class="experience-lists">
-                    <div class="experience-box js-card-reveal">
-                        <h3><span>(1)</span><span>APP DESIGN</span></h3>
-                        <p>Apps built for how people actually behave, not how we imagine they will. Clear navigation,
-                            purposeful layouts, and interaction patterns that serve the user's real goal without getting
-                            in the way.</p>
-                    </div>
-                    <div class="experience-box js-card-reveal">
-                        <h3><span>(2)</span><span>WEB DESIGN</span></h3>
-                        <p>Web experiences that earn attention and reward it. Microinteractions that feel considered,
-                            motion that guides rather than distracts, and pages built to perform as well as they look.
-                        </p>
-                    </div>
-                    <div class="experience-box js-card-reveal">
-                        <h3><span>(3)</span><span>DESIGN SYSTEMS</span></h3>
-                        <p>Systems built to outlast the brief. Reusable components, defined tokens, and documented
-                            patterns that let products grow across surfaces without losing coherence or making teams
-                            reinvent decisions already made.</p>
-                    </div>
+
+            <div class="xp-canvas">
+              <div class="xp-chip" id="xp-chip">Inspect · <em>App design</em> · 01/05</div>
+
+              <div class="xp-board xp-is-on" data-name="App design">
+                <div class="xp-phone xp-sel" data-l="Frame · nav in thumb reach">
+                  <div class="xp-screen" id="xp-screen"></div>
+                  <div class="xp-tabs" role="tablist">
+                    <button type="button" role="tab" aria-selected="true" data-s="0">Home</button>
+                    <button type="button" role="tab" aria-selected="false" data-s="1">Search</button>
+                    <button type="button" role="tab" aria-selected="false" data-s="2">Profile</button>
+                  </div>
                 </div>
-                <div class="experience-lists2">
-                    <div class="experience-box js-card-reveal">
-                        <h3><span>(4)</span><span>UX STRATEGY & RESEARCH</span></h3>
-                        <p>Strategy without research is just opinion. I work to understand users deeply before proposing
-                            anything, and I keep that understanding at the centre of every design decision throughout
-                            the project.</p>
-                    </div>
-                    <div class="experience-box js-card-reveal">
-                        <h3><span>(5)</span><span>PROTOTYPING & INTERACTION</span></h3>
-                        <p>Prototypes that ask the hard questions early. I build to test, not to impress, and I keep
-                            refining interaction models until the experience responds exactly the way a user would
-                            expect without thinking about it.</p>
-                    </div>
+                <p class="xp-hint">Tap the tab bar</p>
+              </div>
+
+              <div class="xp-board" data-name="Web design">
+                <div class="xp-browser xp-sel" id="xp-browser" data-l="Responsive page">
+                  <header><i></i><i></i><i></i></header>
+                  <div class="xp-page"><div class="xp-hero-block">ONE LAYOUT</div><div class="xp-cards"><div></div><div></div><div></div></div></div>
                 </div>
+                <input type="range" id="xp-vw" min="42" max="100" value="100" aria-label="Viewport width">
+                <p class="xp-hint">Drag to resize the viewport</p>
+              </div>
+
+              <div class="xp-board" data-name="Design systems">
+                <div class="xp-kit xp-sel" id="xp-kit" data-l="Components">
+                  <div><span class="xp-k-tag">BADGE</span><span class="xp-k-btn">PRIMARY</span><span class="xp-k-switch"></span></div>
+                  <div><span class="xp-k-input">Email address</span><div class="xp-bar"></div><div class="xp-bar" style="width:60%"></div><span class="xp-k-btn">SAVE</span></div>
+                </div>
+                <div class="xp-tokens">
+                  <button type="button" class="xp-swatch" style="background:#EF9DFC" data-c="#EF9DFC" aria-pressed="true" aria-label="Pink accent"></button>
+                  <button type="button" class="xp-swatch" style="background:#A1DEFC" data-c="#A1DEFC" aria-pressed="false" aria-label="Blue accent"></button>
+                  <button type="button" class="xp-swatch" style="background:#FFA2A0" data-c="#FFA2A0" aria-pressed="false" aria-label="Peach accent"></button>
+                  <button type="button" class="xp-btn" id="xp-radius" aria-pressed="false">Round corners</button>
+                </div>
+                <p class="xp-hint">Change one token, every component follows</p>
+              </div>
+
+              <div class="xp-board" data-name="UX research">
+                <div class="xp-wall" id="xp-wall"></div>
+                <button type="button" class="xp-btn" id="xp-sort" aria-pressed="false">Group the notes</button>
+                <p class="xp-hint">Example notes, from scattered to themes</p>
+              </div>
+
+              <div class="xp-board" data-name="Prototyping">
+                <div class="xp-flow xp-sel" data-l="Prototype flow" id="xp-flow">
+                  <div class="xp-frame xp-is-on"><b>PICK</b><div class="xp-bar"></div><div class="xp-bar"></div><button type="button" class="xp-hot">Select</button></div>
+                  <span class="xp-wire"></span>
+                  <div class="xp-frame"><b>CHECK</b><div class="xp-bar"></div><div class="xp-bar"></div><button type="button" class="xp-hot">Confirm</button></div>
+                  <span class="xp-wire"></span>
+                  <div class="xp-frame"><b>DONE</b><div class="xp-bar"></div><div class="xp-bar"></div><button type="button" class="xp-hot">Restart</button></div>
+                </div>
+                <p class="xp-hint">Click the highlighted hotspot</p>
+              </div>
             </div>
+          </div>
         </section>
 
         <!-- =========================================
@@ -960,6 +1002,7 @@
     <script src="./assets/js/ajaxform.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/hero-lens.js"></script>
+    <script src="./assets/js/expertise.js"></script>
     <script src="./assets/js/themescroll.js"></script>
 
 </body>
