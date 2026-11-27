@@ -57,7 +57,7 @@
 .fs-jam .fs-win { background: #fff; }
 .fs-board { position: relative; flex: 1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-content: center; gap: 12px; padding: 40px 16px 34px; }
 .fs-col { position: relative; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.fs-col h5 { position: relative; z-index: 1; align-self: center; margin: 0; padding: 4px 12px; border: 1.5px solid var(--dark); border-radius: 999px; background: #fff; color: var(--dark); font: 700 10px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.fs-col .fs-step { position: relative; z-index: 1; align-self: center; margin: 0; padding: 4px 12px; border: 1.5px solid var(--dark); border-radius: 999px; background: #fff; color: var(--dark); font: 700 10px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 .fs-col::before { content: ""; position: absolute; top: 10px; left: -12px; width: calc(100% + 12px); height: 2px; background: repeating-linear-gradient(90deg, #7B61FF 0 8px, transparent 8px 13px); transform: scaleX(0); transform-origin: left; transition: transform .45s; }
 .fs-col:first-child::before { left: 50%; width: 50%; }
 .fs-col:nth-child(4)::before { width: calc(50% + 12px); }
@@ -155,7 +155,7 @@
     .fs-board { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 22px; padding: 28px 16px; }
     .fs-col::before { display: none; }
     .fs-cursor { display: none; }
-    .fs-board.fs-joined h5 { background: #7B61FF; color: #fff; }
+    .fs-board.fs-joined .fs-step { background: #6A4DF0; color: #fff; }
 
     .fs-editor { grid-template-columns: minmax(0, 1fr); }
     .fs-side:first-child { flex-direction: row; flex-wrap: wrap; justify-content: center; border-right: 0; border-bottom: 1px solid #C9C8C0; }
