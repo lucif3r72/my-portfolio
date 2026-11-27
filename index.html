@@ -767,15 +767,18 @@
                 </div>
                 <div class="fs-panels">
                     <div class="fs-panel fs-on" role="tabpanel" id="fs-panel-0" aria-labelledby="fs-tab-0" style="--tone:#FDFD96">
-                        <div class="fs-stage">
-                            <div class="fs-flow">
-                                <div class="fs-note" style="--c:#A1DEFC">Visitor arrives</div><span class="fs-link"></span>
-                                <div class="fs-note" style="--c:#FDFD96">Joins the list</div><span class="fs-link"></span>
-                                <div class="fs-note" style="--c:#FFA2A0">Gets started</div>
+                        <div class="fs-stage fs-jam">
+                                <div class="fs-win"><span>Journey map · ordering a coffee</span><button type="button" class="fs-mini" id="fs-connect" aria-pressed="false">Connect journey</button></div>
+                                <div class="fs-board">
+                                    <div class="fs-col"><h5>Browse</h5><button type="button" class="fs-sticky" style="--c:#FFE27A;--r:-2deg">Sees the menu<span class="fs-votes"></span></button><button type="button" class="fs-sticky" style="--c:#FFB8D2;--r:2deg">Too many choices?<span class="fs-votes"></span></button></div>
+                                    <div class="fs-col"><h5>Customise</h5><button type="button" class="fs-sticky" style="--c:#FFE27A;--r:2deg">Picks size and milk<span class="fs-votes"></span></button><button type="button" class="fs-sticky" style="--c:#FFB8D2;--r:-1deg">Wants a favourite saved<span class="fs-votes"></span></button></div>
+                                    <div class="fs-col"><h5>Pay</h5><button type="button" class="fs-sticky" style="--c:#FFE27A;--r:-1deg">Checks the total<span class="fs-votes"></span></button><button type="button" class="fs-sticky" style="--c:#FFB8D2;--r:3deg">Fewer taps, please<span class="fs-votes"></span></button></div>
+                                    <div class="fs-col"><h5>Pick up</h5><button type="button" class="fs-sticky" style="--c:#FFE27A;--r:3deg">Gets a ready alert<span class="fs-votes"></span></button><button type="button" class="fs-sticky" style="--c:#FFB8D2;--r:-2deg">Where do I collect?<span class="fs-votes"></span></button></div>
+                                    <span class="fs-cursor" aria-hidden="true" style="--c:#7B61FF;left:18%;top:10px"><b>Design</b></span>
+                                    <span class="fs-cursor" aria-hidden="true" style="--c:#0A8F5B;right:20%;bottom:14px;animation-delay:-3s"><b>Product</b></span>
+                                </div>
+                                <p class="fs-hint">Step 1 of 4 · tap a note to vote</p>
                             </div>
-                            <button type="button" class="fs-btn" id="fs-connect" aria-pressed="false">Connect the flow</button>
-                            <p class="fs-hint">Step 1 of 4 · map the journey</p>
-                        </div>
                         <div class="fs-info">
                             <h3>FIGJAM</h3>
                             <h4>COLLABORATION TOOL</h4>
@@ -783,16 +786,37 @@
                         </div>
                     </div>
                     <div class="fs-panel" role="tabpanel" id="fs-panel-1" aria-labelledby="fs-tab-1" style="--tone:#EF9DFC">
-                        <div class="fs-stage">
-                            <div class="fs-select">
-                                <div class="fs-card" id="fs-design"><b>Join the list</b><span class="fs-field">you@example.com</span><span class="fs-cta">Join</span></div>
+                        <div class="fs-stage fs-fig">
+                                <div class="fs-win"><span>Order screen</span><span>Components · 4</span></div>
+                                <div class="fs-editor">
+                                    <div class="fs-side"><span>Layers</span>
+                                        <button type="button" class="fs-layer-btn" data-pick="Photo" aria-pressed="false">Photo</button>
+                                        <button type="button" class="fs-layer-btn" data-pick="Title" aria-pressed="false">Title</button>
+                                        <button type="button" class="fs-layer-btn" data-pick="Sizes" aria-pressed="false">Sizes</button>
+                                        <button type="button" class="fs-layer-btn" data-pick="Button" aria-pressed="true">Button</button>
+                                    </div>
+                                    <div class="fs-art">
+                                        <div class="fs-screen">
+                                            <div class="fs-photo" data-layer="Photo" data-l="Photo"><span class="fs-cup"></span></div>
+                                            <strong data-layer="Title" data-l="Title">Flat white</strong>
+                                            <div class="fs-sizes" data-layer="Sizes" data-l="Sizes"><span>S</span><span>M</span><span>L</span></div>
+                                            <div class="fs-add fs-pick" data-layer="Button" data-l="Button">Add to order</div>
+                                        </div>
+                                    </div>
+                                    <div class="fs-side">
+                                        <span>Fill</span>
+                                        <div class="fs-swatches">
+                                            <button type="button" class="fs-swatch fs-fill" style="background:#EF9DFC" data-c="#EF9DFC" aria-pressed="true" aria-label="Pink fill"></button>
+                                            <button type="button" class="fs-swatch fs-fill" style="background:#A1DEFC" data-c="#A1DEFC" aria-pressed="false" aria-label="Blue fill"></button>
+                                            <button type="button" class="fs-swatch fs-fill" style="background:#FFA2A0" data-c="#FFA2A0" aria-pressed="false" aria-label="Peach fill"></button>
+                                            <button type="button" class="fs-swatch fs-fill" style="background:#FDFD96" data-c="#FDFD96" aria-pressed="false" aria-label="Yellow fill"></button>
+                                        </div>
+                                        <label for="fs-rad">Radius <span id="fs-rad-out">14</span></label>
+                                        <input type="range" id="fs-rad" min="0" max="24" value="14">
+                                    </div>
+                                </div>
+                                <p class="fs-hint">Step 2 of 4 · pick a layer, change the style</p>
                             </div>
-                            <div class="fs-props">
-                                <label for="fs-rad">Radius</label><input type="range" id="fs-rad" min="0" max="28" value="10" data-var="--rad"><span>10</span>
-                                <label for="fs-gap">Spacing</label><input type="range" id="fs-gap" min="6" max="22" value="14" data-var="--gap"><span>14</span>
-                            </div>
-                            <p class="fs-hint">Step 2 of 4 · tune the component</p>
-                        </div>
                         <div class="fs-info">
                             <h3>FIGMA</h3>
                             <h4>DESIGN TOOL</h4>
@@ -800,13 +824,25 @@
                         </div>
                     </div>
                     <div class="fs-panel" role="tabpanel" id="fs-panel-2" aria-labelledby="fs-tab-2" style="--tone:#FFA2A0">
-                        <div class="fs-stage">
-                            <div class="fs-proto">
-                                <div class="fs-card"><b>Join the list</b><span class="fs-field">you@example.com</span><button type="button" class="fs-cta">Join</button></div>
-                                <div class="fs-done" aria-live="polite"><b>You're in</b><button type="button" class="fs-btn fs-back">Back</button></div>
+                        <div class="fs-stage fs-xd">
+                                <div class="fs-win"><span>Prototype mode</span><span>Checkout flow</span></div>
+                                <div class="fs-boards">
+                                    <div class="fs-ab fs-active" data-l="1 · Cart"><strong>Your order</strong>
+                                        <span class="fs-line"><span>Flat white</span><span>M</span></span>
+                                        <span class="fs-line"><span>Oat milk</span><span>Yes</span></span>
+                                        <button type="button" class="fs-hot">Checkout</button></div>
+                                    <span class="fs-wire" aria-hidden="true"></span>
+                                    <div class="fs-ab" data-l="2 · Pay"><strong>Pay with</strong>
+                                        <span class="fs-line"><span>Card</span><span>●</span></span>
+                                        <span class="fs-line"><span>Wallet</span><span>○</span></span>
+                                        <button type="button" class="fs-hot" tabindex="-1">Pay now</button></div>
+                                    <span class="fs-wire" aria-hidden="true"></span>
+                                    <div class="fs-ab" data-l="3 · Done"><span class="fs-tick" aria-hidden="true">✓</span><strong style="text-align:center">Order placed</strong>
+                                        <button type="button" class="fs-hot" tabindex="-1">Start again</button></div>
+                                    <span class="fs-dots" aria-hidden="true"><i class="fs-active"></i><i></i><i></i></span>
+                                </div>
+                                <p class="fs-hint">Step 3 of 4 · tap through the flow</p>
                             </div>
-                            <p class="fs-hint">Step 3 of 4 · click through the prototype</p>
-                        </div>
                         <div class="fs-info">
                             <h3>ADOBE XD</h3>
                             <h4>DESIGN TOOL</h4>
@@ -814,23 +850,35 @@
                         </div>
                     </div>
                     <div class="fs-panel" role="tabpanel" id="fs-panel-3" aria-labelledby="fs-tab-3" style="--tone:#A1DEFC">
-                        <div class="fs-stage">
-                            <div class="fs-code-wrap">
-                                <pre class="fs-code">.cta {
-  background: <em id="fs-code-colour">#EF9DFC</em>;
-  border: 2px solid #1D1D1F;
-}
-button.textContent = "<em id="fs-code-label">Join</em>";</pre>
-                                <div class="fs-live"><button type="button" class="fs-cta" id="fs-live">Join</button></div>
-                                <div class="fs-controls">
-                                    <input type="text" id="fs-label" maxlength="18" value="Join" aria-label="Button label">
-                                    <button type="button" class="fs-swatch" style="background:#EF9DFC" data-c="#EF9DFC" aria-pressed="true" aria-label="Pink button"></button>
-                                    <button type="button" class="fs-swatch" style="background:#A1DEFC" data-c="#A1DEFC" aria-pressed="false" aria-label="Blue button"></button>
-                                    <button type="button" class="fs-swatch" style="background:#FDFD96" data-c="#FDFD96" aria-pressed="false" aria-label="Yellow button"></button>
+                        <div class="fs-stage fs-dev">
+                                <div class="fs-tabs" role="tablist" aria-label="Files">
+                                    <button type="button" role="tab" class="fs-file-tab" aria-selected="true">order.js</button>
+                                    <button type="button" role="tab" class="fs-file-tab" aria-selected="false">order.css</button>
                                 </div>
+                                <div class="fs-work">
+                                    <div>
+                                        <pre class="fs-code fs-show"><span><i>let</i> cups = <b id="fs-code-cups">1</b>;</span><span><i>let</i> extraShot = <b id="fs-code-extra">false</b>;</span><span></span><span><i>function</i> <em>render</em>() {</span><span>  button.textContent =</span><span>    <em>label</em>(cups, extraShot);</span><span>}</span></pre>
+                                        <pre class="fs-code"><span><em>.order</em> {</span><span>  background: <b id="fs-code-accent">#A1DEFC</b>;</span><span>  border: <b>2px solid</b>;</span><span>  border-radius: <b>8px</b>;</span><span>}</span></pre>
+                                    </div>
+                                    <div class="fs-preview">
+                                        <div class="fs-web">
+                                            <div class="fs-url">localhost/order</div>
+                                            <div class="fs-body">
+                                                <strong>Flat white</strong>
+                                                <div class="fs-stepper"><button type="button" id="fs-minus" aria-label="One cup fewer">−</button><output id="fs-cups">1</output><button type="button" id="fs-plus" aria-label="One cup more">+</button></div>
+                                                <label class="fs-check"><input type="checkbox" id="fs-extra"> Extra shot</label>
+                                                <div class="fs-total order" id="fs-total" aria-live="polite">Order 1 cup</div>
+                                                <div class="fs-swatches">
+                                                    <button type="button" class="fs-swatch fs-accent" style="background:#A1DEFC" data-c="#A1DEFC" aria-pressed="true" aria-label="Blue theme"></button>
+                                                    <button type="button" class="fs-swatch fs-accent" style="background:#EF9DFC" data-c="#EF9DFC" aria-pressed="false" aria-label="Pink theme"></button>
+                                                    <button type="button" class="fs-swatch fs-accent" style="background:#FDFD96" data-c="#FDFD96" aria-pressed="false" aria-label="Yellow theme"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="fs-hint">Step 4 of 4 · use it, watch the code</p>
                             </div>
-                            <p class="fs-hint">Step 4 of 4 · edit the live button</p>
-                        </div>
                         <div class="fs-info">
                             <h3>HTML, CSS &amp; JS</h3>
                             <h4>DESIGN-TO-CODE</h4>
