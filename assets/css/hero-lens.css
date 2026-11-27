@@ -1,0 +1,376 @@
+/* =========================================================
+   HOME HERO: "INSPECT LENS"  (home page only)
+   Think / Design / Build layers revealed through a lens.
+   ========================================================= */
+.hero-sec.hero-sec--lens {
+    height: 100vh;
+    height: 100svh;
+    min-height: 640px;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.lh-hero {
+    --lh-green: #00B800;
+    --lh-muted: #5B5A52;
+    --lh-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+    --lh-pad: clamp(16px, 2.3vw, 44px);
+    --lx: 50%;
+    --ly: 50%;
+    --lr: 0px;
+    position: relative;
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--bg-default);
+    cursor: crosshair;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.lh-layer,
+.lh-scene {
+    position: absolute;
+    inset: 0;
+}
+
+.lh-lens {
+    pointer-events: none;
+    clip-path: circle(var(--lr) at var(--lx) var(--ly));
+    background-color: var(--lens-bg, var(--primary));
+    transition: background-color .35s ease;
+}
+
+/* ---------- Scene (rendered twice: base + lens) ---------- */
+.lh-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -53%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(30px, 5.2vh, 56px);
+}
+
+.lh-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font_instrument);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .26em;
+    color: var(--lh-muted);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.lh-status i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--lh-green);
+    animation: lh-ping 2s infinite;
+}
+
+@keyframes lh-ping {
+    0% { box-shadow: 0 0 0 0 rgba(0, 184, 0, .5); }
+    70% { box-shadow: 0 0 0 9px rgba(0, 184, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 184, 0, 0); }
+}
+
+.lh-hl {
+    position: relative;
+    text-align: center;
+}
+
+.lh-headline {
+    margin: 0;
+    font-family: var(--font_bebas);
+    font-weight: 400;
+    font-size: clamp(92px, min(11.4vw, 25vh), 232px);
+    line-height: .9;
+    letter-spacing: .005em;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.lh-line {
+    display: block;
+    white-space: pre;
+    padding: .04em 0 .02em;
+}
+
+.lh-hero.is-intro .lh-line {
+    overflow: hidden;
+}
+
+.lh-ch {
+    display: inline-block;
+}
+
+.lh-ch > span {
+    display: inline-block;
+}
+
+.lh-tag {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 2vw, 26px);
+    font-family: var(--font_instrument);
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: .24em;
+    color: var(--lh-muted);
+}
+
+.lh-tag i {
+    font-style: normal;
+    opacity: .5;
+}
+
+.lh-word {
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 4px;
+    background: none;
+    font: inherit;
+    line-height: inherit;
+    min-height: 0;
+    letter-spacing: inherit;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color .2s, color .2s;
+}
+
+.lh-word:hover {
+    color: var(--dark);
+}
+
+.lh-hero[data-mode=think] .lh-word[data-m=think],
+.lh-hero[data-mode=design] .lh-word[data-m=design],
+.lh-hero[data-mode=build] .lh-word[data-m=build] {
+    background: var(--dark);
+    color: var(--bg-default);
+}
+
+.lh-foot {
+    position: absolute;
+    left: var(--lh-pad);
+    right: var(--lh-pad);
+    bottom: clamp(18px, 3.4vh, 34px);
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: var(--font_instrument);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.lh-foot span:last-child {
+    color: var(--lh-muted);
+}
+
+.lh-foot b {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+/* ---------- Inspector annotations (lens layer only) ---------- */
+.lh-anno,
+.lh-guides {
+    display: none;
+}
+
+.lh-lens .lh-anno {
+    display: block;
+}
+
+.lh-sel {
+    position: absolute;
+    inset: -12px -18px;
+    border: 1.5px solid var(--dark);
+}
+
+.lh-sel::before {
+    content: attr(data-dim);
+    position: absolute;
+    left: -1.5px;
+    bottom: calc(100% + 1.5px);
+    padding: 3px 8px;
+    background: var(--dark);
+    color: var(--bg-default);
+    font: 700 10px/1.4 var(--lh-mono);
+    letter-spacing: .08em;
+    white-space: nowrap;
+}
+
+.lh-sel b {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: var(--bg-default);
+    border: 1.5px solid var(--dark);
+}
+
+.lh-sel b:nth-child(1) { left: -5px; top: -5px; }
+.lh-sel b:nth-child(2) { right: -5px; top: -5px; }
+.lh-sel b:nth-child(3) { left: -5px; bottom: -5px; }
+.lh-sel b:nth-child(4) { right: -5px; bottom: -5px; }
+
+.lh-guides {
+    position: absolute;
+    inset: 0;
+}
+
+.lh-guides i {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--dark);
+    opacity: .55;
+}
+
+.lh-guides i::after {
+    content: attr(data-l);
+    position: absolute;
+    left: 10px;
+    top: -14px;
+    font: 700 9px/1 var(--lh-mono);
+    font-style: normal;
+    letter-spacing: .12em;
+}
+
+.lh-hero[data-mode=design] .lh-lens .lh-guides {
+    display: block;
+}
+
+/* ---------- Lens modes ---------- */
+/* 01 THINK: blueprint, structure only */
+.lh-hero[data-mode=think] { --lens-bg: var(--bg-default); }
+
+.lh-hero[data-mode=think] .lh-lens {
+    background-image: linear-gradient(rgba(30, 30, 32, .12) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 32, .12) 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+.lh-hero[data-mode=think] .lh-lens .lh-ch > span {
+    color: transparent;
+    -webkit-text-stroke: 1.6px var(--dark);
+}
+
+.lh-hero[data-mode=think] .lh-lens .lh-line {
+    outline: 1.5px dashed var(--dark);
+    outline-offset: 5px;
+}
+
+.lh-hero[data-mode=think] .lh-lens .lh-sel { border-style: dashed; }
+
+.lh-hero[data-mode=think] .lh-lens .lh-tag,
+.lh-hero[data-mode=think] .lh-lens .lh-foot span,
+.lh-hero[data-mode=think] .lh-lens .lh-status { color: var(--dark); }
+
+/* 02 DESIGN: colour, type, rhythm */
+.lh-hero[data-mode=design] { --lens-bg: var(--primary); }
+
+.lh-hero[data-mode=design] .lh-lens .lh-tag,
+.lh-hero[data-mode=design] .lh-lens .lh-foot span,
+.lh-hero[data-mode=design] .lh-lens .lh-status { color: var(--dark); }
+
+.lh-hero[data-mode=design] .lh-lens .lh-sel b { background: var(--primary); }
+
+/* 03 BUILD: the live layer */
+.lh-hero[data-mode=build] { --lens-bg: var(--dark); }
+
+.lh-hero[data-mode=build] .lh-lens {
+    background-image: radial-gradient(rgba(0, 184, 0, .35) 1px, transparent 1.4px);
+    background-size: 16px 16px;
+}
+
+.lh-hero[data-mode=build] .lh-lens .lh-headline { color: var(--bg-default); }
+
+.lh-hero[data-mode=build] .lh-lens .lh-tag,
+.lh-hero[data-mode=build] .lh-lens .lh-foot span,
+.lh-hero[data-mode=build] .lh-lens .lh-foot b,
+.lh-hero[data-mode=build] .lh-lens .lh-status,
+.lh-hero[data-mode=build] .lh-lens .lh-word { color: #CFCBB4; }
+
+.lh-hero[data-mode=build] .lh-lens .lh-word[data-m=build] {
+    background: var(--lh-green);
+    color: var(--dark);
+}
+
+.lh-hero[data-mode=build] .lh-lens .lh-sel { border-color: var(--lh-green); }
+.lh-hero[data-mode=build] .lh-lens .lh-sel::before { background: var(--lh-green); color: var(--dark); }
+.lh-hero[data-mode=build] .lh-lens .lh-sel b { background: var(--dark); border-color: var(--lh-green); }
+
+/* ---------- Lens ring + chip ---------- */
+.lh-ring {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 2px solid var(--dark);
+    border-radius: 50%;
+    box-shadow: 5px 5px 0 var(--dark);
+    pointer-events: none;
+    will-change: transform;
+}
+
+.lh-chip {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, calc(-100% - 14px));
+    padding: 5px 10px;
+    background: var(--dark);
+    color: var(--bg-default);
+    border-radius: 3px;
+    font: 700 10px/1.3 var(--lh-mono);
+    letter-spacing: .1em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
+}
+
+.lh-chip:empty { display: none; }
+
+.lh-ring.below .lh-chip {
+    top: 100%;
+    transform: translate(-50%, 14px);
+}
+
+.lh-chip em {
+    font-style: normal;
+    color: var(--primary);
+}
+
+.lh-hero[data-mode=build] .lh-chip em { color: var(--lh-green); }
+
+/* the crosshair and lens ring replace the site cursor inside the hero */
+body.lh-over #magic-cursor { visibility: hidden; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 720px) {
+    .lh-headline { font-size: clamp(84px, 25vw, 150px); }
+    .lh-center { transform: translate(-50%, -58%); }
+    .lh-status { font-size: 10px; letter-spacing: .2em; }
+    .lh-tag { font-size: 10px; gap: 6px; }
+    .lh-word { padding: 9px 8px; }
+    .lh-foot { flex-direction: column; gap: 6px; font-size: 10px; bottom: 20px; }
+    .lh-sel { inset: -8px -10px; }
+    .lh-chip { font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lh-status i { animation: none; }
+}

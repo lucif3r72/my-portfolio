@@ -265,6 +265,10 @@ $(function () {
        5. Hero entrance
     ═══════════════════════════════════════════════════ */
   function initHeroAnims() {
+    /* tell the home hero lens (hero-lens.js) that the preloader is done */
+    window.__uxrHeroReady = true;
+    document.dispatchEvent(new Event("uxr:hero"));
+
     const heroLines = document.querySelectorAll(".hero-line-inner");
     if (heroLines.length) {
       gsap.to(heroLines, {

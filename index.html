@@ -146,6 +146,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/hero-lens.css">
     <!-- ===== Lenis Smooth Scroll ===== -->
     <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet"></noscript>
 </head>
@@ -272,7 +273,7 @@
         <!-- =========================================
                      HERO
                 ========================================= -->
-        <section class="hero-sec">
+        <section class="hero-sec hero-sec--lens">
             <header class="header-wrap">
                 <div class="custom-row">
                     <div class="header-local-time-box">
@@ -303,27 +304,32 @@
                 </div>
             </header>
 
-            <div class="hero-sec-content position-relative">
-                <span class="available-status hero-anim-item">OPEN TO COLLABORATION</span>
-                <h1 class="hero-heading">
-                    <span class="hero-line"><span class="hero-line-inner">HEY!</span></span>
-                    <span class="hero-line"><span class="hero-line-inner">I'M NADIR</span></span>
-                </h1>
-                <div class="hero-descriptor hero-anim-item">
-                    <span class="hero-tag">THINK</span>
-                    <span class="hero-sep">—</span>
-                    <span class="hero-tag">DESIGN</span>
-                    <span class="hero-sep">—</span>
-                    <span class="hero-tag">BUILD</span>
+            <div class="lh-hero is-intro" id="lhHero" data-mode="design">
+                <div class="lh-layer lh-base">
+                    <div class="lh-scene">
+                        <div class="lh-guides" aria-hidden="true"></div>
+                        <div class="lh-center">
+                            <div class="lh-status"><i aria-hidden="true"></i>Open to collaboration</div>
+                            <div class="lh-hl">
+                                <h1 class="lh-headline" aria-label="Hey! I'm Nadir">
+                                    <span class="lh-line">HEY!</span>
+                                    <span class="lh-line">I'M NADIR</span>
+                                </h1>
+                                <div class="lh-anno" aria-hidden="true">
+                                    <div class="lh-sel" data-dim=""><b></b><b></b><b></b><b></b></div>
+                                </div>
+                            </div>
+                            <div class="lh-tag" role="group" aria-label="Approach">
+                                <button class="lh-word" type="button" data-m="think">THINK</button><i aria-hidden="true">—</i>
+                                <button class="lh-word" type="button" data-m="design">DESIGN</button><i aria-hidden="true">—</i>
+                                <button class="lh-word" type="button" data-m="build">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="lh-foot"><span>Based in Mumbai, IN</span><span><b>Visual &amp; Experience Designer</b> + Product Designer</span></div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="hero-footer-wrap hero-anim-item">
-                <p>BASED IN MUMBAI, IN</p>
-                <div class="hero-footer-right">
-                    <span class="link-with-line">VISUAL & EXPERIENCE DESIGNER</span>
-                    <p>+ PRODUCT DESIGNER</p>
-                </div>
+                <div class="lh-layer lh-lens" aria-hidden="true"></div>
+                <div class="lh-ring" aria-hidden="true"><div class="lh-chip"></div></div>
             </div>
         </section>
 
@@ -953,6 +959,7 @@
     <!-- ajaxform: only needed on contact page — guarded inside the script -->
     <script src="./assets/js/ajaxform.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/hero-lens.js"></script>
     <script src="./assets/js/themescroll.js"></script>
 
 </body>
