@@ -148,6 +148,7 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/hero-lens.css">
     <link rel="stylesheet" href="./assets/css/expertise.css">
+    <link rel="stylesheet" href="./assets/css/stack.css">
     <!-- ===== Lenis Smooth Scroll ===== -->
     <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.css" rel="stylesheet"></noscript>
 </head>
@@ -752,77 +753,88 @@
                      FAVOURITE STACK
                      Bootstrap col-lg-5 (heading pin) + col-lg-7 (content)
                 ═══════════════════════════════════════════ -->
-        <section class="favourite-stack-sec">
-            <div class="container-fluid px-0">
-                <div class="row g-0">
-                    <!-- LEFT: pinned by ScrollTrigger — col-lg-5 -->
-                    <div class="col-lg-5">
-                        <div class="exp-pin-col" id="stackPinCol">
-                            <h2 class="sec-sticky-heading" id="stackHeading">FAVOURITE<br>STACK</h2>
+        <section class="fs" id="fs" aria-labelledby="fs-title">
+            <div class="fs-head">
+                <h2 id="fs-title">FAVOURITE<br>STACK</h2>
+                <p>One idea, four tools. Follow it through.</p>
+            </div>
+            <div class="fs-file">
+                <div class="fs-bar" role="tablist" aria-label="Tools">
+                    <button type="button" role="tab" class="fs-tool" id="fs-tab-0" aria-controls="fs-panel-0" aria-selected="true" tabindex="0" style="--tone:#FDFD96"><img src="./assets/imgs/file-figma.svg" alt="" width="24" height="24">FigJam</button>
+                    <button type="button" role="tab" class="fs-tool" id="fs-tab-1" aria-controls="fs-panel-1" aria-selected="false" tabindex="-1" style="--tone:#EF9DFC"><img src="./assets/imgs/pen-tool.svg" alt="" width="24" height="24">Figma</button>
+                    <button type="button" role="tab" class="fs-tool" id="fs-tab-2" aria-controls="fs-panel-2" aria-selected="false" tabindex="-1" style="--tone:#FFA2A0"><img src="./assets/imgs/file-vector.svg" alt="" width="24" height="24">Adobe XD</button>
+                    <button type="button" role="tab" class="fs-tool" id="fs-tab-3" aria-controls="fs-panel-3" aria-selected="false" tabindex="-1" style="--tone:#A1DEFC"><img src="./assets/imgs/globe.svg" alt="" width="24" height="24">HTML, CSS &amp; JS</button>
+                </div>
+                <div class="fs-panels">
+                    <div class="fs-panel fs-on" role="tabpanel" id="fs-panel-0" aria-labelledby="fs-tab-0" style="--tone:#FDFD96">
+                        <div class="fs-stage">
+                            <div class="fs-flow">
+                                <div class="fs-note" style="--c:#A1DEFC">Visitor arrives</div><span class="fs-link"></span>
+                                <div class="fs-note" style="--c:#FDFD96">Joins the list</div><span class="fs-link"></span>
+                                <div class="fs-note" style="--c:#FFA2A0">Gets started</div>
+                            </div>
+                            <button type="button" class="fs-btn" id="fs-connect" aria-pressed="false">Connect the flow</button>
+                            <p class="fs-hint">Step 1 of 4 · map the journey</p>
+                        </div>
+                        <div class="fs-info">
+                            <h3>FIGJAM</h3>
+                            <h4>COLLABORATION TOOL</h4>
+                            <p>My whiteboard for discovery. I use FigJam to map user journeys, run workshops, and turn research into flows the whole team can reason from. Alignment here consistently saves weeks further down the process.</p>
                         </div>
                     </div>
-                    <!-- RIGHT: scrollable content — col-lg-7 -->
-                    <div class="col-lg-7">
-                        <div class="favourite-stack-lists">
-                            <div class="favourite-stack-box js-stack-reveal">
-                                <div class="favourite-stack-box-left">
-                                    <div class="icon"><img src="./assets/imgs/pen-tool.svg" alt="Figma"></div>
-                                </div>
-                                <div class="content">
-                                    <h3>FIGMA</h3>
-                                    <div class="content-body">
-                                        <h4>DESIGN TOOL</h4>
-                                        <p>My primary workspace for everything from early exploration to full system
-                                            architecture. I design responsive interfaces, build component libraries, and
-                                            structure handoffs so that what gets to development is exactly what was
-                                            intended.</p>
-                                    </div>
+                    <div class="fs-panel" role="tabpanel" id="fs-panel-1" aria-labelledby="fs-tab-1" style="--tone:#EF9DFC">
+                        <div class="fs-stage">
+                            <div class="fs-select">
+                                <div class="fs-card" id="fs-design"><b>Join the list</b><span class="fs-field">you@example.com</span><span class="fs-cta">Join</span></div>
+                            </div>
+                            <div class="fs-props">
+                                <label for="fs-rad">Radius</label><input type="range" id="fs-rad" min="0" max="28" value="10" data-var="--rad"><span>10</span>
+                                <label for="fs-gap">Spacing</label><input type="range" id="fs-gap" min="6" max="22" value="14" data-var="--gap"><span>14</span>
+                            </div>
+                            <p class="fs-hint">Step 2 of 4 · tune the component</p>
+                        </div>
+                        <div class="fs-info">
+                            <h3>FIGMA</h3>
+                            <h4>DESIGN TOOL</h4>
+                            <p>My primary workspace for everything from early exploration to full system architecture. I design responsive interfaces, build component libraries, and structure handoffs so that what gets to development is exactly what was intended.</p>
+                        </div>
+                    </div>
+                    <div class="fs-panel" role="tabpanel" id="fs-panel-2" aria-labelledby="fs-tab-2" style="--tone:#FFA2A0">
+                        <div class="fs-stage">
+                            <div class="fs-proto">
+                                <div class="fs-card"><b>Join the list</b><span class="fs-field">you@example.com</span><button type="button" class="fs-cta">Join</button></div>
+                                <div class="fs-done" aria-live="polite"><b>You're in</b><button type="button" class="fs-btn fs-back">Back</button></div>
+                            </div>
+                            <p class="fs-hint">Step 3 of 4 · click through the prototype</p>
+                        </div>
+                        <div class="fs-info">
+                            <h3>ADOBE XD</h3>
+                            <h4>DESIGN TOOL</h4>
+                            <p>Used for interactive prototyping and UX validation. Creating clickable flows that let stakeholders test a journey before any code is written surfaces the right questions early, when changes are still cheap and fast.</p>
+                        </div>
+                    </div>
+                    <div class="fs-panel" role="tabpanel" id="fs-panel-3" aria-labelledby="fs-tab-3" style="--tone:#A1DEFC">
+                        <div class="fs-stage">
+                            <div class="fs-code-wrap">
+                                <pre class="fs-code">.cta {
+  background: <em id="fs-code-colour">#EF9DFC</em>;
+  border: 2px solid #1D1D1F;
+}
+button.textContent = "<em id="fs-code-label">Join</em>";</pre>
+                                <div class="fs-live"><button type="button" class="fs-cta" id="fs-live">Join</button></div>
+                                <div class="fs-controls">
+                                    <input type="text" id="fs-label" maxlength="18" value="Join" aria-label="Button label">
+                                    <button type="button" class="fs-swatch" style="background:#EF9DFC" data-c="#EF9DFC" aria-pressed="true" aria-label="Pink button"></button>
+                                    <button type="button" class="fs-swatch" style="background:#A1DEFC" data-c="#A1DEFC" aria-pressed="false" aria-label="Blue button"></button>
+                                    <button type="button" class="fs-swatch" style="background:#FDFD96" data-c="#FDFD96" aria-pressed="false" aria-label="Yellow button"></button>
                                 </div>
                             </div>
-                            <div class="favourite-stack-box js-stack-reveal">
-                                <div class="favourite-stack-box-left">
-                                    <div class="icon"><img src="./assets/imgs/file-vector.svg" alt="Adobe XD"></div>
-                                </div>
-                                <div class="content">
-                                    <h3>ADOBE XD</h3>
-                                    <div class="content-body">
-                                        <h4>DESIGN TOOL</h4>
-                                        <p>Used for interactive prototyping and UX validation. Creating clickable flows
-                                            that let stakeholders test a journey before any code is written surfaces the
-                                            right questions early, when changes are still cheap and fast.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="favourite-stack-box js-stack-reveal">
-                                <div class="favourite-stack-box-left">
-                                    <div class="icon"><img src="./assets/imgs/globe.svg" alt="HTML, CSS and JavaScript"></div>
-                                </div>
-                                <div class="content">
-                                    <h3>HTML, CSS & JS</h3>
-                                    <div class="content-body">
-                                        <h4>DESIGN-TO-CODE</h4>
-                                        <p>I write HTML, CSS, JavaScript, and jQuery to make design intent real in the
-                                            browser. Handling interactivity, dynamic states, and the edge cases prototypes
-                                            cannot fully simulate means I own the gap between design and implementation
-                                            rather than leaving it to chance. I am also familiar with PHP, MySQL, React,
-                                            and Node.js, so I can work comfortably with engineering teams.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="favourite-stack-box js-stack-reveal">
-                                <div class="favourite-stack-box-left">
-                                    <div class="icon"><img src="./assets/imgs/file-figma.svg" alt="FigJam"></div>
-                                </div>
-                                <div class="content">
-                                    <h3>FIGJAM</h3>
-                                    <div class="content-body">
-                                        <h4>COLLABORATION TOOL</h4>
-                                        <p>My whiteboard for discovery. I use FigJam to map user journeys, run
-                                            workshops, and turn research into flows the whole team can reason from.
-                                            Alignment here consistently saves weeks further down the process.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <p class="fs-hint">Step 4 of 4 · edit the live button</p>
+                        </div>
+                        <div class="fs-info">
+                            <h3>HTML, CSS &amp; JS</h3>
+                            <h4>DESIGN-TO-CODE</h4>
+                            <p>I write HTML, CSS, JavaScript, and jQuery to make design intent real in the browser. Handling interactivity, dynamic states, and the edge cases prototypes cannot fully simulate means I own the gap between design and implementation rather than leaving it to chance. I am also familiar with PHP, MySQL, React, and Node.js, so I can work comfortably with engineering teams.</p>
                         </div>
                     </div>
                 </div>
@@ -1003,6 +1015,7 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/hero-lens.js"></script>
     <script src="./assets/js/expertise.js"></script>
+    <script src="./assets/js/stack.js"></script>
     <script src="./assets/js/themescroll.js"></script>
 
 </body>

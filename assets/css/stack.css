@@ -1,0 +1,121 @@
+/* =========================================================
+   HOME: "FAVOURITE STACK" as one idea moving through four tools
+   ========================================================= */
+.fs {
+    --pad: clamp(16px, 2.8vw, 40px);
+    --muted: #5B5A52;
+    --rule: #D8D3B6;
+    --mono: ui-monospace, Menlo, Consolas, monospace;
+    width: 100%;
+    padding: clamp(56px, 8vw, 110px) var(--pad);
+    border-bottom: 1.5px solid var(--dark);
+    color: var(--dark);
+    font-family: var(--font_instrument);
+    line-height: 1.5;
+}
+
+.fs *, .fs *::before, .fs *::after { box-sizing: border-box; }
+.fs :where(h2, h3, h4, p, pre) { margin: 0; padding: 0; color: inherit; letter-spacing: normal; text-transform: none; }
+.fs :where(button, input) { margin: 0; padding: 0; font: inherit; color: inherit; line-height: inherit; }
+.fs :where(button) { cursor: pointer; background: none; border: 0; }
+.fs :focus-visible { outline: 3px solid var(--dark); outline-offset: 2px; }
+
+.fs-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; margin-bottom: 40px; }
+.fs-head h2 { font: 400 clamp(56px, 8vw, 112px)/.9 var(--font_bebas); }
+.fs-head p { font-size: 11px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+
+.fs-file { border: 2px solid var(--dark); border-radius: 8px; box-shadow: 8px 8px 0 var(--dark); overflow: hidden; background: var(--bg-default); }
+
+/* toolbar */
+.fs-bar { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 2px solid var(--dark); }
+.fs .fs-tool { display: flex; align-items: center; justify-content: center; gap: 12px; min-width: 0; padding: 16px 10px; border-right: 1.5px solid var(--dark); font: 400 clamp(20px, 2vw, 28px)/1 var(--font_bebas); letter-spacing: .03em; text-align: center; }
+.fs .fs-tool:last-child { border-right: 0; }
+.fs .fs-tool img { width: 24px; height: 24px; flex: none; }
+.fs .fs-tool:hover { background: rgba(29, 29, 31, .06); }
+.fs .fs-tool[aria-selected="true"] { background: var(--tone); }
+.fs .fs-tool:focus-visible { outline-offset: -5px; }
+
+/* all four panels share one cell: the height never jumps and no space is left over */
+.fs-panels { display: grid; }
+.fs-panel { grid-area: 1 / 1; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); min-width: 0; visibility: hidden; opacity: 0; }
+.fs-panel.fs-on { visibility: visible; opacity: 1; transition: opacity .35s; }
+
+.fs-stage { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; min-width: 0; min-height: 440px; padding: 34px 24px 28px; border-right: 2px solid var(--dark); background-image: linear-gradient(rgba(29, 29, 31, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 29, 31, .07) 1px, transparent 1px); background-size: 28px 28px; }
+.fs-info { display: flex; flex-direction: column; justify-content: center; gap: 14px; min-width: 0; padding: clamp(22px, 3vw, 44px); background: var(--tone); }
+.fs-info h3 { font: 400 clamp(34px, 3.6vw, 52px)/1 var(--font_bebas); }
+.fs-info h4 { font: 700 10px/1.4 var(--mono); letter-spacing: .18em; text-transform: uppercase; }
+.fs-info p { font-size: 16px; line-height: 1.7; }
+
+.fs-hint { font: 700 10px/1.5 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); text-align: center; }
+.fs .fs-btn { padding: 10px 16px; border: 2px solid var(--dark); border-radius: 6px; background: var(--bg-default); box-shadow: 3px 3px 0 var(--dark); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.fs .fs-btn[aria-pressed="true"] { background: var(--dark); color: var(--bg-default); }
+
+/* 1 FigJam */
+.fs-flow { display: flex; align-items: center; }
+.fs-note { width: 110px; height: 96px; display: flex; align-items: center; justify-content: center; padding: 10px; border: 1.5px solid var(--dark); box-shadow: 4px 4px 0 var(--dark); background: var(--c); font-size: 13px; font-weight: 700; text-align: center; transition: transform .5s; }
+.fs-note:nth-of-type(1) { transform: rotate(-6deg) translateY(-18px); }
+.fs-note:nth-of-type(2) { transform: rotate(5deg) translateY(20px); }
+.fs-note:nth-of-type(3) { transform: rotate(-3deg) translateY(-6px); }
+.fs-link { width: 40px; height: 2px; background: var(--dark); position: relative; transform: scaleX(0); transform-origin: left; transition: transform .5s .2s; }
+.fs-link::after { content: ""; position: absolute; right: -1px; top: -4px; border: 5px solid transparent; border-left-color: var(--dark); }
+.fs-flow.fs-joined .fs-note { transform: none; }
+.fs-flow.fs-joined .fs-link { transform: scaleX(1); }
+
+/* the sign-up card used by Figma, XD and code */
+.fs-card { --rad: 10px; --gap: 14px; width: min(260px, 100%); display: flex; flex-direction: column; gap: var(--gap); padding: calc(var(--gap) + 4px); border: 2px solid var(--dark); border-radius: var(--rad); background: #fff; }
+.fs-card b { font: 400 30px/1 var(--font_bebas); }
+.fs-field { padding: 10px 12px; border: 1.5px solid var(--dark); border-radius: calc(var(--rad) / 1.6); font-size: 12px; color: var(--muted); }
+.fs-cta { display: block; width: 100%; padding: 12px; border: 2px solid var(--dark); border-radius: calc(var(--rad) / 1.6); background: var(--accent, #EF9DFC); box-shadow: 3px 3px 0 var(--dark); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-align: center; text-transform: uppercase; overflow-wrap: anywhere; }
+
+/* 2 Figma */
+.fs-select { position: relative; width: min(260px, 100%); display: flex; justify-content: center; outline: 1.5px solid var(--dark); outline-offset: 10px; }
+.fs-select::before { content: "Frame · Sign up"; position: absolute; left: -11px; bottom: calc(100% + 11px); padding: 3px 8px; background: var(--dark); color: var(--bg-default); font: 700 9px/1.4 var(--mono); letter-spacing: .08em; white-space: nowrap; }
+.fs-props { display: grid; grid-template-columns: auto minmax(0, 160px) 34px; align-items: center; gap: 6px 12px; font: 700 10px/1.6 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.fs-props input { width: 100%; accent-color: var(--dark); }
+
+/* 3 XD */
+.fs-proto { position: relative; width: min(260px, 100%); }
+.fs-proto .fs-done { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; border: 2px solid var(--dark); border-radius: 10px; background: #A1DEFC; text-align: center; visibility: hidden; opacity: 0; transform: translateX(24px); transition: .35s; }
+.fs-proto .fs-done b { font: 400 34px/1 var(--font_bebas); }
+.fs-proto.fs-next .fs-done { visibility: visible; opacity: 1; transform: none; }
+.fs-proto .fs-cta { animation: fs-pulse 1.5s infinite; }
+@keyframes fs-pulse { 50% { box-shadow: 3px 3px 0 var(--dark), 0 0 0 7px rgba(29, 29, 31, .14); } }
+
+/* 4 code */
+.fs-code-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; max-width: 380px; }
+.fs pre.fs-code { width: 100%; padding: 14px 16px; border-radius: 6px; background: var(--dark); color: var(--bg-default); font: 12px/1.7 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.fs-code em { font-style: normal; color: #FDFD96; }
+.fs-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; }
+.fs-controls input[type="text"] { width: 170px; padding: 8px 10px; border: 2px solid var(--dark); border-radius: 6px; background: #fff; font-size: 13px; }
+.fs .fs-swatch { width: 28px; height: 28px; border: 2px solid var(--dark); border-radius: 50%; }
+.fs .fs-swatch[aria-pressed="true"] { outline: 2px solid var(--dark); outline-offset: 3px; }
+.fs-code-wrap .fs-live { width: min(240px, 100%); }
+
+@media (max-width: 860px) {
+    /* stacked: each panel takes only its own height, so no empty strip under shorter text */
+    .fs-panels { display: block; }
+    .fs-panel { display: none; grid-template-columns: minmax(0, 1fr); }
+    .fs-panel.fs-on { display: grid; }
+    .fs-stage { min-height: 420px; border-right: 0; border-bottom: 2px solid var(--dark); }
+    .fs-info { justify-content: flex-start; }
+}
+
+@media (max-width: 600px) {
+    .fs-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .fs .fs-tool:nth-child(2) { border-right: 0; }
+    .fs .fs-tool:nth-child(-n+2) { border-bottom: 1.5px solid var(--dark); }
+    .fs .fs-tool { padding: 13px 8px; gap: 8px; }
+    .fs-stage { padding: 34px 18px 24px; }
+    .fs-flow { flex-direction: column; }
+    .fs-note { height: 76px; }
+    .fs-note:nth-of-type(1) { transform: rotate(-5deg) translateX(-26px); }
+    .fs-note:nth-of-type(2) { transform: rotate(4deg) translateX(30px); }
+    .fs-note:nth-of-type(3) { transform: rotate(-3deg) translateX(-12px); }
+    .fs-link { width: 2px; height: 26px; transform: scaleY(0); transform-origin: top; }
+    .fs-link::after { right: -4px; top: auto; bottom: -1px; border-left-color: transparent; border-top-color: var(--dark); }
+    .fs-flow.fs-joined .fs-link { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fs *, .fs *::after { animation: none !important; transition: none !important; }
+}
